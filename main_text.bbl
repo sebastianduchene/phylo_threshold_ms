@@ -1,0 +1,277 @@
+\begin{thebibliography}{37}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abdool~Karim and de~Oliveira(2021)]{abdool2021new}
+S.~S. Abdool~Karim and T.~de~Oliveira.
+\newblock New sars-cov-2 variants—clinical, public health, and vaccine
+  implications.
+\newblock \emph{New England Journal of Medicine}, 384\penalty0 (19):\penalty0
+  1866--1868, 2021.
+
+\bibitem[Attwood et~al.(2022)Attwood, Hill, Aanensen, Connor, and
+  Pybus]{attwood2022phylogenetic}
+S.~W. Attwood, S.~C. Hill, D.~M. Aanensen, T.~R. Connor, and O.~G. Pybus.
+\newblock Phylogenetic and phylodynamic approaches to understanding and
+  combating the early sars-cov-2 pandemic.
+\newblock \emph{Nature Reviews Genetics}, 23\penalty0 (9):\penalty0 547--562,
+  2022.
+
+\bibitem[Biek et~al.(2015)Biek, Pybus, Lloyd-Smith, and
+  Didelot]{biek2015measurably}
+R.~Biek, O.~G. Pybus, J.~O. Lloyd-Smith, and X.~Didelot.
+\newblock Measurably evolving pathogens in the genomic era.
+\newblock \emph{Trends in ecology \& evolution}, 30\penalty0 (6):\penalty0
+  306--313, 2015.
+
+\bibitem[Bouckaert et~al.(2019)Bouckaert, Vaughan, Barido-Sottani, Duch{\^e}ne,
+  Fourment, Gavryushkina, Heled, Jones, K{\"u}hnert, De~Maio,
+  et~al.]{bouckaert2019beast}
+R.~Bouckaert, T.~G. Vaughan, J.~Barido-Sottani, S.~Duch{\^e}ne, M.~Fourment,
+  A.~Gavryushkina, J.~Heled, G.~Jones, D.~K{\"u}hnert, N.~De~Maio, et~al.
+\newblock Beast 2.5: An advanced software platform for bayesian evolutionary
+  analysis.
+\newblock \emph{PLoS computational biology}, 15\penalty0 (4):\penalty0
+  e1006650, 2019.
+
+\bibitem[Bromham et~al.(2018)Bromham, Duch{\^e}ne, Hua, Ritchie, Duch{\^e}ne,
+  and Ho]{bromham2018bayesian}
+L.~Bromham, S.~Duch{\^e}ne, X.~Hua, A.~M. Ritchie, D.~A. Duch{\^e}ne, and S.~Y.
+  Ho.
+\newblock Bayesian molecular dating: opening up the black box.
+\newblock \emph{Biological Reviews}, 93\penalty0 (2):\penalty0 1165--1191,
+  2018.
+
+\bibitem[Buonagurio et~al.(1986)Buonagurio, Nakada, Parvin, Krystal, Palese,
+  and Fitch]{buonagurio1986evolution}
+D.~A. Buonagurio, S.~Nakada, J.~D. Parvin, M.~Krystal, P.~Palese, and W.~M.
+  Fitch.
+\newblock Evolution of human influenza a viruses over 50 years: rapid, uniform
+  rate of change in ns gene.
+\newblock \emph{Science}, 232\penalty0 (4753):\penalty0 980--982, 1986.
+
+\bibitem[Dos~Reis and Yang(2013)]{dos2013unbearable}
+M.~Dos~Reis and Z.~Yang.
+\newblock The unbearable uncertainty of bayesian divergence time estimation.
+\newblock \emph{Journal of Systematics and Evolution}, 51\penalty0
+  (1):\penalty0 30--43, 2013.
+
+\bibitem[Drummond et~al.(2003{\natexlab{a}})Drummond, Pybus, and
+  Rambaut]{drummond2003inference}
+A.~Drummond, O.~G. Pybus, and A.~Rambaut.
+\newblock Inference of viral evolutionary rates from molecular sequences.
+\newblock \emph{Adv Parasitol}, 54:\penalty0 331--358, 2003{\natexlab{a}}.
+
+\bibitem[Drummond et~al.(2003{\natexlab{b}})Drummond, Pybus, Rambaut, Forsberg,
+  and Rodrigo]{drummond2003measurably}
+A.~J. Drummond, O.~G. Pybus, A.~Rambaut, R.~Forsberg, and A.~G. Rodrigo.
+\newblock Measurably evolving populations.
+\newblock \emph{Trends in ecology \& evolution}, 18\penalty0 (9):\penalty0
+  481--488, 2003{\natexlab{b}}.
+
+\bibitem[Duch{\^e}ne et~al.(2014)Duch{\^e}ne, Lanfear, and
+  Ho]{duchene2014impact}
+S.~Duch{\^e}ne, R.~Lanfear, and S.~Y. Ho.
+\newblock The impact of calibration and clock-model choice on molecular
+  estimates of divergence times.
+\newblock \emph{Molecular phylogenetics and evolution}, 78:\penalty0 277--289,
+  2014.
+
+\bibitem[Duch{\^e}ne et~al.(2015)Duch{\^e}ne, Duch{\^e}ne, Holmes, and
+  Ho]{duchene2015performance}
+S.~Duch{\^e}ne, D.~Duch{\^e}ne, E.~C. Holmes, and S.~Y. Ho.
+\newblock The performance of the date-randomization test in phylogenetic
+  analyses of time-structured virus data.
+\newblock \emph{Molecular Biology and Evolution}, 32\penalty0 (7):\penalty0
+  1895--1906, 2015.
+
+\bibitem[Duchene et~al.(2016)Duchene, Holt, Weill, Le~Hello, Hawkey, Edwards,
+  Fourment, and Holmes]{duchene2016genome}
+S.~Duchene, K.~E. Holt, F.-X. Weill, S.~Le~Hello, J.~Hawkey, D.~J. Edwards,
+  M.~Fourment, and E.~C. Holmes.
+\newblock Genome-scale rates of evolutionary change in bacteria.
+\newblock \emph{Microbial genomics}, 2\penalty0 (11):\penalty0 e000094, 2016.
+
+\bibitem[Duchene et~al.(2018)Duchene, Duchene, Geoghegan, Dyson, Hawkey, and
+  Holt]{duchene2018inferring}
+S.~Duchene, D.~A. Duchene, J.~L. Geoghegan, Z.~A. Dyson, J.~Hawkey, and K.~E.
+  Holt.
+\newblock Inferring demographic parameters in bacterial genomic data using
+  bayesian and hybrid phylogenetic methods.
+\newblock \emph{BMC evolutionary biology}, 18:\penalty0 1--11, 2018.
+
+\bibitem[Duchene et~al.(2020{\natexlab{a}})Duchene, Featherstone,
+  Haritopoulou-Sinanidou, Rambaut, Lemey, and Baele]{duchene2020temporal}
+S.~Duchene, L.~Featherstone, M.~Haritopoulou-Sinanidou, A.~Rambaut, P.~Lemey,
+  and G.~Baele.
+\newblock Temporal signal and the phylodynamic threshold of sars-cov-2.
+\newblock \emph{Virus evolution}, 6\penalty0 (2):\penalty0 veaa061,
+  2020{\natexlab{a}}.
+
+\bibitem[Duchene et~al.(2020{\natexlab{b}})Duchene, Ho, Carmichael, Holmes, and
+  Poinar]{duchene2020recovery}
+S.~Duchene, S.~Y. Ho, A.~G. Carmichael, E.~C. Holmes, and H.~Poinar.
+\newblock The recovery, interpretation and use of ancient pathogen genomes.
+\newblock \emph{Current Biology}, 30\penalty0 (19):\penalty0 R1215--R1231,
+  2020{\natexlab{b}}.
+
+\bibitem[Duchene et~al.(2020{\natexlab{c}})Duchene, Lemey, Stadler, Ho,
+  Duchene, Dhanasekaran, and Baele]{duchene2020bayesian}
+S.~Duchene, P.~Lemey, T.~Stadler, S.~Y. Ho, D.~A. Duchene, V.~Dhanasekaran, and
+  G.~Baele.
+\newblock Bayesian evaluation of temporal signal in measurably evolving
+  populations.
+\newblock \emph{Molecular Biology and Evolution}, 37\penalty0 (11):\penalty0
+  3363--3379, 2020{\natexlab{c}}.
+
+\bibitem[Elbe and Buckland-Merrett(2017)]{elbe2017data}
+S.~Elbe and G.~Buckland-Merrett.
+\newblock Data, disease and diplomacy: Gisaid's innovative contribution to
+  global health.
+\newblock \emph{Global Challenges}, 1\penalty0 (1):\penalty0 33--46, 2017.
+
+\bibitem[Ghafari et~al.(2021)Ghafari, du~Plessis, Raghwani, Bhatt, Xu, Pybus,
+  and Katzourakis]{ghafari2021purifying}
+M.~Ghafari, L.~du~Plessis, J.~Raghwani, S.~Bhatt, B.~Xu, O.~Pybus, and
+  A.~Katzourakis.
+\newblock Purifying selection determines the short-term time dependency of
+  evolutionary rates in sars-cov-2 and ph1n1 influenza.
+\newblock \emph{medRxiv}, 2021.
+
+\bibitem[Gojobori et~al.(1990)Gojobori, Moriyama, and
+  KIMuRA]{gojobori1990molecular}
+T.~Gojobori, E.~N. Moriyama, and M.~KIMuRA.
+\newblock Molecular clock of viral evolution, and the neutral theory.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 87\penalty0
+  (24):\penalty0 10015--10018, 1990.
+
+\bibitem[Harvey et~al.(2021)Harvey, Carabelli, Jackson, Gupta, Thomson,
+  Harrison, Ludden, Reeve, Rambaut, Peacock, et~al.]{harvey2021sars}
+W.~T. Harvey, A.~M. Carabelli, B.~Jackson, R.~K. Gupta, E.~C. Thomson, E.~M.
+  Harrison, C.~Ludden, R.~Reeve, A.~Rambaut, S.~J. Peacock, et~al.
+\newblock Sars-cov-2 variants, spike mutations and immune escape.
+\newblock \emph{Nature Reviews Microbiology}, 19\penalty0 (7):\penalty0
+  409--424, 2021.
+
+\bibitem[Ho and Duch{\^e}ne(2014)]{ho2014molecular}
+S.~Y. Ho and S.~Duch{\^e}ne.
+\newblock Molecular-clock methods for estimating evolutionary rates and
+  timescales.
+\newblock \emph{Molecular Ecology}, 23\penalty0 (24):\penalty0 5947--5965,
+  2014.
+
+\bibitem[Kahila Bar-Gal et~al.(2012)Kahila Bar-Gal, Kim, Klein, Shin, Oh, Kim,
+  Kim, Kim, Grant, Pappo, et~al.]{kahila2012tracing}
+G.~Kahila Bar-Gal, M.~J. Kim, A.~Klein, D.~H. Shin, C.~S. Oh, J.~W. Kim, T.-H.
+  Kim, S.~B. Kim, P.~R. Grant, O.~Pappo, et~al.
+\newblock Tracing hepatitis b virus to the 16th century in a korean mummy.
+\newblock \emph{Hepatology}, 56\penalty0 (5):\penalty0 1671--1680, 2012.
+
+\bibitem[Kocher et~al.(2021)Kocher, Papac, Barquera, Key, Spyrou, H{\"u}bler,
+  Rohrlach, Aron, Stahl, Wissgott, et~al.]{kocher2021ten}
+A.~Kocher, L.~Papac, R.~Barquera, F.~M. Key, M.~A. Spyrou, R.~H{\"u}bler, A.~B.
+  Rohrlach, F.~Aron, R.~Stahl, A.~Wissgott, et~al.
+\newblock Ten millennia of hepatitis b virus evolution.
+\newblock \emph{Science}, 374\penalty0 (6564):\penalty0 182--188, 2021.
+
+\bibitem[Menardo et~al.(2019)Menardo, Duch{\^e}ne, Brites, and
+  Gagneux]{menardo2019molecular}
+F.~Menardo, S.~Duch{\^e}ne, D.~Brites, and S.~Gagneux.
+\newblock The molecular clock of mycobacterium tuberculosis.
+\newblock \emph{PLoS pathogens}, 15\penalty0 (9):\penalty0 e1008067, 2019.
+
+\bibitem[M{\"u}hlemann et~al.(2018)M{\"u}hlemann, Jones, Damgaard, Allentoft,
+  Shevnina, Logvin, Usmanova, Panyushkina, Boldgiv, Bazartseren,
+  et~al.]{muhlemann2018ancient}
+B.~M{\"u}hlemann, T.~C. Jones, P.~d.~B. Damgaard, M.~E. Allentoft, I.~Shevnina,
+  A.~Logvin, E.~Usmanova, I.~P. Panyushkina, B.~Boldgiv, T.~Bazartseren, et~al.
+\newblock Ancient hepatitis b viruses from the bronze age to the medieval
+  period.
+\newblock \emph{Nature}, 557\penalty0 (7705):\penalty0 418--423, 2018.
+
+\bibitem[Paraskevis et~al.(2013)Paraskevis, Magiorkinis, Magiorkinis, Ho,
+  Belshaw, Allain, and Hatzakis]{paraskevis2013dating}
+D.~Paraskevis, G.~Magiorkinis, E.~Magiorkinis, S.~Y. Ho, R.~Belshaw, J.-P.
+  Allain, and A.~Hatzakis.
+\newblock Dating the origin and dispersal of hepatitis b virus infection in
+  humans and primates.
+\newblock \emph{Hepatology}, 57\penalty0 (3):\penalty0 908--916, 2013.
+
+\bibitem[Ramsden et~al.(2009)Ramsden, Holmes, and
+  Charleston]{ramsden2009hantavirus}
+C.~Ramsden, E.~C. Holmes, and M.~A. Charleston.
+\newblock Hantavirus evolution in relation to its rodent and insectivore hosts:
+  no evidence for codivergence.
+\newblock \emph{Molecular biology and evolution}, 26\penalty0 (1):\penalty0
+  143--153, 2009.
+
+\bibitem[Rieux and Balloux(2016)]{rieux2016inferences}
+A.~Rieux and F.~Balloux.
+\newblock Inferences from tip-calibrated phylogenies: a review and a practical
+  guide.
+\newblock \emph{Molecular ecology}, 25\penalty0 (9):\penalty0 1911--1924, 2016.
+
+\bibitem[Ross et~al.(2018)Ross, Klunk, Fornaciari, Giuffra, Duch{\^e}ne,
+  Duggan, Poinar, Douglas, Eden, Holmes, et~al.]{ross2018paradox}
+Z.~P. Ross, J.~Klunk, G.~Fornaciari, V.~Giuffra, S.~Duch{\^e}ne, A.~T. Duggan,
+  D.~Poinar, M.~W. Douglas, J.-S. Eden, E.~C. Holmes, et~al.
+\newblock The paradox of hbv evolution as revealed from a 16th century mummy.
+\newblock \emph{PLoS pathogens}, 14\penalty0 (1):\penalty0 e1006750, 2018.
+
+\bibitem[Sanju{\'a}n(2012)]{sanjuan2012molecular}
+R.~Sanju{\'a}n.
+\newblock From molecular genetics to phylodynamics: evolutionary relevance of
+  mutation rates across viruses.
+\newblock \emph{PLoS pathogens}, 8\penalty0 (5):\penalty0 e1002685, 2012.
+
+\bibitem[Shu and McCauley(2017)]{shu2017gisaid}
+Y.~Shu and J.~McCauley.
+\newblock Gisaid: Global initiative on sharing all influenza data--from vision
+  to reality.
+\newblock \emph{Eurosurveillance}, 22\penalty0 (13):\penalty0 30494, 2017.
+
+\bibitem[Spyrou et~al.(2019)Spyrou, Bos, Herbig, and Krause]{spyrou2019ancient}
+M.~A. Spyrou, K.~I. Bos, A.~Herbig, and J.~Krause.
+\newblock Ancient pathogen genomics as an emerging tool for infectious disease
+  research.
+\newblock \emph{Nature Reviews Genetics}, 20\penalty0 (6):\penalty0 323--340,
+  2019.
+
+\bibitem[Tay et~al.(2024)Tay, Kocher, and Duchene]{tay2024assessing}
+J.~H. Tay, A.~Kocher, and S.~Duchene.
+\newblock Assessing the effect of model specification and prior sensitivity on
+  bayesian tests of temporal signal.
+\newblock \emph{PLoS Computational Biology}, 20\penalty0 (11):\penalty0
+  e1012371, 2024.
+
+\bibitem[Thalmann et~al.(2013)Thalmann, Shapiro, Cui, Schuenemann, Sawyer,
+  Greenfield, Germonpr{\'e}, Sablin, L{\'o}pez-Gir{\'a}ldez, Domingo-Roura,
+  et~al.]{thalmann2013complete}
+O.~Thalmann, B.~Shapiro, P.~Cui, V.~J. Schuenemann, S.~K. Sawyer, D.~L.
+  Greenfield, M.~B. Germonpr{\'e}, M.~V. Sablin, F.~L{\'o}pez-Gir{\'a}ldez,
+  X.~Domingo-Roura, et~al.
+\newblock Complete mitochondrial genomes of ancient canids suggest a european
+  origin of domestic dogs.
+\newblock \emph{Science}, 342\penalty0 (6160):\penalty0 871--874, 2013.
+
+\bibitem[Trov{\~a}o et~al.(2015)Trov{\~a}o, Baele, Vrancken, Bielejec, Suchard,
+  Fargette, and Lemey]{trovao2015host}
+N.~S. Trov{\~a}o, G.~Baele, B.~Vrancken, F.~Bielejec, M.~A. Suchard,
+  D.~Fargette, and P.~Lemey.
+\newblock Host ecology determines the dispersal patterns of a plant virus.
+\newblock \emph{Virus evolution}, 1\penalty0 (1):\penalty0 vev016, 2015.
+
+\bibitem[Warnock et~al.(2012)Warnock, Yang, and Donoghue]{warnock2012exploring}
+R.~C. Warnock, Z.~Yang, and P.~C. Donoghue.
+\newblock Exploring uncertainty in the calibration of the molecular clock.
+\newblock \emph{Biology letters}, 8\penalty0 (1):\penalty0 156--159, 2012.
+
+\bibitem[Zuckerkandl and Pauling(1965)]{zuckerkandl1965evolutionary}
+E.~Zuckerkandl and L.~Pauling.
+\newblock Evolutionary divergence and convergence in proteins.
+\newblock In \emph{Evolving genes and proteins}, pages 97--166. Elsevier, 1965.
+
+\end{thebibliography}
