@@ -1,16 +1,9 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Abdool~Karim and de~Oliveira(2021)]{abdool2021new}
-S.~S. Abdool~Karim and T.~de~Oliveira.
-\newblock New sars-cov-2 variants—clinical, public health, and vaccine
-  implications.
-\newblock \emph{New England Journal of Medicine}, 384\penalty0 (19):\penalty0
-  1866--1868, 2021.
 
 \bibitem[Attwood et~al.(2022)Attwood, Hill, Aanensen, Connor, and
   Pybus]{attwood2022phylogenetic}
@@ -127,12 +120,6 @@ S.~Duchene, P.~Lemey, T.~Stadler, S.~Y. Ho, D.~A. Duchene, V.~Dhanasekaran, and
 \newblock \emph{Molecular Biology and Evolution}, 37\penalty0 (11):\penalty0
   3363--3379, 2020{\natexlab{c}}.
 
-\bibitem[Elbe and Buckland-Merrett(2017)]{elbe2017data}
-S.~Elbe and G.~Buckland-Merrett.
-\newblock Data, disease and diplomacy: Gisaid's innovative contribution to
-  global health.
-\newblock \emph{Global Challenges}, 1\penalty0 (1):\penalty0 33--46, 2017.
-
 \bibitem[Ghafari et~al.(2021)Ghafari, du~Plessis, Raghwani, Bhatt, Xu, Pybus,
   and Katzourakis]{ghafari2021purifying}
 M.~Ghafari, L.~du~Plessis, J.~Raghwani, S.~Bhatt, B.~Xu, O.~Pybus, and
@@ -147,14 +134,6 @@ T.~Gojobori, E.~N. Moriyama, and M.~KIMuRA.
 \newblock Molecular clock of viral evolution, and the neutral theory.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 87\penalty0
   (24):\penalty0 10015--10018, 1990.
-
-\bibitem[Harvey et~al.(2021)Harvey, Carabelli, Jackson, Gupta, Thomson,
-  Harrison, Ludden, Reeve, Rambaut, Peacock, et~al.]{harvey2021sars}
-W.~T. Harvey, A.~M. Carabelli, B.~Jackson, R.~K. Gupta, E.~C. Thomson, E.~M.
-  Harrison, C.~Ludden, R.~Reeve, A.~Rambaut, S.~J. Peacock, et~al.
-\newblock Sars-cov-2 variants, spike mutations and immune escape.
-\newblock \emph{Nature Reviews Microbiology}, 19\penalty0 (7):\penalty0
-  409--424, 2021.
 
 \bibitem[Ho and Duch{\^e}ne(2014)]{ho2014molecular}
 S.~Y. Ho and S.~Duch{\^e}ne.
@@ -227,18 +206,24 @@ R.~Sanju{\'a}n.
   mutation rates across viruses.
 \newblock \emph{PLoS pathogens}, 8\penalty0 (5):\penalty0 e1002685, 2012.
 
-\bibitem[Shu and McCauley(2017)]{shu2017gisaid}
-Y.~Shu and J.~McCauley.
-\newblock Gisaid: Global initiative on sharing all influenza data--from vision
-  to reality.
-\newblock \emph{Eurosurveillance}, 22\penalty0 (13):\penalty0 30494, 2017.
-
-\bibitem[Spyrou et~al.(2019)Spyrou, Bos, Herbig, and Krause]{spyrou2019ancient}
+\bibitem[Spyrou et~al.(2019{\natexlab{a}})Spyrou, Bos, Herbig, and
+  Krause]{spyrou2019ancient}
 M.~A. Spyrou, K.~I. Bos, A.~Herbig, and J.~Krause.
 \newblock Ancient pathogen genomics as an emerging tool for infectious disease
   research.
 \newblock \emph{Nature Reviews Genetics}, 20\penalty0 (6):\penalty0 323--340,
-  2019.
+  2019{\natexlab{a}}.
+
+\bibitem[Spyrou et~al.(2019{\natexlab{b}})Spyrou, Keller, Tukhbatova, Scheib,
+  Nelson, Andrades~Valtue{\~n}a, Neumann, Walker, Alterauge, Carty,
+  et~al.]{spyrou2019phylogeography}
+M.~A. Spyrou, M.~Keller, R.~I. Tukhbatova, C.~L. Scheib, E.~A. Nelson,
+  A.~Andrades~Valtue{\~n}a, G.~U. Neumann, D.~Walker, A.~Alterauge, N.~Carty,
+  et~al.
+\newblock Phylogeography of the second plague pandemic revealed through
+  analysis of historical yersinia pestis genomes.
+\newblock \emph{Nature communications}, 10\penalty0 (1):\penalty0 4470,
+  2019{\natexlab{b}}.
 
 \bibitem[Tay et~al.(2024)Tay, Kocher, and Duchene]{tay2024assessing}
 J.~H. Tay, A.~Kocher, and S.~Duchene.

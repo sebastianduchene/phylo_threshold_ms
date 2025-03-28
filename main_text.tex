@@ -16,7 +16,8 @@
 \usepackage{setspace}
 
 \usepackage{pdflscape}
-\doublespacing
+%\doublespacing
+\onehalfspacing
 \usepackage[dvipsnames]{xcolor}
 \usepackage{lineno}
 \linenumbers
@@ -134,30 +135,24 @@ A lack of temporal signal is typically considered to be associated with unreliab
 In this study we sought to pinpoint the impact of sampling strategies on these estimates. We focused our attention on two major problems for emerging microbes and studies involving ancient DNA. First, we varied the sampling window of a population that has attained its phylodynamic threshold. Second, we subsampled a population over time to vary the number of ancient samples, leading to a temporal sampling bias. Finally, we illustrate these results in an empirical data set of Hepatitis B virus (HBV) that includes a large number of ancient samples \citep{kocher2021ten}. This virus has been the subject of intense research due to its close association with human populations and complex evolutionary dynamics \citep{paraskevis2013dating, ross2018paradox, kahila2012tracing}.
 
 \subsection{Sampling windows relative to the phylodynamic threshold}
-We simulated sequence data that resembled the evolution of HBV, a double-stranded DNA (dsDNA) virus that has evolved in humans for around 10 thousand years \citep{kocher2021ten}. Our synthetic data had a genome length of 3,200 Kb and an evolutionary rate of $1.5\time10^{-5}$ subs/site/year \citep{kocher2021ten, muhlemann2018ancient}. Under these conditions we expect to observe one mutation every 20 years ($\frac{1}{3200\ sites \times\ 1.5\times10^{-5}subs/site/year}\approx20\ years$). This number is important for the design of our simulation experiments: 20 years is the time we would expect for it to attain its phylodynamic threshold and it is would typically be the required sampling window to detect temporal signal.
+We simulated sequence data that resembled the evolution of HBV, a double-stranded DNA (dsDNA) virus that has evolved in humans for around 10 thousand years \citep{kocher2021ten}. Our synthetic data had a genome length of 3,200 Kb and an evolutionary rate of $1.5\time10^{-5}$ subs/site/year \citep{kocher2021ten, muhlemann2018ancient}. Under these conditions we expect to observe one mutation every 20 years ($\frac{1}{3200\ sites \times\ 1.5\times10^{-5}subs/site/year}\approx20\ years$). This number is important for the design of our simulation experiments: 20 years is the time we would expect for it to attain its phylodynamic threshold and it is would typically be the required sampling window to detect temporal signal. We analysed the data under a Bayesian phylogenetic framework an considered whether the posterior contained the true value used to generate the data, known as coverage, and the width of the posterior, known as precision (a `precise' estimate has a narrow posterior distribution).
 
 \subsection{Calibration windows for tips}
 We conceived a simulation process under which the evolutionary timescale had an expected time of 10 thousand years and with a sampling window of 0, 10, 20, 200 , or 2,000 years. A sampling window spanning 0 years results in ultrametric trees with the sampling times providing no calibration information. In contrast, a sampling window of 10 years is half of the phylodynamic threshold and is expected to have weak temporal signal (see fig. \ref{figure:Fig1}(d)-(f)). Sampling windows of 20 years (the phylodynamic threshold) or wider are expected to behave as measurably evolving populations and with increasingly strong temporal signal (see fig. \ref{figure:Fig1}(j)-(l)). All our simulations were analysed under Bayesian phylogenetic framework, as implemented in the BEASTv2.5 platform \citep{bouckaert2019beast}.
 
-All our simulations produced posterior estimated that included the correct value used to generate the data (i.e. high coverage). Increasingly wide sampling windows improved the precision of the estimates, while still including the correct value. We do not observe a systematic bias associated with the sampling window width, contrary to the expectation that low temporal signal necessarily results in an underestimation of the evolutionary rate and an overestimation of the tree height \citep{duchene2015performance}.
+All our simulations produced posterior estimated that included the correct value used to generate the data (i.e. 100\% coverage; fig. \ref{figure:Fig2}). Increasingly wide sampling windows improved the precision of the estimates, while still including the correct value. This result is unsurprising, given our configuration of the prior. Notably, the prior on the phylogenetic tree and the evolutionary rate are particularly influential for estimating evolutionary rates and timescales (for a detailed investigation see \cite{tay2024assessing}). Here, the tree prior is a constant-size coalescent for which the prior on the population size (known as $\Theta$) is an exponential distribution with mean of 5,000, which matches the value used to generate the data. Similarly, the evolutionary rate had a prior in the form of a $\Gamma$ distribution with $shape=1.5$ and $rate=10^{5}$, whose mean is $shape\times rate=1.5\times10^{-5}$ and thus also matches the `true' value. Although these priors are centred on the correct values, they are vague, and it is important to note than in all cases, the posterior distribution of the evolutionary rate and tree height was narrower than the prior, meaning that even in the absence of sampling times the sequence data provide some information about these two parameters.
 
-This result is largely expected due to our configuration of the prior. Notably, the prior on the phylogenetic tree and the evolutionary rate are particularly influential for estimating evolutionary rates and timescales (for a detailed investigation see \cite{tay2024assessing}).Here tree prior is a constant-size coalescent for which the prior on the population size (known as $\Theta$) is an exponential distribution with mean of 5,000, which matches the value used to generate the data. Similarly, the evolutionary rate had a prior in the form of a $\Gamma$ distribution with shape=1.5 and rate=$10^{6}$, whose mean is shape$\times$rate$=1.5\times10^{-6}$ and thus also matches the `true' value. Although these priors are centred on the correct values, they are vague, and it is important to note than in all cases, the posterior distribution of the evolutionary rate and tree height was narrower than the prior, meaning that even in the absence of sampling times the sequence data provide some information about these two parameters.
+We reanalysed this data with a different priors on the population size and the evolutionary rate that were deliberately `misleading'. The prior on the population size was an exponential distribution with mean of 50,000, whereas the prior on the evolutionary rate was $\Gamma(shape=1.5, rate=10^{6})$ (mean=$1.5\time10^{-6}$. Under this configuration the mean prior mass corresponds to trees that are one order of magnitude older than the truth and evolutionary rates that are an order of magnitude slower. The objective of this experiment is to determine whether the sampling window is sufficiently informative to overcome such misleading prior information.
 
+The posterior distribution was largely contained within the prior, resulting in low coverage for the evolutionary rate for sampling windows of 0, 10, and 20 years (0\% coverage; fig. \ref{figure:Fig3}). A sampling window of 200 years was necessary to obtain 92\% coverage, while a sampling window of 2,000 years had 100\% coverage and with even higher precision (fig. \ref{figure:Fig3}). These results demonstrate that a misleading prior that excludes, or poses a very low probability on the true value, requires a sampling window that is potentially much wider than that corresponding to the phylodynamic threshold. 
 
-\textcolor{purple}{Note to self: That precision generally improves, but there does not seem to be a systematic bias if the prior is reasonable. When the prior is unreasonable, then we do need to sample quite past the phylodynamic threshold}
-
-
-
-\textcolor{red}{WRITING UP TO HERE. THE REST IS RUBBISH!}
-
-
-
+We did not detect a systematic bias associated with the width of the sampling window, contrary to the expectation that low temporal signal necessarily results in an underestimation of the evolutionary rate and an overestimation of the tree height \citep{duchene2015performance}. Instead, we find that a lack of temporal signal due to narrow sampling windows may simply lend more influence to the prior. 
 
 \begin{landscape}
 	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[scale=0.7, angle=0]{summary_all_estimates_correct_prior.pdf}
-			\caption{Simulations of varying sampling window widths. Each column corresponds to a simulation setting: (a) is for ultrametric trees where all samples are collected at the same point in time, (b) is for the situation where the sampling window is 10 years (half the phylodynamic threshold), (c) is where the sampling window is exactly the phylodynamic threshold of 20 years. Scenarios (d) and (e) denote sampling windows that are 10 and 100 times the phylodynamic threshold. The first row is an example of a simulated phylogenetic tree with branch lengths scaled in units of time. The black circles represent genomic samples. The purple dashed line is is the phylodynamic threshold and the solid red line is for the oldest sample, such that it represents the sampling window. Note that time here is shown in log$_{10}$ scale. The second row is the estimated evolutionary rate over 100 simulations. The dashed black line is the value used to generate the data (i.e. the ground truth), the blue bars are the posterior, and those in orange are the prior. For the prior and the posterior we use solid circles to show the mean estimate. The third row is the estimate of the error in tree height (the age of the tree). The error in tree height is calculated as the $\frac{true-estimated}{true}$.}
+			\caption{Simulations of varying sampling window widths. Each column corresponds to a simulation setting: (a) is for ultrametric trees where all samples are collected at the same point in time, (b) is for the situation where the sampling window is 10 years (half the phylodynamic threshold), (c) is where the sampling window is exactly the phylodynamic threshold of 20 years. Scenarios (d) and (e) denote sampling windows that are 10 and 100 times the phylodynamic threshold. The first row is an example of a simulated phylogenetic tree with branch lengths scaled in units of time. The black circles represent genomic samples. The purple dashed line is is the phylodynamic threshold and the solid red line is for the oldest sample, such that it represents the sampling window. Note that time here is shown in log$_{10}$ scale. The second row is the estimated evolutionary rate over 100 simulations. The dashed black line is the value used to generate the data (i.e. the ground truth), the dark blue bars are the posterior, and those in orange are the prior. For the prior and the posterior we use solid circles to show the mean estimate and the width of the error bars denotes the 95\% quantile range. The third row is the estimate of the error in tree height (the age of the tree). The error in tree height is calculated as $\frac{true-estimated}{true}$.}
 			\label{figure:Fig2}
 		\end{center}
 		%		\centering
@@ -176,11 +171,21 @@ This result is largely expected due to our configuration of the prior. Notably, 
 \end{landscape}
 
 
+\subsection{Temporal sampling bias}
+We investigated the impact of temporal sampling bias on the precision and accuracy on molecular clock estimates. For this purpose we simulated data with the same genomic characteristics as HBV and where genome sampling was conducted over five periods of time uniformly distributed between the present and the root of the trees (fig. \ref{figure:Fig4}(a)). The fully sampled trees contained 500 genome samples, equally distributed over each of the five sampling times. Such stratified sampling is expected in ancient DNA studies, for example when a set of samples are drawn from archaeological sites (e.g. \cite{spyrou2019phylogeography}). We sampled the complete data sets by randomly selecting 20 samples from each strata, which we refer to as `time-uniform' sampling, and by sampling with a probability that is inversely proportional to the age of the strata, referred to as `time-biased'. The time-uniform and time-biased sampling strategies both contain 100 samples (1/5$^{th}$ of the complete data), but the time-biased only includes a small number of ancient samples.
+
+The coverage of the evolutionary rate estimate was comparable across simulation treatments, at 88\% for the complete data set, 83\% for the time-uniform, and 89\% for the time-biased (fig. \ref{figure:Fig4}(b)). The somewhat higher coverage for the estimates from the time-biased analyses is likely because this sampling treatment reduces the precision of the posterior, rather than an improvement in both accuracy and precision.
+
+We also calculated a measure of bias for both sampling strategies by counting the number of simulations for which the posterior mean with either sampling strategy was higher than that with the complete data. We found that 50\% of the estimates under time-uniform sampling had higher means than the complete data, where as the same was true for 45\% of those with time-biased sampling (fig. \ref{figure:Fig5}(a)). Although these numbers do not indicate a substantial bias, we do note that time-biased sampling tends to lead to lower mean evolutionary rate estimates than using the complete data or time-uniform sampling.
+
+The most striking result from temporal sampling strategies was in the precision of the posterior. Both sampling treatments resulted in posterior distributions that were wider than that with the complete data, which is to be expected because they are effectively smaller data sets with less information. However, the time-biased sampling data sets almost invariably has posterior distributions that were less precise than those from the time-uniform sampling.
+
+
 %\begin{landscape}
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.6, angle=0]{sampling_bias_summary_trees_rates.pdf}
-		\caption{Trees plot thing pending}
+		\includegraphics[scale=0.5, angle=0]{sampling_bias_summary_trees_rates.pdf}
+		\caption{Analyses under sampling treatments over time. In (a) we show an example of a the trees for a simulation replicate, with branch lengths and time in log$_{10}$ scale. The complete data set consists of 500 genome samples, collected in five points in time, with an equal number of samples per time point (n=100). The first sampling strategy is unbiased, where 20 samples are drawn from each time point, and is known here as `time-uniform'. The `time-biased' regime is where sampling intensity decreases over time. Note that the total number of samples in the time-uniform and time-biased treatments is identical. In (b) we show the posterior estimates of the evolutionary rate for each treatment. Each simulation replicate is represented by three error bars: dark blue for the complete data, and lighter shades of blue for the estimates from the time-uniform and time-biased sampling treatments. The width of the error bars denotes the 95\% quantile range and the dots are the mean value. The dashed line shows the true value used to generate the data.}
 		\label{figure:Fig4}
 	\end{center}
 		%		\centering
@@ -197,6 +202,8 @@ This result is largely expected due to our configuration of the prior. Notably, 
 	%		\centering
 \end{figure}
 
+
+\textcolor{red}{DRAFT UP TO HERE. FIGURE 5 NEEDS A LEGEND AND THEN WE NEED A SUMMARY FROM THE EMPIRICAL DATA}
 	
 
 \begin{table}[H]
@@ -226,6 +233,14 @@ This result is largely expected due to our configuration of the prior. Notably, 
 
 \section{Discussion}
 Pending.
+\textcolor{red}{Key points to mention:}
+
+\begin{itemize}
+	\item That seqeunces are informative, even when there is no sampling time information and when they are identical. They are simply consistent with a very slow rate. In popular Bayesan analyses the prior puts a lot of weight on small values, which probably explains favours low values even when the sampling window is narrow.
+	\item thus using a reasonable prior and to conduct prior sensitivity is important. 
+\end{itemize}
+
+
 \section{Materials and methods}
 Pending.
 
