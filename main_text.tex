@@ -135,7 +135,7 @@ A lack of temporal signal is typically considered to be associated with unreliab
 In this study we sought to pinpoint the impact of sampling strategies on these estimates. We focused our attention on two major problems for emerging microbes and studies involving ancient DNA. First, we varied the sampling window of a population that has attained its phylodynamic threshold. Second, we subsampled a population over time to vary the number of ancient samples, leading to a temporal sampling bias. Finally, we illustrate these results in an empirical data set of Hepatitis B virus (HBV) that includes a large number of ancient samples \citep{kocher2021ten}. This virus has been the subject of intense research due to its close association with human populations and complex evolutionary dynamics \citep{paraskevis2013dating, ross2018paradox, kahila2012tracing}.
 
 \subsection{Sampling windows relative to the phylodynamic threshold}
-We simulated sequence data that resembled the evolution of HBV, a double-stranded DNA (dsDNA) virus that has evolved in humans for around 10 thousand years \citep{kocher2021ten}. Our synthetic data had a genome length of 3,200 Kb and an evolutionary rate of $1.5\time10^{-5}$ subs/site/year \citep{kocher2021ten, muhlemann2018ancient}. Under these conditions we expect to observe one mutation every 20 years ($\frac{1}{3200\ sites \times\ 1.5\times10^{-5}subs/site/year}\approx20\ years$). This number is important for the design of our simulation experiments: 20 years is the time we would expect for it to attain its phylodynamic threshold and it would typically be the required sampling window to detect temporal signal. We analysed the data under a Bayesian phylogenetic framework an considered whether the posterior contained the true value used to generate the data, known as coverage, and the width of the posterior, known as precision (a `precise' estimate has a narrow posterior distribution).
+We simulated sequence data that resembled the evolution of HBV, a double-stranded DNA (dsDNA) virus that has evolved in humans for around 10 thousand years \citep{kocher2021ten}. Our synthetic data had a genome length of 3,200 nucleotides and an evolutionary rate of $1.5\time10^{-5}$ subs/site/year \citep{kocher2021ten, muhlemann2018ancient}. Under these conditions we expect to observe one mutation every 20 years ($\frac{1}{3200\ sites \times\ 1.5\times10^{-5}subs/site/year}\approx20\ years$). This number is important for the design of our simulation experiments: 20 years is the time we would expect for it to attain its phylodynamic threshold and it would typically be the required sampling window to detect temporal signal. We analysed the data under a Bayesian phylogenetic framework an considered whether the posterior contained the true value used to generate the data, known as coverage, and the width of the posterior, known as precision (a `precise' estimate has a narrow posterior distribution).
 
 \subsection{Calibration windows for tips}
 We conceived a simulation process under which the evolutionary timescale had an expected time of 10 thousand years and with a sampling window of 0, 10, 20, 200 , or 2,000 years. A sampling window spanning 0 years results in ultrametric trees with the sampling times providing no calibration information. In contrast, a sampling window of 10 years is half of the phylodynamic threshold and is expected to have weak temporal signal (see fig. \ref{figure:Fig1}(d)-(f)). Sampling windows of 20 years (the phylodynamic threshold) or wider are expected to behave as measurably evolving populations and with increasingly strong temporal signal (see fig. \ref{figure:Fig1}(j)-(l)). All our simulations were analysed under Bayesian phylogenetic framework, as implemented in the BEASTv2.5 platform \citep{bouckaert2019beast}.
@@ -202,9 +202,9 @@ The most striking result of the temporal sampling strategies was in the precisio
 \end{figure}
 
 \subsection{Empirical analyses of Hepatitis B virus (HBV) ancient and modern genomes}
+To explore the impact of the width of the sampling window and the temporal sampling bias on the estimates of evolutionary rates and times, we performed analyses of a HBV data set that includes modern and ancient genomes, from \cite{kocher2021ten}. The complete data set consisted of 232 genomes of length 3,344 nucleotides and with a sampling window of 10,535 years. HBV is an ancient pathogen that has likely codiverged with human populations for thousands of years \citep{locarnini2021origins, zehender2014enigmatic, paraskevis2013dating}, and thus its phylodynamic threshold has not been empirically established, as is the case for recent outbreaks, like SARS-CoV-2 \citep{duchene2020temporal}. 
 
-\textcolor{red}{DRAFT UP TO HERE. FIGURE 5 NEEDS A LEGEND AND THEN WE NEED A SUMMARY FROM THE EMPIRICAL DATA}
-
+For our first set of analyses we varied the width of the sampling window: we drew 100 genomes with different sampling window widths: 0 (only modern samples), up to 500, 1,000, or 5,000 years before present. Increasing the sampling window resulted in estimates of the evolutionary rate that were more precise and closer to the estimate from the complete data set (fig. \ref{figure:Fig6}). In contrast to our simulations, here we find that the evolutionary rate is estimated to be higher for shorter sampling windows. This pattern is consistent with the vagaries of evolutionary rate variation in this virus, particularly time-dependency \citep{vrancken2017accurate}. However, a more likely cause is the effect of the marginal prior -our analyses using the `misleading' prior configuration above indicate that broadening the sampling window results in estimates that are less sensitive to the prior (supplementary material online).
 
 \begin{figure}[H]
     \begin{center}
@@ -215,11 +215,12 @@ The most striking result of the temporal sampling strategies was in the precisio
     %		\centering
 \end{figure}
 
+\textcolor{red}{DRAFT UP TO HERE. SUMMARISE RESULTS FROM THE TEMPORAL SAMPLING BIAS IN EMPIRICAL DATA}
 
 \begin{figure}[H]
     \begin{center}
         \includegraphics[scale=0.7, angle=0]{empirical_results_biased.pdf}
-        \caption{\textcolor{red}{PENDING}.}
+        \caption{Results from empirical analyses of Hepatitis B virus (HBV) ancient DNA data. The phylogenetic trees correspond to highest clade credibility trees from three analyses where the data were subsampled to include an increasing number of ancient samples. First, we consider a data set for which the samples are are 95\% modern and the remaining 5\% being the most ancient. Then, we reduce the number of modern samples to 50\%, 25\% and 10\%, and the rest being ancient. Note that the sampling window is constant because we always retain the most ancient samples. In all cases the data sets consist of 100 genome samples. The violin plots show the posterior distribution of the evolutionary rate in blue and its corresponding prior in orange. The dashed line shows the mean evolutionary rate estimate from the complete data set.}
         \label{figure:Fig6}
     \end{center}
     %		\centering
@@ -267,7 +268,7 @@ Pending.
 
 
 \section{Acknowledgements}
-This work was supported by the Australian Research Council (DE190100805) and the Medical Research Future Fund (MRF9200006). This research was undertaken using the LIEF HPC-GPGPU Facility hosted at the University of Melbourne. This Facility was established with the assistance of LIEF Grant LE170100200. We acknowledge efforts by originating and submitting laboratories for the sequence data in GISAID EpiCoV on which our analyses are based. We are also grateful to Prof. Edward Holmes for useful suggestions and comments on ideas developed in this study.
+Pending.
 
 
 
