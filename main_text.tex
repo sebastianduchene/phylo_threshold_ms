@@ -40,6 +40,31 @@
 \addtolength{\topmargin}{-.875in}
 \addtolength{\textheight}{1.75in}
 
+% color can be used to apply background shading to table cells only
+\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+
+
 %\author{Pending}
 
 
@@ -261,10 +286,27 @@ To investigate the impact of temporal sampling bias we initially simulated trees
 We conducted two sampling schemes for the trees with 500 tips: the `time-uniform' scheme consisted of drawing 20 samples from each time point, whereas the `time-biased' scheme included of mostly modern samples (90 from the present, and 5, 3, 1, and 1 from the remaining time points). For each simulation scenario we generated 100 replicates.
 
 \subsubsection{Analysis of simulated data}
+We analysed all data sets in BEAST 2 under a model that matched that used to generate the data: the HKY+$\Gamma_4$ substitution model, a uncorrelated relaxed molecular clock model with an underlying lognormal distribution, and a constant size coalescent tree prior. We used the default prior configuration in the program, except for the mean molecular clock rate and the population size of the coalescent (known as $theta$) for which we specifically set a prior that was reasonable but not overly informative (table \ref{table:prior_distros}). For the simulations with varying sampling window width we investigated prior sensitivity in detail and thus we also analysed the data under a `misleading' prior configuration, where the prior density was deliberately concentrated on values that substantially differed from those used to generate the data.
 
-\textcolor{red}{Describe analyses in BEAST, the prior, sampling from the prior and that.}
+\begin{table*}[h]
+	\caption{Prior configuration for the molecular clock model and tree prior. The substitution model parameters had the default priors in BEAST 2. Note that the mean of the $\Gamma$ distribution here is $shape/rate$ and that the expected age of the root of a tree under a constant size coalescent is $2\times \theta$} 
+	\begin{center} 
+		\label{table:prior_distros}
+		\begin{tabular}{ c|c|c }
+			Parameter & `Reasonable' prior & `Misleading' prior \\
+			\hline
+			 Coalescent population size ($\theta$) & $Exponential(mean=5,000)$ & $Exponential(mean= 50,000)$\\
+			Molecular clock mean rate (M) & $\Gamma(shape=1.5, rate=10^5)$ & $\Gamma(shape=1.5, rate=10^6)$ \\
+		\end{tabular}
+	\end{center}	%\vspace{-0.4cm}
+\end{table*}
 
-Pending.
+Using the values from table \ref{table:prior_distros}, under the reasonable prior the mean of the lognormal distribution of the molecular clock has a mean of $1\times 10^{-5}$ subs/site/year, with a 95\% quantile width of $1.1\times 10^{-6}$ to $4.7\times10^{-5}$, and the expected height of the root node is 10,000 years (expected time to coalescent=$2\times \theta$, see \cite{nordborg2019coalescent}). In contrast, under the misleading prior the mean molecular clock rate (mean of the lognormal distribution) is much lower, at $1\times10^{-6}$ subs/site/year, a 95\% quantile width of $1.1\times10^{-7}$ to $4.7\times10^{-6}$, and with an expected height of the root node of 100,000 years. In all cases we set the sampling times for calibration. In the case of ultrametric trees, al sampling times are all set to the present, such that all calibration information is provided by the prior.
+
+\textcolor{red}{Describe MCMC details and that we also ran the prior, conditional on the age and number of samples by setting the sampleFromPrior="true"}
+
+\subsubsection{HBV empirical data}
+\textcolor{red}{A few details of the data and then the model that we use to analyse them, and that we compare the pairs}
 
 \section{Author contributions}
 Pending.
