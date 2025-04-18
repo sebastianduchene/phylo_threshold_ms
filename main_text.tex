@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 
-
+\usepackage[normalem]{ulem}
 
 \usepackage[utf8]{inputenc}
 
@@ -248,9 +248,13 @@ For our second set of empirical analyses, we subsampled the data to produce a ra
 The impact of temporal sampling bias was less clear than in our simulations above (figs \ref{figure:Fig4} and \ref{figure:Fig5}). The data set with 95\% modern genomes had the highest uncertainty in the evolutionary rate estimate, but uncertainty did not decrease monotonically with the proportion of modern genomes. Moreover, the posterior estimate of the evolutionary rate from the data set with 50\% modern genomes deviated the most from the that obtained using the full data set. Critically, when we analysed these data using the `misleading' prior setting we found that increasing the number of ancient samples resulted in a less influential prior. These results demonstrate that the exact impact of temporal sampling bias may be difficult to predict in practice, but that generally increasing the number of ancient samples results in data sets that are more informative, in that the difference between the prior and posterior is more pronounced than when only a few ancient samples are available.
 
 \section{Discussion}
+The concepts of the phyloydnamic threshold, measurably evolving populations, and temporal signal have valuable for our understanding of rapidly evolving organisms or data sets with ancient DNA. Our analyses help us disentangle the definition of these concepts and their practical implications. 
+
+The phylodynamic threshold is a useful concept, but the threshold itself is not a discrete bound. In the context of Bayesian analyses, a reasonable prior might be sufficient to obtain posterior estimates of evolutionary rates and times that are accurate. Increasing the sampling window improves precision, not not necessarily accuracy. In contrast, when the prior is misleading, as in our simulations, where the average evolutionary rate would be one order of magnitude lower than the truth, a sampling window of 10 times the minimum expected phylodynamic threshold was necessary to obtain a posterior that included the correct value. As a consequence, the phylodynamic threshold depends on the extent to which that data inform the posterior, which ultimately depends on the relative contribution of the prior. Maximally uninformative prior, such as Jeffrey's prior, offer an attractive approach, but such priors can ignore useful expert knowledge, they can be notoriously difficult to sample, and are not necessarily proper probability distributions, which complicates the application of tests of temporal signal \citep{duchene2020bayesian}. 
+
 \textcolor{red}{DRAFT UP TO HERE}
 \begin{itemize}
-    \item On the phylodynamic threshold. That it is a useful concept. However it is not a discrete bound, but a region. When the prior is `correct', sampling over longer time periods (past the threshold) simply improves precision. When the prior is misleading, we may well need to sample beyond the threshold. In our case, we found that sampling 10 times more was required to overcome the misleading prior. If the prior is reasonable, then sampling less than the phylodynamic threshold is OK.
+    \item \sout{On the phylodynamic threshold. That it is a useful concept. However it is not a discrete bound, but a region. When the prior is `correct', sampling over longer time periods (past the threshold) simply improves precision. When the prior is misleading, we may well need to sample beyond the threshold. In our case, we found that sampling 10 times more was required to overcome the misleading prior. If the prior is reasonable, then sampling less than the phylodynamic threshold is OK.}
     \item Tests of temporal signal are important, but they only quantify the strength of the association between dates and genetic distance. However, prior sensitivity analyses appear to be even more important. For example, we could sample at the phylodynamic threshold, in which case most tests would likely suggest temporal signal. However, if the prior is misleading (even if we consdier it uninformative) then it might still obscure the signal from the data. A reasonable approach would be to consistently check the prior on a few key parameters, notably the evolutionary rate and the height of the tree. Ideally, the posterior should be more precise than the prior.
     \item Sampling bias is an obvious concern. Here we do not focus on population structure, which has been investigated previously and causes X. Instead we focus on temporal sampling bias, which is a common concern in aDNA data sets. Contrary to our expectations, it does not seem to lead to a systematic bias, given the the prior is not misleading, but instead it simply improves information content in the data. This is good, but determining whether the data are sufficiently informative is tricky, and thus choosing a good prior is important. 
     \item a short discussion on the clock rate prior and tree prior (ctmc rate reference, the gamma here, the colescent, the birth-death).
@@ -286,7 +290,7 @@ To investigate the impact of temporal sampling bias we initially simulated trees
 We conducted two sampling schemes for the trees with 500 tips: the `time-uniform' scheme consisted of drawing 20 samples from each time point, whereas the `time-biased' scheme included of mostly modern samples (90 from the present, and 5, 3, 1, and 1 from the remaining time points). For each simulation scenario we generated 100 replicates.
 
 \subsubsection{Analysis of simulated data}
-We analysed all data sets in BEAST 2 under a model that matched that used to generate the data: the HKY+$\Gamma_4$ substitution model, a uncorrelated relaxed molecular clock model with an underlying lognormal distribution, and a constant size coalescent tree prior. We used the default prior configuration in the program, except for the mean molecular clock rate and the population size of the coalescent (known as $theta$) for which we specifically set a prior that was reasonable but not overly informative (table \ref{table:prior_distros}). For the simulations with varying sampling window width we investigated prior sensitivity in detail and thus we also analysed the data under a `misleading' prior configuration, where the prior density was deliberately concentrated on values that substantially differed from those used to generate the data.
+We analysed all data sets in BEAST 2 under a model that matched that used to generate the data: the HKY+$\Gamma_4$ substitution model, a uncorrelated relaxed molecular clock model with an underlying lognormal distribution, and a constant size coalescent tree prior. We used the default prior configuration in the program, except for the mean evolutionary rate and the population size of the coalescent (known as $theta$) for which we specifically set a prior that was reasonable but not overly informative (table \ref{table:prior_distros}). For the simulations with varying sampling window width we investigated prior sensitivity in detail and thus we also analysed the data under a `misleading' prior configuration, where the prior density was deliberately concentrated on values that substantially differed from those used to generate the data.
 
 \begin{table*}[h]
 	\caption{Prior configuration for the molecular clock model and tree prior. The substitution model parameters had the default priors in BEAST 2. Note that the mean of the $\Gamma$ distribution here is $shape/rate$ and that the expected age of the root of a tree under a constant size coalescent is $2\times \theta$} 
@@ -301,18 +305,25 @@ We analysed all data sets in BEAST 2 under a model that matched that used to gen
 	\end{center}	%\vspace{-0.4cm}
 \end{table*}
 
-Using the values from table \ref{table:prior_distros}, under the reasonable prior the mean of the lognormal distribution of the molecular clock has a mean of $1\times 10^{-5}$ subs/site/year, with a 95\% quantile width of $1.1\times 10^{-6}$ to $4.7\times10^{-5}$, and the expected height of the root node is 10,000 years (expected time to coalescent=$2\times \theta$, see \cite{nordborg2019coalescent}). In contrast, under the misleading prior the mean molecular clock rate (mean of the lognormal distribution) is much lower, at $1\times10^{-6}$ subs/site/year, a 95\% quantile width of $1.1\times10^{-7}$ to $4.7\times10^{-6}$, and with an expected height of the root node of 100,000 years. In all cases we set the sampling times for calibration. In the case of ultrametric trees, al sampling times are all set to the present, such that all calibration information is provided by the prior.
+Using the values from table \ref{table:prior_distros}, under the reasonable prior the mean of the lognormal distribution of branch rates has an average of $1\times 10^{-5}$ subs/site/year, with a 95\% quantile width of $1.1\times 10^{-6}$ to $4.7\times10^{-5}$, and the expected height of the root node is 10,000 years (expected time to coalescent=$2\times \theta$, see \cite{nordborg2019coalescent}). In contrast, under the misleading prior the average evolutionary rate (mean of the lognormal distribution) is much lower, at $1\times10^{-6}$ subs/site/year, a 95\% quantile width of $1.1\times10^{-7}$ to $4.7\times10^{-6}$, and with an expected height of the root node of 100,000 years. In all cases we set the sampling times for calibration. In the case of ultrametric trees, al sampling times are all set to the present, such that all calibration information is provided by the prior.
 
-\textcolor{red}{Describe MCMC details and that we also ran the prior, conditional on the age and number of samples by setting the sampleFromPrior="true"}
+We used Markov chain Monte Carlo (MCMC) for inference. We set the chain length to $10^{8}$ steps, sampling every $5\times10^{4}$ steps. We deemed sufficient sampling by verifying that the effective sample size was at least 200, by using the R package CODA (version 0.19) \citep{plummer2006coda}. When this criterion was not met we extended the chain length to $5\times10^{8}$ steps. 
+
+Our simulations with varying sampling window width used two possible prior configurations. To assess their impact we drew MCMC samples from the marginal prior of the evolutionary rate and the height of the root node. That is, the prior for a given parameter integrating over the prior in other parameters, the number of tips, and their heights. We obtained such samples by setting the option \texttt{sampleFromPrior="true"} in the input xml files in BEAST 2, which conducts the MCMC while ignoring the phylogenetic likelihood.
 
 \subsubsection{HBV empirical data}
-\textcolor{red}{A few details of the data and then the model that we use to analyse them, and that we compare the pairs}
+We selected a complete genome data set of HBV published by \cite{kocher2021ten}. The complete alignment included 232 genomes of length 3,344 nucleotides, with 1,807 variable sites, and 1,498 site patterns. The sampling times ranged from the present to 10,535 years before present. To investigate the impact of varying the sampling window and on temporal sampling bias we subsampled the data as described in our Results section. We analysed each data set using the same model and prior settings as in our simulations, including the use of the reasonable and misleading prior configuration.
+
+\section{Data availability}
+Computer code, analysis files, and data sets in this study are available at:
+
+\url{https://github.com/sebastianduchene/phylo_threshold_code_data}
 
 \section{Author contributions}
 Pending.
 
 \section{Competing interests}
-Pending.
+None.
 
 
 \section{Acknowledgments}
