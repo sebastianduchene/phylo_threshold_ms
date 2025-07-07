@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.1)  26 JUN 2025 14:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.1)  7 JUL 2025 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,17 +426,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 83.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--101
+Underfull \hbox (badness 10000) in paragraph at lines 99--103
 
  []
 
 
-LaTeX Warning: Reference `figure:Fig4' on page 1 undefined on input line 102.
+LaTeX Warning: Reference `figure:Fig4' on page 1 undefined on input line 104.
 
 [1
 
@@ -447,7 +447,7 @@ File: summary_all_estimates_misleading_upwards_prior.pdf Graphic file (type pdf
 )
 <use summary_all_estimates_misleading_upwards_prior.pdf>
 Package pdftex.def Info: summary_all_estimates_misleading_upwards_prior.pdf  us
-ed on input line 110.
+ed on input line 112.
 (pdftex.def)             Requested size: 556.4752pt x 354.12057pt.
  [2
 
@@ -456,13 +456,13 @@ ed on input line 110.
 File: empirical_results_tree_height.pdf Graphic file (type pdf)
 <use empirical_results_tree_height.pdf>
 Package pdftex.def Info: empirical_results_tree_height.pdf  used on input line 
-120.
+122.
 (pdftex.def)             Requested size: 404.70924pt x 455.2979pt.
 <empirical_results_biased_root_height.pdf, id=42, 578.16pt x 650.43pt>
 File: empirical_results_biased_root_height.pdf Graphic file (type pdf)
 <use empirical_results_biased_root_height.pdf>
 Package pdftex.def Info: empirical_results_biased_root_height.pdf  used on inpu
-t line 130.
+t line 132.
 (pdftex.def)             Requested size: 404.70924pt x 455.2979pt.
  [3
 
@@ -473,7 +473,7 @@ File: empirical_results_depth_misleading_prior_tree_height.pdf Graphic file (ty
 pe pdf)
 <use empirical_results_depth_misleading_prior_tree_height.pdf>
 Package pdftex.def Info: empirical_results_depth_misleading_prior_tree_height.p
-df  used on input line 142.
+df  used on input line 144.
 (pdftex.def)             Requested size: 404.70924pt x 455.2979pt.
 
 [4 <./empirical_results_biased_root_height.pdf>]
@@ -483,21 +483,21 @@ File: empirical_results_biased_misleading_prior_root_height.pdf Graphic file (t
 ype pdf)
 <use empirical_results_biased_misleading_prior_root_height.pdf>
 Package pdftex.def Info: empirical_results_biased_misleading_prior_root_height.
-pdf  used on input line 156.
+pdf  used on input line 158.
 (pdftex.def)             Requested size: 404.70924pt x 455.2979pt.
  [5 <./empirical_results_depth_misleading_prior_tree_height.pdf>]
 <empirical_results_depth_misleading_prior.pdf, id=73, 578.16pt x 650.43pt>
 File: empirical_results_depth_misleading_prior.pdf Graphic file (type pdf)
 <use empirical_results_depth_misleading_prior.pdf>
 Package pdftex.def Info: empirical_results_depth_misleading_prior.pdf  used on 
-input line 166.
+input line 168.
 (pdftex.def)             Requested size: 404.70924pt x 455.2979pt.
  [6 <./empirical_results_biased_misleading_prior_root_height.pdf>]
 <empirical_results_biased_misleading_prior.pdf, id=83, 578.16pt x 650.43pt>
 File: empirical_results_biased_misleading_prior.pdf Graphic file (type pdf)
 <use empirical_results_biased_misleading_prior.pdf>
 Package pdftex.def Info: empirical_results_biased_misleading_prior.pdf  used on
- input line 177.
+ input line 179.
 (pdftex.def)             Requested size: 404.70924pt x 455.2979pt.
  [7 <./empirical_results_depth_misleading_prior.pdf>]
 [8 <./empirical_results_biased_misleading_prior.pdf>]
@@ -529,7 +529,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
 ype1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb>
-Output written on Supplementary_material.pdf (8 pages, 712968 bytes).
+Output written on Supplementary_material.pdf (8 pages, 712972 bytes).
 PDF statistics:
  150 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams

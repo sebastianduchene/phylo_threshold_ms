@@ -1,4 +1,4 @@
-\begin{thebibliography}{63}
+\begin{thebibliography}{65}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -195,6 +195,14 @@ L.~Ferretti, T.~Golubchik, F.~Di~Lauro, M.~Ghafari, J.~Villabona-Arenas, K.~E.
   discretised gamma model of site rate heterogeneity.
 \newblock \emph{bioRxiv}, pages 2024--08, 2024.
 
+\bibitem[Gavryushkina et~al.(2017)Gavryushkina, Heath, Ksepka, Stadler, Welch,
+  and Drummond]{gavryushkina2017bayesian}
+A.~Gavryushkina, T.~A. Heath, D.~T. Ksepka, T.~Stadler, D.~Welch, and A.~J.
+  Drummond.
+\newblock Bayesian total-evidence dating reveals the recent crown radiation of
+  penguins.
+\newblock \emph{Systematic biology}, 66\penalty0 (1):\penalty0 57--73, 2017.
+
 \bibitem[Ghafari et~al.(2022)Ghafari, du~Plessis, Raghwani, Bhatt, Xu, Pybus,
   and Katzourakis]{ghafari2022purifying}
 M.~Ghafari, L.~du~Plessis, J.~Raghwani, S.~Bhatt, B.~Xu, O.~G. Pybus, and
@@ -369,6 +377,13 @@ A.~Rieux and F.~Balloux.
 \newblock Inferences from tip-calibrated phylogenies: a review and a practical
   guide.
 \newblock \emph{Molecular ecology}, 25\penalty0 (9):\penalty0 1911--1924, 2016.
+
+\bibitem[Ronquist et~al.(2016)Ronquist, Lartillot, and
+  Phillips]{ronquist2016closing}
+F.~Ronquist, N.~Lartillot, and M.~J. Phillips.
+\newblock Closing the gap between rocks and clocks using total-evidence dating.
+\newblock \emph{Philosophical Transactions of the Royal Society B: Biological
+  Sciences}, 371\penalty0 (1699):\penalty0 20150136, 2016.
 
 \bibitem[Ross et~al.(2018)Ross, Klunk, Fornaciari, Giuffra, Duch{\^e}ne,
   Duggan, Poinar, Douglas, Eden, Holmes, et~al.]{ross2018paradox}
