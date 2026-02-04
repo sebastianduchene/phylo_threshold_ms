@@ -153,7 +153,14 @@ The Reviewer raises and important point that we attempted to address comprehensi
 
 A major focus of this paper is clarifying the impact of prior distributions on the phylogenetic threshold. I was therefore surprised by the very limited range of prior distributions that were used to analyze the simulated data. These analyses form the heart of this paper, and a much wider range of priors (not simply or two additional sets of priors) should be examined. I understand that these analyses are time consuming, but I think fewer replicates of each simulation scenario, with a wider range of analyses (corresponding to a wider range of priors) for each replicate would be a good trade-off. 
 
+<<<<<<< HEAD
 {\color{blue}
+=======
+\textcolor{blue}{These are our main revisions. In particular, we repeated our analyses with the following setup of priors:}
+
+
+
+>>>>>>> overleaf-2026-02-04-1507
 \textbf{Response:}
 
 We conducted analyses with a range of priors for the mean evolutionary rate, $M$ (the mean rate of the relaxed molecular clock with underlying lognormal distribution, where branch rates $r_i$ are give by $r_i \sim Lognormal(\mu, \sigma)$).
@@ -200,8 +207,55 @@ Our results are consistent with our previous findings, but much more comprehensi
 
 Another major issue I have is that the choice of prior distributions used for comparison seem arbitrary and not very well motivated. For example, consider the "reasonable prior" and "misleading prior" detailed on Page 20. The population size parameter priors are both relatively vague, and the "misleading" prior comfortably includes the true value within its 95\% quantile interval. On the other hand, for the molecular clock mean rate, the "misleading" prior has a 95\% quantile interval that is 1/10-th as wide as that of the "reasonable" prior, and it does not include the true value. What if the "misleading" priors were centered far away from the true values but were as informative/uninformative (meaning, had the same variance) as the "reasonable" priors? Or what if we kept the same "misleading" downward biased prior for the mean rate and paired it with a prior for the population size that is upward biased (as the "misleading" prior is) AND much more informative than the "reasonable" prior? It seems that the authors' motivation for the "misleading" prior was choosing the mean rate to be much lower and the mean population size to be much higher, but it is puzzling why they seem to have ignored the variance of these priors: the "misleading" mean rate prior has much smaller variance than the "reasonable" mean rate prior, while the the "misleading" population size prior has much larger variance than the "reasonable" population size prior. As it stands, the results of the simulation study show: 1) that we have more temporal signal when we increase the sampling window, and 2) the scenario in which the data have the lowest amount of signal and the model employs a relatively strong prior results in the posterior being dominated by the prior. Neither of these findings are new or add much insight. What would be insightful is if the authors could provide some guidance (by exploring a wide range of priors) on how vague the prior must be in the case of each sampling window to ensure that the prior does not override the temporal signal in the data.
 
+<<<<<<< HEAD
 {\color{blue}
 \textbf{Response:} 
+=======
+\textcolor{blue}{Action: We used a new set of nine prior configurations that impose different levels of uncertainty, and for which most of the mass of the distribution is concentrated at, below, or above the true value.
+$$
+\theta \sim Exponential(mean=5,000)
+$$
+, where $\theta$ is the effective population size of the coalescent and which we now keep constant for the analyses, given the points raised by the reviewer. The true value of this parameter is 5,000.
+\newline
+For the evolutionary rate (mean of the lognormal distribution, $M$), we considered nine possible priors. The first three assume that the mean is the correct value ($1.5\times10^{-5}$), but with different degrees of uncertainty (recal that the mean of the Gamma distribution is $shape/rate$):
+\newline
+$$
+M \sim Gamma(shape = 1.5, rate = 1\times10^{5})
+$$
+$$
+M \sim Gamma(shape = 1.5/5, rate = 1/5\times10^{5})
+$$
+$$
+M \sim Gamma(shape = 15, rate = 1\times10^{6})
+$$
+\newline
+The second three configurations assume that the mean is an order of magnitude higher, and with similar degrees of uncertainty:
+\newline
+$$
+M \sim Gamma(shape = 1.5, rate = 1\times10^{4})
+$$
+$$
+M \sim Gamma(shape = 1.5/5, rate = 2,000)
+$$
+$$
+M \sim Gamma(shape = 15, rate = 1\times10^{5})
+$$
+\newline
+The last three configurations impose a mean that is one order of magnitude lower than the truth:
+$$
+M \sim Gamma(shape = 1.5, rate = 1\times10^{6})
+$$
+$$
+M \sim Gamma(shape = 0.3, rate = 2\times10^{5})
+$$
+$$
+M \sim Gamma(shape = 15, rate = 1\times10^{7})
+$$}
+
+
+\textbf{Response:}
+Pending
+>>>>>>> overleaf-2026-02-04-1507
 
 The Reviewer raises an entirely valid point about the uncertainty in the prior distributions. In our revised study we only concentrate on the prior on the evolutionary rate. For the population size of the coalescent, $\theta$, we use a conservative prior of the form $\theta \sim Exponential(mean=5,000)$. This is the `reasonable prior' in our previous version of the manuscript, because its mean is the value used to generate the data. For the prior on the evolutionary rate we considered a range of Gamma distributions that place more weight on values that would over- or underestimate the evolutionary rate and with three different degrees of uncertainty. Please see our response above and fig \ref{figure:Figure1}.
 	
