@@ -8,6 +8,7 @@
 \usepackage[normalem]{ulem}
 
 \usepackage[utf8]{inputenc}
+\usepackage{amssymb}
 
 \usepackage[square,sort,comma,numbers]{natbib}
 \bibliographystyle{abbrvnat}
@@ -112,7 +113,7 @@ Molecular sequence data have become nearly ubiquitous for studying the evolution
 Molecular clock models necessarily involve two key quantities, the evolutionary timescale and the `evolutionary rate', with the latter representing the combination of mutations and substitutions that accrue over time. However, evolutionary times and rates are unidentifiable (\cite{dos2013unbearable}, as reviewed by \citealt{bromham2018bayesian, guindon2020rates}), and therefore cannot be jointly estimated using genetic sequence data alone. To make inferences from genetic sequences, all molecular clock methods require prior assumption about evolutionary times or rates, known as a `molecular clock calibration'. Three main calibrations exist: First, the age of the most recent common ancestor between two samples can be constrained to a given time point or interval (`internal node calibration'). Second, a known estimate of the evolutionary rate can be incorporated (e.g. as a prior in Bayesian frameworks). Third, in cases where molecular sequences are sampled at different points in time (heterochronous sampling), the tips of the phylogeny can be anchored to these time points (`tip calibration'; reviewed by \cite{rieux2016inferences}). The choice of calibration depends on the information available and its reliability \citep{warnock2012exploring, duchene2014impact}. For instance, it would be remiss to ignore evidence about when two lineages shared a common ancestor if the fossil record is compelling \citep{gavryushkina2017bayesian, ronquist2016closing}. Crucially, multiple sources of calibration information can be provided for the molecular clock.
 
 \subsection{Measurably evolving populations}
-Rapidly evolving organisms, notably many viruses and bacteria, have been found to accrue an appreciable number of mutations over the sampling timescale. Influenza viruses, for example, have evolutionary rates of around $6\times10^{-3}$ subs/site/year (substitutions per genomic site per year) \citep{ghafari2022purifying, sanjuan2012molecular}. Assuming a genome size of 13,500 Kb, one would expect to observe one mutation every 4 to 5 days ($\frac{365\ days/year}{13,500\ sites\ \times\ 6\times10^{-3}subs/site/year}\approx4.5\ days/subs$). If genome samples are collected over the course of a few weeks, the sampling times themselves can be used to calibrate the molecular clock and tip calibration is therefore warranted. Data sets for which tip calibration is feasible are considered to have been sampled from a `measurably evolving population' \citep{drummond2003measurably} and to have `temporal signal'. 
+Rapidly evolving organisms, notably many viruses and bacteria, have been found to accrue an appreciable number of mutations over the sampling timescale. Influenza viruses, for example, have evolutionary rates of around $6\times10^{-3}$ subs/site/year (substitutions per genomic site per year) \citep{ghafari2022purifying, sanjuan2012molecular}. Assuming a genome size of 13,500 nucleotides, one would expect to observe one mutation every 4 to 5 days ($\frac{365\ days/year}{13,500\ sites\ \times\ 6\times10^{-3}subs/site/year}\approx4.5\ days/subs$). If genome samples are collected over the course of a few weeks, the sampling times themselves can be used to calibrate the molecular clock and tip calibration is therefore warranted. Data sets for which tip calibration is feasible are considered to have been sampled from a `measurably evolving population' \citep{drummond2003measurably} and to have `temporal signal'. 
 
 Measurably evolving populations are typically characterised either by a sampling period that is long relative to the evolutionary rate, a sufficiently big data set (long molecular sequences or many samples), or both. Traditionally, such characteristics were mainly found in rapidly evolving organisms, typically RNA viruses. Nowadays, advances in sequencing technologies have dramatically expanded the range of organisms from which data sets can be considered to have been sampled from a measurably evolving population. Namely, ancient DNA techniques have effectively expanded the genome sampling window for many organisms \citep{spyrou2019ancient, duchene2020recovery}, and whole genome sequencing has meant that data sets of `slowly' evolving microbes often carry sufficient information for calibrating the molecular clock  \citep{biek2015measurably} even when the sampling period covers only a few decades \citep{menardo2019molecular}.
 
@@ -161,37 +162,148 @@ We conceived a simulation process under which the evolutionary timescale had an 
 
 To investigate the impact of the prior we considered several configurations for the prior on the mean evolutionary rate. In our analyses the molecular clock model is a uncorrelated relaxed molecular clock model with an underlying lognormal distribution, with mean $M$. For this parameter we set nine possible prior Gamma distributions, for which the prior mean could be the value used to generate the data, or one order of magnitude higher or lower. We also included three degrees of uncertainty in this prior (see Fig \ref{figure:Fig2} and table \ref{table:prior_distros}). In this respect, a prior with low uncertainty, and a mean that is much higher or lower than the true should result in more bias than one that has higher uncertainty or is centred on the true value.
 
-Our simulations for which the prior on $M$ was centred on the true value had very high coverage. At least 94 out of 100 simulation replicates across sampling windows included the true value of $M$ within their 95\% credible interval (CI) (table \ref{table:coverage} and fig \ref{figure:Fig2}).
-
-\textcolor{red}{\textbf{Revisions here. Need to explain results and then also explain precision and bias}}
-
-
-produced posterior estimates that included the correct value used to generate the data (i.e. 100\% coverage; fig. \ref{figure:Fig2}). Increasingly wide sampling windows improved the precision of the estimates, while still including the correct value. This result is unsurprising, given our configuration of the prior. Here, the tree prior is a constant-size coalescent for which the prior on the population size (known as $\theta$) is an exponential distribution with mean of 5,000, which matches the value used to generate the data. Similarly, the evolutionary rate had a prior in the form of a Gamma distribution with $shape=1.5$ and $rate=10^{5}$, whose mean is $shape / rate=1.5\times10^{-5}$ and thus also matches the `true' value. Although these priors are centred on the correct values, they are vague, and it is important to note that in all cases, the posterior distributions of the evolutionary rate and tree height were narrower than their priors, meaning that even in the absence of sampling times the sequence data themselves provide some information about these two parameters.
-
+Our simulations for which the prior on $M$ was centred on the true value had very high coverage. At least 94 out of 100 simulation replicates across sampling windows included the true value of $M$ within their 95\% credible interval (CI) (table \ref{table:coverage} and fig \ref{figure:Fig2}). Coverage, however, was associated with the degree to which the prior was biased and the sampling window width. For example, when the prior was highly precise (95\% CI/mean=1.0) but biased downwards, even the simulations with a sampling window of 100$\times$ the phylodynamic threshold (i.e. 2,000 years before present) still had low coverage (only 1 out of 100 simulation replicates included the true value in the 95\% credible interval, table \ref{table:coverage}).
 
 \begin{table*}[h]
-	\caption{Coverage of the mean evolutionary rate, $M$. We consider coverage as whether a posterior distribution contains the value used to generate the data within its 95\% credible interval (CI) and we show the number of simulation replicates out of 100 for which we we found coverage. Data were simulated under trees with five possible sampling widow depths relative to the phylodynamic threshold, where Sw=$\times D$ is for simulations with a sampling window of $D$ times the phylodynamic threshold (20 years in our data; see fig \ref{figure:Fig2}). Each column is a sampling window depth, and the rows denote the configuration of the prior on the mean rate, $M$, for which we show the prior mean and the width of the 95\% CI divided by the mean (larger values imply higher uncertainty). The true value of $M$ is $1.5\times 10^{-5}$ subs/site/year.} 
+	\caption{Coverage of the mean evolutionary rate, $M$. We consider coverage as whether a posterior distribution contains the value used to generate the data within its 95\% credible interval (CI) and we show the number of simulation replicates out of 100 for which we we found coverage. Data were simulated under trees with five possible sampling widow depths relative to the phylodynamic threshold, where Sw=$\times D$ is for simulations with a sampling window of $D$ times the phylodynamic threshold (20 years in our data; see fig \ref{figure:Fig2}). Each column is a sampling window depth, and the rows denote the configuration of the prior on the mean rate, $M$, for which we show the prior mean and the width of the 95\% CI divided by the mean (larger values imply higher uncertainty). The true value of $M$ is $1.5\times 10^{-5}$ subs/site/year. The horizontal lines separate prior configurations with different prior means.} 
 	\begin{center} 
 		\label{table:coverage}
 		\begin{tabular}{ c|c|c|c|c|c }
           	Prior configuration\\(mean, 95\%CI width) &	Sw=0$\times$  & Sw=0.5$\times$ & Sw=1$\times$ & Sw=10$\times$ & Sw=100$\times$ \\			
 			\hline
-			$1.5\times10^{-5}$, 3.04 & 100    & 100  & 100   & 96   & 95\\
-			$1.5\times10^{-5}$, 6.33 & 100    & 98   & 100   & 95   & 94\\
-			$1.5\times10^{-5}$, 1.00 & 100    & 100  & 100   & 94   & 94\\ 
+			$1.5\times10^{-5}$, 3.04 & 100 & 100 & 100 & 96 & 95\\
+			$1.5\times10^{-5}$, 6.33 & 100 & 100 & 99 & 95 & 94\\
+			$1.5\times10^{-5}$, 1.00 & 100 & 100 & 100 & 94 & 94\\
 			\hline
-
-			$1.5\times10^{-4}$, 3.04 & 100    & 97   &  97   & 93   & 93\\
-			$1.5\times10^{-4}$, 6.33 & 100    & 99   & 100   & 94   & 92\\
-			$1.5\times10^{-4}$, 1.00 &   0    & 0    & 0     & 77   & 91\\
+			$1.5\times10^{-4}$, 3.04 & 100 & 97 & 97 & 93 & 93\\
+			$1.5\times10^{-4}$, 6.33 & 100 & 100 & 99 & 94 & 92\\
+			$1.5\times10^{-4}$, 1.00 & 0 & 0 & 0 & 77 & 91\\
 			\hline
-			$1.5\times10^{-6}$, 3.04 &   0    &  0   & 0     & 68   & 91\\
-			$1.5\times10^{-6}$, 6.33 & 100    & 85   & 88    & 95   & 94\\
-			$1.5\times10^{-6}$, 1.00 &   0    & 0    & 0     & 0    & 1\\
+			$1.5\times10^{-6}$, 3.04 & 0 & 0 & 0 & 68 & 91\\
+			$1.5\times10^{-6}$, 6.33 & 100 & 88 & 85 & 95 & 94\\
+			$1.5\times10^{-6}$, 1.00 & 0 & 0 & 0 & 0 & 1\\
+		\end{tabular}
+	\end{center}
+\end{table*}
 
-\end{tabular}
+
+\begin{landscape}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.75, angle=0]{testing_prior_uncertainty_fig.pdf}
+			\caption{Estimates of evolutionary rates, $M$ for simulations of varying sampling window widths. Each column corresponds to a simulation setting: (a) is for ultrametric trees where all samples are collected at the same point in time (sampling window, sw=0), (b) is for the situation where the sampling window is 10 years (half the expected phylodynamic threshold; sampling window, sw=0.5$\times$ ph.t), (c) is where the sampling window is exactly the expected phylodynamic threshold of 20 years (sw=1$\times$ ph.t). Scenarios (d) and (e) denote sampling windows that are 10 and 100 $\times$ the expected phylodynamic threshold (sw=10$\times$ ph.t and sw=100$\times$ ph.t, respectively). The rows denote example phylogenetic trees and prior configurations where the mean is set to the correct value (fist row), an order of magnitude higher (second row), or an order of magnitude lower, last row). The prior is shown with the grey violins and each black bar is the 95\% credible interval of the posterior. The dashed line in each case denotes the correct value.}
+			\label{figure:Fig2}
+		\end{center}
+		%		\centering
+	\end{figure}
+\end{landscape}
+
+The uncertainty in estimates of evolutionary rates was associated with the width of the sampling window, but also with the uncertainty in the prior. In the situation where the sampling window was $1\times$ the phylodynamic threshold or less we consistently found that uncertainty in the prior was commensurate with uncertainty in the posterior. Estimates using a prior uncertainty of 1.00 (the width of the 95\% credible interval is the same as the mean) are narrower than those using a prior of uncertainty of 3.04 or 6.33 (see table \ref{table:precision} and fig \ref{figure:Fig2}). 
+
+When the sampling window was $10\times$ the phylodynamic threshold or more we found a more complicated picture. When the prior had a downward bias (mean=$1.5\times 10^{-6}$ subs/site/year) and a narrow credible interval of 1.00, the posterior estimate was wider than when this prior was less uncertain (table \ref{table:precision} and fig \ref{figure:Fig2}). This finding can be explained because a very wide sampling window provides a large amount of information for inferring the evolutionary rate, which can yield high uncertainty if the prior stands in conflict. Importantly, the widest sampling window in our experiments, of $100\times$ the phylodynamic threshold produced consistently high precision, although it is important to note that when the prior is highly biased downward (mean of $1.5\times 10^{-6}$ subs/site/year and uncertainty of 1.00) coverage is very low, with only one simulation replicate containing the true value used to generate the data within the 95\% credible interval. 
+
+\begin{table*}[h]
+	\caption{Average uncertainty of the mean evolutionary rate, $M$ across 100 simulation replicates in each case. We quantify uncertainty as the posterior width of the 95\% credible interval (CI) divided by the mean. The rows and columns match those from table \ref{table:coverage}, with the posterior for each simulation replicate shown in fig \ref{figure:Fig2}.} 
+	\begin{center} 
+		\label{table:precision}
+		\begin{tabular}{ c|c|c|c|c|c }
+			Prior configuration\\(mean, 95\%CI width) &	Sw=0$\times$  & Sw=0.5$\times$ & Sw=1$\times$ & Sw=10$\times$ & Sw=100$\times$ \\			
+			\hline
+			$1.5\times10^{-5}$, 3.04 & 2.24 & 1.87 & 1.55 & 0.48 & 0.21\\
+			$1.5\times10^{-5}$, 6.33 & 3.06 & 2.01 & 1.72 & 0.48 & 0.22\\
+			$1.5\times10^{-5}$, 1.00 & 0.96 & 0.94 & 0.91 & 0.45 & 0.21\\
+			\hline
+			$1.5\times10^{-4}$, 3.04 & 1.36 & 1.83 & 1.50 & 0.48 & 0.22\\
+			$1.5\times10^{-4}$, 6.33 & 5.39 & 2.11 & 1.70 & 0.49 & 0.21\\
+			$1.5\times10^{-4}$, 1.00 & 1.04 & 0.87 & 0.80 & 0.43 & 0.21\\
+			\hline
+			$1.5\times10^{-6}$, 3.04 & 1.36 & 1.37 & 1.38 & 0.52 & 0.22\\
+			$1.5\times10^{-6}$, 6.33 & 1.99 & 1.90 & 1.72 & 0.48 & 0.22\\
+			$1.5\times10^{-6}$, 1.00 & 0.75 & 0.75 & 0.76 & 0.75 & 0.28\\
+		\end{tabular}
+	\end{center}
+\end{table*}
+
+
+To understand the directionality of posterior evolutionary rate estimates relative to the value used to generate the data, we quantified the amount of bias, as difference between the true evolutionary rate and the posterior mean divided by the true value (i.e. $\frac{true\ value-posterior\ mean}{true\ value}=\frac{1.5\times 10^{-5} - posterior\ mean}{1.5\times 10^{-5}}$). As expected, when the prior was centred in the true value, we observed no or minimum bias, with values ranging from an average of 0.00 and 8.31 (a posterior estimate that was on average 8 times higher than the truth). The most marked average bias was found for our prior with mean $1.5\times 10^{-4} subs/site/year$ and an uncertainty of 1.00, which could be as high as 8.31 (table \ref{table:bias}). Increasingly wide sampling windows had lower amounts of bias. A sampling window of $100\times$ the phylodynamic threshold had a maximum average bias of -0.22 for the prior with downward bias and low uncertainty, with other prior configurations resulting in a bias of at most -0.22.
+
+\begin{table*}[h]
+	\caption{Average bias of the mean evolutionary rate, $M$ across 100 simulation replicates in each case. Bias is calculated as the true evolutionary rate, $1.5\times 10^{-5}$ subs/site/year - posterior mean, divided by the true value.} 
+\begin{center}
+	\label{table:bias}
+	\begin{tabular}{ c|c|c|c|c|c }
+		Prior configuration \\(mean, 95\%CI width) & Sw=0$\times$ & Sw=0.5$\times$ & Sw=1$\times$ & Sw=10$\times$ & Sw=100$\times$ \\
+		\hline
+		$1.5\times10^{-5}$, 3.04 & 0.16 & 0.06 & 0.01 & 0.00 & 0.01\\
+		$1.5\times10^{-5}$, 6.33 & 0.28 & 0.03 & -0.03 & 0.00 & 0.01\\
+		$1.5\times10^{-5}$, 1.00 & 0.00 & -0.01 & -0.01 & 0.00 & 0.01\\
+		\hline
+		$1.5\times10^{-4}$, 3.04 & 4.93 & 0.67 & 0.30 & 0.02 & 0.01\\
+		$1.5\times10^{-4}$, 6.33 & 3.37 & 0.27 & 0.08 & 0.00 & 0.01\\
+		$1.5\times10^{-4}$, 1.00 & 8.31 & 3.22 & 1.84 & 0.17 & 0.04\\
+		\hline
+		$1.5\times10^{-6}$, 3.04 & -0.71 & -0.70 & -0.69 & -0.16 & -0.02\\
+		$1.5\times10^{-6}$, 6.33 & -0.45 & -0.43 & -0.37 & -0.04 & 0.00\\
+		$1.5\times10^{-6}$, 1.00 & -0.86 & -0.86 & -0.86 & -0.75 & -0.22\\
+	\end{tabular}
 \end{center}
 \end{table*}
+
+Overall, these simulations demonstrate that increasingly wide sampling windows result in evolutionary rate estimates that are more accurate, precise, and less biased, than those from data sets with narrow sampling windows. Although increasingly wide sampling windows are more robust to prior misspecification, we emphasise the importance of choosing the prior for this parameter carefully.
+
+For all trees that were non ultrametric (i.e. those with a sampling window width of at least $0.5\times$ the phylodynamic threshold) a downward bias in the evolutionary rate prior appears to be more detrimental than one with an upward bias. In our simulations with sampling windows of width $100\times$ the phylodynamic threshold a highly biased prior (mean=$1.5\times 10^{-6}$ subs/site/year and uncertainty of 1.00) still had very low coverage. In contrast, a prior with a similar upward bias (mean=$1.5\times 10^{-4}$ and uncertainty of 1.00) produced much higher coverage for sampling windows from $10\times$ the phylodynamic threshold  (table \ref{table:coverage}). 
+
+These results indicate that priors with high uncertainty should be advised for practical studies. In our simulations posterior estimates using a prior uncertainty of 6.33 seemed to produce a good trade-off between uncertainty and accuracy. Such a prior means that the 95\% credible interval spans just over six orders of magnitude. For a sampling window of $1\times$ the phylodynamic threshold, the posterior distribution had an average uncertainty of around 1.7, which may be sufficient for biological interpretation of estimates of evolutionary rates and timescales. 
+
+\subsection{Hierarchical priors and the phylodynamic threshold}
+
+{\color{red} \textbf{Here we need to explain the hyper prior, that it is very upwardly biased, but htat it was easy to overcome, even with a sampling window of $0.5\times$ the phylodynamic threshold, with a biasof less than 0.09 (less than 10\%)}}
+
+
+\begin{table*}[h]
+	\caption{Coverage, average uncertainty and average bias of the mean evolutionary rate, $M$ using a hierarchical prior on $M$. Statistics are reported over 100 simulation replicates under each of the five sampling window widths (Sw) relative to the phylodynamic threshold (of 20 years).} 
+	\begin{center}
+		\label{table:hyper}
+		\begin{tabular}{ c|c|c|c|c|c }
+			Statistic & Sw=0$\times$ & Sw=0.5$\times$ & Sw=1$\times$ & Sw=10$\times$ & Sw=100$\times$ \\
+			\hline
+			Coverage    & 100   & 100  & 99   & 96   & 94\\
+			Uncertainty & 57.69 & 2.44 & 1.86 & 0.49 & 0.22\\
+			Bias        & 1.01  & 0.09 & 0.01 & 0.00 & 0.01\\
+		\end{tabular}
+	\end{center}
+\end{table*}
+
+
+
+\begin{landscape}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.75, angle=0]{testing_hierarchical_prior_fig.pdf}
+			\caption{Estimates of evolutionary rates, $M$ for simulations of varying sampling window widths. Each column corresponds to a simulation setting: (a) is for ultrametric trees where all samples are collected at the same point in time (sampling window, sw=0), (b) is for the situation where the sampling window is 10 years (half the expected phylodynamic threshold; sampling window, sw=0.5$\times$ ph.t), (c) is where the sampling window is exactly the expected phylodynamic threshold of 20 years (sw=1$\times$ ph.t). Scenarios (d) and (e) denote sampling windows that are 10 and 100 $\times$ the expected phylodynamic threshold (sw=10$\times$ ph.t and sw=100$\times$ ph.t, respectively). The first row denotes example phylogenetic trees, while the second row is the corresponding posterior estimates. The prior is shown with the grey violins (a hierarchical prior configuration) and each black bar is the 95\% credible interval of the posterior. The dashed line in each case denotes the correct value.}
+			\label{figure:Fig3}
+		\end{center}
+		%		\centering
+	\end{figure}
+\end{landscape}
+
+
+
+
+
+{\color{red}
+	Takeaway points for discussion:
+\begin{itemize}
+	\item That a downward rate prior is likely more problematic because it has no lower bound, whereas the sampling window effectively brackets the rate. The maximum rate is the total genetic divergence divided by the sampling window width. The exception is when the sampling window is very narrow (even 0), where we can observe higher bias when the evol. rate prior is upwardly biased, but this is because the bracketing does not occur. 
+	\item That the phylodynamic threshold does not guarantee correct estimates, because we also depend on the number of samples. It just means that we are guaranteed to have some genetic diversity in the sampling window, but note that its coverage, uncertainty and bias, are often comparable to what we obtain with $0.5\times$ ph.t.
+	\item Also note that in Bayesian analyses, the sampling times are never the only source of calibration. The prior on the evol. rate is an obvious one, but the tree prior is also very informative. In our case, we assume a constant population size coalescent, where the $\theta$ parameter governs the root height (explain here), so it is a prior on time, and therefore on the rate given the sequence divergence ($M\propto \frac{1}{\theta}, M = \frac{D}{T_l}$). The CTMC-rate reference, commonly used on the rate in beastx is thought to be uninformative, but it effectively favours low values. 
+	\item That using priors that are vague seems like a good idea. Here the widest priors, with uncertainty of 6.33 were not overly informative to overcome the signal from the data. 
+\end{itemize}}
+
+
+produced posterior estimates that included the correct value used to generate the data (i.e. 100\% coverage; fig. \ref{figure:Fig2}). Increasingly wide sampling windows improved the precision of the estimates, while still including the correct value. This result is unsurprising, given our configuration of the prior. Here, the tree prior is a constant-size coalescent for which the prior on the population size (known as $\theta$) is an exponential distribution with mean of 5,000, which matches the value used to generate the data. Similarly, the evolutionary rate had a prior in the form of a Gamma distribution with $shape=1.5$ and $rate=10^{5}$, whose mean is $shape / rate=1.5\times10^{-5}$ and thus also matches the `true' value. Although these priors are centred on the correct values, they are vague, and it is important to note that in all cases, the posterior distributions of the evolutionary rate and tree height were narrower than their priors, meaning that even in the absence of sampling times the sequence data themselves provide some information about these two parameters.
+
+
 
 
 
@@ -206,27 +318,7 @@ The posterior distribution was largely contained within the prior, resulting in 
 
 Contrary to the expectation that low temporal signal necessarily results in an underestimation of the evolutionary rate and an overestimation of the tree height \citep{duchene2015performance}, we find that a lack of temporal signal due to narrow sampling windows may simply lend more influence to the prior. To confirm this point we conducted an additional set of simulations where the mean evolutionary rate prior was $Gamma(shape=1.5, rate=10^{4})$ (mean=$1.5\times 10^{-4}$, and 95\% range from $1.1 \times 10^{-5}$ to $4.7 \times 10^{-4}$), and thus should lead to an overestimation of this parameter. As expected, we also found that increasing the width of the sampling window resulted in a prior that was less influential on the posterior and with the latter converging to the value used to generate the data (see Supplementary material). Compared to the previous setting with incorrectly lower prior, a narrower sampling window already resulted in good coverage. This is unsurprising, as higher rate values are less likely when only few mutations are observed in a relatively long sampling window, while lower rate values cannot be excluded.
 
-\begin{landscape}
-	\begin{figure}[H]
-		\begin{center}
-		\includegraphics[scale=0.7, angle=0]{summary_all_estimates_correct_prior.pdf}
-			\caption{Simulations of varying sampling window widths. Each column corresponds to a simulation setting: (a) is for ultrametric trees where all samples are collected at the same point in time, (b) is for the situation where the sampling window is 10 years (half the expected phylodynamic threshold), (c) is where the sampling window is exactly the expected phylodynamic threshold of 20 years. Scenarios (d) and (e) denote sampling windows that are 10 and 100 times the expected phylodynamic threshold. The first row is an example of a simulated phylogenetic tree with branch lengths scaled in units of time. The black circles represent genomic samples. The purple dashed line is the expected phylodynamic threshold and the solid red line is for the oldest sample, such that it represents the sampling window. Note that time here is shown in log$_{10}$ scale. The second row is the estimated evolutionary rate over 100 simulations. The dashed black line is the value used to generate the data (i.e. the ground truth), the dark blue bars are the posterior, and those in orange are the prior. For the prior and the posterior we use solid circles to show the mean estimate and the width of the error bars denotes the 95\% quantile range. The third row is the estimate of the error in tree height (the age of the tree). The error in tree height is calculated as $\frac{true-estimated}{true}$.}
-			\label{figure:Fig2}
-		\end{center}
-		%		\centering
-	\end{figure}
-\end{landscape}
 
-\begin{landscape}
-	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.7, angle=0]{summary_all_estimates_misleading_prior.pdf}
-			\caption{Simulations of varying sampling window widths. The colours, labels and legends match those from fig \ref{figure:Fig2}. However, in these analyses we deliberate use misleading priors on two key parameters, with a exponential distribution with mean 5,000 for the coalescent population size (true value=5,000), and a $Gamma(shape=1.5, rate=10^{6})$ with mean=$1.5\times10^{-6}$ (true value=$1.5\times10^{-5}$) for the mean evolutionary rate.}
-			\label{figure:Fig3}
-		\end{center}
-		%		\centering
-	\end{figure}
-\end{landscape}
 
 
 \subsection{Temporal sampling bias}
@@ -308,7 +400,7 @@ Overall, our study elucidates some of the fundamental intricacies of molecular c
 \subsubsection{Data generation}
 We simulated phylogenetic trees and the evolution of nucleotide sequences to assess the impact of varying the sampling window and temporal sampling bias. We parameterised our simulations to resemble an HBV population evolving over 10,000 years before present, as described by \cite{kocher2021ten}. 
 
-We generated phylogenetic trees under a coalescent process in which the population size has been constant over time using the package ReMaster \citep{vaughan2024remaster}, part of the BEAST 2 (version 2.7) software. We set the population size to 5,000, which results in trees with an average age of about 10,000 time units (years). The number of samples (i.e. tips) drawn from the trees and their ages was defined in ReMaster, according to the simulation scenario described below.
+We generated phylogenetic trees under a coalescent process in which the population size has been constant over time using the package ReMaster \citep{vaughan2024remaster}, part of the BEAST 2 (version 2.7) software. We set the population size to 5,000, which results in trees with an average age of about 10,000 time units (years) (see \citealt{arbisser2018joint}). The number of samples (i.e. tips) drawn from the trees and their ages was defined in ReMaster, according to the simulation scenario described below.
 
 The simulation of sequence data requires trees with branch lengths in units of subs/site, instead of time. For this purpose, we multiplied the branch lengths of the simulated time tree with the rate of evolution, a lognormally distributed random variable with parameters $\mu=log(1.5\times10^{-5}) - \frac{0.25^2}{2}$ and $\sigma=0.25$. This procedure equates to simulating an uncorrelated relaxed molecular clock model with an underlying lognormal distribution \citep{drummond2006relaxed} with mean, $M$ of $1.5\times10^{-5}$ subs/site/year and a standard deviation of 0.25 subs/site/year (following that $\mu=log(M)-\frac{\sigma^2}{2}$). Because we multiply the branch lengths in units of years by a variable in subs/site/year, the resulting trees have branch lengths in units of subs/site, formally known as phylograms, in contrast to chronograms where the branch lengths correspond to time.   We obtained sequence alignments using the R package phangorn (v2.8.1) \citep{schliep2011phangorn}, according to a HKY+$\Gamma_4$ substitution model, with parameters $\kappa=2$, $\alpha=4$, and equal base frequencies. The alignments consisted of 3,200 nucleotides to match the average genome size of HBV.
 
@@ -321,7 +413,13 @@ We conducted two sampling schemes for the trees with 500 tips: the `time-uniform
 \subsubsection{Analysis of simulated data}
 We analysed all data sets in BEAST 2 under a model that matched that used to generate the data: the HKY+$\Gamma_4$ substitution model, a uncorrelated relaxed molecular clock model with an underlying lognormal distribution, and a constant size coalescent tree prior. We used the default prior configuration in the program, except for the mean evolutionary rate ($M$) and the population size of the coalescent ($\theta$). For the population size we assumed $ \theta \sim Exponential(mean=5,000)$, which is centred in the value used to generate the data. The expected height of the root node is roughly 10,000 years (expected time to coalescent=$2\times \theta$ for an ultrametric tree, see \cite{nordborg2019coalescent}). 
 
-For the mean evolutionary rate we considered a range of priors with different degrees of information content (uncertainty) and for which the mean was either the value used to generate the data, or one order of magnitude higher or lower, as shown in table \ref{table:prior_distros}. We also included three degrees of uncertainty in such prior distributions, where the 95\% quantile width was equal to the mean, or around three or six times as wide. In all cases we set the sampling times for calibration. In the case of ultrametric trees, sampling times are set to the present, such that all calibration information is provided by the prior.
+For the mean evolutionary rate we considered a range of priors with different degrees of information content (uncertainty) and for which the mean was either the value used to generate the data, or one order of magnitude higher or lower, as shown in table \ref{table:prior_distros}. We also included three degrees of uncertainty in such prior distributions, where the 95\% quantile width was equal to the mean, or around three or six times as wide. In all cases we set the sampling times for calibration. 
+
+In the case of ultrametric trees, sampling times are set to the present, such that all calibration information is provided by the tree prior. Concretely, let the tree length (sum of al branch lengths $b_i$ in units of time) be $T_l$, the tree height $T_h$, branch rates $r_i$ (the vector of branch rates $\vec{R}\in \{r_1,...r_{num.\ branches}\}$ (see \citealt{douglas2021adaptive}), and $D$ is the total genetic distance in the tree (sum of branch lengths in subs/site).
+
+In Bayesian frameworks branch lengths in genetic distance are the product of rates and times \citep{drummond2006relaxed, douglas2021adaptive}, such that $D=\sum r_i b_i$. The average evolutionary rate (an estimate of parameter $M$), $\bar{r}=\frac{\sum r_i b_i}{\sum b_i}=\frac{D}{T_l}$. However, $T_l$ is a function of $\theta$ through $\mathbb{E}[T_l]=2\theta\times log(n)$, where $n$ is the number of sampled lineages \citep{arbisser2018joint, tavare1997inferring}. Thus, the prior on $\theta$ pertains to the tree height (through $\mathbb{E}[T_h]=2\times \theta (1-\frac{1}{n})\approx 2 \times \theta$ for large $n$), the tree length, and therefor the evolutionary rate. 
+
+
 
 \begin{table*}[h]
 	\caption{Prior configuration for the mean evolutionary rate, $M$ of the lognormal distribution of branch rates. Note that the mean of the $Gamma$ distribution here is $shape/rate$ and that the true value used to generate the data is $1.5\times10^{-5}$ subs/site/year.} 
@@ -345,9 +443,23 @@ For the mean evolutionary rate we considered a range of priors with different de
 	\end{center}	%\vspace{-0.4cm}
 \end{table*}
 
-We used Markov chain Monte Carlo (MCMC) to sample the posterior distribution. We set the chain length to $10^{8}$ steps, sampling every $5\times10^{4}$ steps. We deemed sufficient sampling by verifying that the effective sample size was at least 200, by using the R package CODA (version 0.19) \citep{plummer2006coda}. When this criterion was not met we extended the chain length to $5\times10^{8}$ steps. 
 
-Our simulations with varying sampling window width used two possible prior configurations. To assess their impact we drew MCMC samples from the marginal prior of the evolutionary rate and the height of the root node. That is, the prior for a given parameter integrating over the prior in other parameters, the number of tips, and their heights. We obtained such samples by setting the option \texttt{sampleFromPrior="true"} in the input xml files in BEAST 2, which conducts the MCMC while ignoring the phylogenetic likelihood.
+We used an additional configuration for the prior $M$ using a hierarchical structure as follows:
+$$
+M \sim Gamma(shape, rate)
+$$
+$$
+shape \sim LogNormal(1, 5)
+$$
+$$
+rate \sim LogNormal(1, 5)
+$$
+To set up this model, we simply treat the $shape$ and $rate$ as parameters that are sampled in the model. 
+
+
+We used Markov chain Monte Carlo (MCMC) to sample the posterior distribution for all analyses. We set the chain length to $10^{8}$ steps, sampling every $5\times10^{4}$ steps. We deemed sufficient sampling by verifying that the effective sample size was at least 200, by using the R package CODA (version 0.19) \citep{plummer2006coda}. When this criterion was not met we extended the chain length to $5\times10^{8}$ steps. 
+
+To visualise the prior on $M$ in our model with a hierarchical prior we drew MCMC samples from the marginal prior of $M$. That is, the prior integrating over the hyperprior distributions and all other parameters. We obtained such samples by setting the option \texttt{sampleFromPrior="true"} in the input xml files in BEAST 2, which conducts the MCMC while ignoring the phylogenetic likelihood.
 
 \subsubsection{HBV empirical data}
 We selected a complete genome data set of HBV published by \cite{kocher2021ten}. The complete alignment included 232 genomes of length 3,344 nucleotides, with 1,807 variable sites, and 1,498 site patterns. The sampling times ranged from the present to 10,535 years before present. To investigate the impact of varying the sampling window and on temporal sampling bias we subsampled the data as described in our Results section. We analysed each data set using the same model and prior settings as in our simulations, including the use of the reasonable and misleading prior configuration.

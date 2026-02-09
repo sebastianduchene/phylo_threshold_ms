@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.1.30)  4 FEB 2026 14:25
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.1.30)  9 FEB 2026 15:51
  restricted system commands enabled.
 **main_text_R1.tex
 (./main_text_R1.tex
@@ -115,7 +115,19 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
 
-) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks22
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip50
 \bibsep=\skip51
@@ -159,7 +171,7 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count194
-\output=\toks22
+\output=\toks23
 \linenoprevgraf=\count195
 \linenumbersep=\dimen143
 \linenumberwidth=\dimen144
@@ -259,7 +271,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks23
+\pdftexcmds@toks=\toks24
 )
 (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
@@ -376,14 +388,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip54
 )
-Package hyperref Info: Option `colorlinks' set `false' on input line 33.
+Package hyperref Info: Option `colorlinks' set `false' on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen161
 \ar@mcellbox=\box101
 \extrarowheight=\dimen162
-\NC@list=\toks24
+\NC@list=\toks25
 \extratabsurround=\skip55
 \backup@length=\skip56
 \ar@cellbox=\box102
@@ -398,31 +410,31 @@ File: l3backend-luatex.def 2022-01-12 L3 backend support: PDF output (LuaTeX)
 (./main_text_R1.aux)
 \openout1 = main_text_R1.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
-1.
+2.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -431,12 +443,12 @@ LaTeX Font Info:    ... okay on input line 71.
 \scratchbox=\box104
 \nofMPsegments=\count289
 \nofMParguments=\count290
-\everyMPshowfont=\toks25
+\everyMPshowfont=\toks26
 \MPscratchCnt=\count291
 \MPscratchDim=\dimen164
 \MPnumerator=\count292
 \makeMPintoPDFobject=\count293
-\everyMPtoPDFconversion=\toks26
+\everyMPtoPDFconversion=\toks27
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -446,7 +458,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 71.
+Package hyperref Info: Link coloring OFF on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -459,33 +471,38 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count294
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
 
 (./main_text_R1.out) (./main_text_R1.out)
 \@outlinefile=\write3
 
 \openout3 = main_text_R1.out
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 82.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 82.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--101
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
-<examples_temp_signal_thresholds_meps.pdf, id=273, 794.97pt x 505.89pt>
+<examples_temp_signal_thresholds_meps.pdf, id=277, 794.97pt x 505.89pt>
 File: examples_temp_signal_thresholds_meps.pdf Graphic file (type pdf)
 <use examples_temp_signal_thresholds_meps.pdf>
 Package luatex.def Info: examples_temp_signal_thresholds_meps.pdf  used on inpu
-t line 145.
+t line 146.
 (luatex.def)             Requested size: 437.23485pt x 278.24034pt.
 
 
@@ -494,87 +511,101 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [6<./examples_temp_signal_thresholds_meps.pdf>] [7
 
 
-] [8] [9]
-<summary_all_estimates_correct_prior.pdf, id=337, 794.97pt x 505.89pt>
-File: summary_all_estimates_correct_prior.pdf Graphic file (type pdf)
-<use summary_all_estimates_correct_prior.pdf>
-Package luatex.def Info: summary_all_estimates_correct_prior.pdf  used on input
- line 211.
-(luatex.def)             Requested size: 556.4752pt x 354.12057pt.
- [10
+] [8]
+<testing_prior_uncertainty_fig.pdf, id=331, 650.43pt x 505.89pt>
+File: testing_prior_uncertainty_fig.pdf Graphic file (type pdf)
+<use testing_prior_uncertainty_fig.pdf>
+Package luatex.def Info: testing_prior_uncertainty_fig.pdf  used on input line 
+193.
+(luatex.def)             Requested size: 487.8213pt x 379.41655pt.
+ [9
 
-<./summary_all_estimates_correct_prior.pdf>]
-<summary_all_estimates_misleading_prior.pdf, id=347, 794.97pt x 505.89pt>
-File: summary_all_estimates_misleading_prior.pdf Graphic file (type pdf)
-<use summary_all_estimates_misleading_prior.pdf>
-Package luatex.def Info: summary_all_estimates_misleading_prior.pdf  used on in
-put line 222.
-(luatex.def)             Requested size: 556.4752pt x 354.12057pt.
- [11
+<./testing_prior_uncertainty_fig.pdf>]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./summary_all_estimates_misleading_prior.pdf>]
-<sampling_bias_summary_trees_rates.pdf, id=367, 794.97pt x 1011.78pt>
+[10
+
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12]
+<testing_hierarchical_prior_fig.pdf, id=373, 650.43pt x 252.945pt>
+File: testing_hierarchical_prior_fig.pdf Graphic file (type pdf)
+<use testing_hierarchical_prior_fig.pdf>
+Package luatex.def Info: testing_hierarchical_prior_fig.pdf  used on input line
+ 282.
+(luatex.def)             Requested size: 487.8213pt x 189.70828pt.
+ [13
+
+<./testing_hierarchical_prior_fig.pdf>] [14
+
+] [15]
+<sampling_bias_summary_trees_rates.pdf, id=413, 794.97pt x 1011.78pt>
 File: sampling_bias_summary_trees_rates.pdf Graphic file (type pdf)
 <use sampling_bias_summary_trees_rates.pdf>
 Package luatex.def Info: sampling_bias_summary_trees_rates.pdf  used on input l
-ine 243.
+ine 336.
 (luatex.def)             Requested size: 397.48402pt x 505.88876pt.
-[12
-
-]
-<sampling_bias_summary_rates.pdf, id=376, 867.24pt x 505.89pt>
+ [16]
+<sampling_bias_summary_rates.pdf, id=419, 867.24pt x 505.89pt>
 File: sampling_bias_summary_rates.pdf Graphic file (type pdf)
 <use sampling_bias_summary_rates.pdf>
-Package luatex.def Info: sampling_bias_summary_rates.pdf  used on input line 25
-4.
+Package luatex.def Info: sampling_bias_summary_rates.pdf  used on input line 34
+7.
 (luatex.def)             Requested size: 433.61894pt x 252.94437pt.
- [13<./sampling_bias_summary_trees_rates.pdf>] [14<./sampling_bias_summary_rates
+ [17<./sampling_bias_summary_trees_rates.pdf>] [18<./sampling_bias_summary_rates
 .pdf>]
-<empirical_results_depth.pdf, id=418, 578.16pt x 650.43pt>
+<empirical_results_depth.pdf, id=462, 578.16pt x 650.43pt>
 File: empirical_results_depth.pdf Graphic file (type pdf)
 <use empirical_results_depth.pdf>
-Package luatex.def Info: empirical_results_depth.pdf  used on input line 268.
+Package luatex.def Info: empirical_results_depth.pdf  used on input line 361.
 (luatex.def)             Requested size: 404.70924pt x 455.2979pt.
- [15<./empirical_results_depth.pdf>] [16] [17]
-<empirical_results_biased.pdf, id=502, 578.16pt x 650.43pt>
+
+[19<./empirical_results_depth.pdf>] [20] [21]
+<empirical_results_biased.pdf, id=546, 578.16pt x 650.43pt>
 File: empirical_results_biased.pdf Graphic file (type pdf)
 <use empirical_results_biased.pdf>
-Package luatex.def Info: empirical_results_biased.pdf  used on input line 298.
+Package luatex.def Info: empirical_results_biased.pdf  used on input line 391.
 (luatex.def)             Requested size: 404.70924pt x 455.2979pt.
- [18<./empirical_results_biased.pdf>] [19] [20] (./main_text_R1.bbl [21] [22] [
-23] [24] [25])
-[26] (./main_text_R1.aux)
+ [22<./empirical_results_biased.pdf>] [23] [24] (./main_text_R1.bbl [25] [26] [
+27] [28] [29]) [30]
+(./main_text_R1.aux)
 Package rerunfilecheck Info: File `main_text_R1.out' has not changed.
-(rerunfilecheck)             Checksum: D0A8E0FC2615A537CEC49A5C2638925C;3718.
+(rerunfilecheck)             Checksum: F4A55D42A06C78CA7D8D7AF0CDE9B5DC;4041.
 )
 
 Here is how much of LuaTeX's memory you used:
- 10795 strings out of 477805
+ 11370 strings out of 477805
  125011,552014 words of node,token memory allocated
- 496 words of node memory still in use:
-   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 9 attribute, 56 glue_spec,
- 9 attribute_list, 1 write, 5 pdf_action nodes
-   avail lists: 2:1005,3:469,4:255,5:771,6:62,7:12399,8:81,9:547,10:27,11:1128
- 30937 multiletter control sequences out of 65536+600000
- 37 fonts using 2832695 bytes
- 60i,10n,59p,1765b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 528 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 14 attribute, 56 glue_spec
+, 14 attribute_list, 1 write, 7 pdf_action nodes
+   avail lists: 2:1016,3:465,4:255,5:772,6:60,7:12399,8:81,9:719,10:27,11:1128
+ 31469 multiletter control sequences out of 65536+600000
+ 45 fonts using 3327239 bytes
+ 60i,10n,59p,1765b,579s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texm
 f/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf/fonts/opentype
 /public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman
 10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></u
 sr/share/texmf/fonts/opentype/public/lm/lmsans8-regular.otf></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main_text_R1.pdf (26 pages, 821944 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main_text_R1.pdf (30 pages, 863079 bytes).
 
-PDF statistics: 643 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
- 123 named destinations out of 1000 (max. 131072)
- 153 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 722 PDF objects out of 1000 (max. 8388607)
+ 636 compressed objects within 7 object streams
+ 134 named destinations out of 1000 (max. 131072)
+ 161 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{67}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,6 +14,13 @@ A.~Andrades~Valtue{\~n}a, G.~U. Neumann, M.~A. Spyrou, L.~Musralina, F.~Aron,
   diversity, and ecology of plague.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 119\penalty0
   (17):\penalty0 e2116722119, 2022.
+
+\bibitem[Arbisser et~al.(2018)Arbisser, Jewett, and
+  Rosenberg]{arbisser2018joint}
+I.~M. Arbisser, E.~M. Jewett, and N.~A. Rosenberg.
+\newblock On the joint distribution of tree height and tree length under the
+  coalescent.
+\newblock \emph{Theoretical population biology}, 122:\penalty0 46--56, 2018.
 
 \bibitem[Baele and Lemey(2014)]{baele2014bayesian}
 G.~Baele and P.~Lemey.
@@ -85,6 +92,14 @@ M.~Dos~Reis and Z.~Yang.
 \newblock The unbearable uncertainty of bayesian divergence time estimation.
 \newblock \emph{Journal of Systematics and Evolution}, 51\penalty0
   (1):\penalty0 30--43, 2013.
+
+\bibitem[Douglas et~al.(2021)Douglas, Zhang, and
+  Bouckaert]{douglas2021adaptive}
+J.~Douglas, R.~Zhang, and R.~Bouckaert.
+\newblock Adaptive dating and fast proposals: Revisiting the phylogenetic
+  relaxed clock model.
+\newblock \emph{PLoS computational biology}, 17\penalty0 (2):\penalty0
+  e1008322, 2021.
 
 \bibitem[Drummond et~al.(2003{\natexlab{a}})Drummond, Pybus, and
   Rambaut]{drummond2003inference}
@@ -435,6 +450,12 @@ M.~A. Spyrou, M.~Keller, R.~I. Tukhbatova, C.~L. Scheib, E.~A. Nelson,
   analysis of historical yersinia pestis genomes.
 \newblock \emph{Nature communications}, 10\penalty0 (1):\penalty0 4470,
   2019{\natexlab{b}}.
+
+\bibitem[Tavar{\'e} et~al.(1997)Tavar{\'e}, Balding, Griffiths, and
+  Donnelly]{tavare1997inferring}
+S.~Tavar{\'e}, D.~J. Balding, R.~C. Griffiths, and P.~Donnelly.
+\newblock Inferring coalescence times from dna sequence data.
+\newblock \emph{Genetics}, 145\penalty0 (2):\penalty0 505--518, 1997.
 
 \bibitem[Tay et~al.(2024)Tay, Kocher, and Duchene]{tay2024assessing}
 J.~H. Tay, A.~Kocher, and S.~Duchene.
