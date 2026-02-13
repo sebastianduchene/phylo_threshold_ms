@@ -1,4 +1,4 @@
-\begin{thebibliography}{70}
+\begin{thebibliography}{73}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -29,6 +29,14 @@ G.~Baele and P.~Lemey.
 \newblock In M.~Chen, K.~L, and L.~PO, editors, \emph{Bayesian phylogenetics,
   methods, algorithms, and applications}, chapter~4, pages 59--93. CPC Press,
   Boca Raton (Florida), 2014.
+
+\bibitem[Baele et~al.(2025)Baele, Ji, Hassler, McCrone, Shao, Zhang, Holbrook,
+  Lemey, Drummond, Rambaut, et~al.]{baele2025beast}
+G.~Baele, X.~Ji, G.~W. Hassler, J.~T. McCrone, Y.~Shao, Z.~Zhang, A.~J.
+  Holbrook, P.~Lemey, A.~J. Drummond, A.~Rambaut, et~al.
+\newblock Beast x for bayesian phylogenetic, phylogeographic and phylodynamic
+  inference.
+\newblock \emph{Nature Methods}, 22\penalty0 (8):\penalty0 1653--1656, 2025.
 
 \bibitem[Biek et~al.(2015)Biek, Pybus, Lloyd-Smith, and
   Didelot]{biek2015measurably}
@@ -210,6 +218,12 @@ L.~A. Featherstone, A.~Rambaut, S.~Duchene, and W.~Wirth.
   root-to-tip regression.
 \newblock \emph{Systematic biology}, 73\penalty0 (3):\penalty0 623--628, 2024.
 
+\bibitem[Ferreira and Suchard(2008)]{ferreira2008bayesian}
+M.~A. Ferreira and M.~A. Suchard.
+\newblock Bayesian analysis of elapsed times in continuous-time markov chains.
+\newblock \emph{Canadian Journal of Statistics}, 36\penalty0 (3):\penalty0
+  355--368, 2008.
+
 \bibitem[Ferretti et~al.(2024)Ferretti, Golubchik, Di~Lauro, Ghafari,
   Villabona-Arenas, Atkins, Fraser, and Hall]{ferretti2024biased}
 L.~Ferretti, T.~Golubchik, F.~Di~Lauro, M.~Ghafari, J.~Villabona-Arenas, K.~E.
@@ -252,6 +266,14 @@ S.~Guindon.
 \newblock Rates and rocks: strengths and weaknesses of molecular dating
   methods.
 \newblock \emph{Frontiers in Genetics}, 11:\penalty0 526, 2020.
+
+\bibitem[Heath et~al.(2014)Heath, Huelsenbeck, and
+  Stadler]{heath2014fossilized}
+T.~A. Heath, J.~P. Huelsenbeck, and T.~Stadler.
+\newblock The fossilized birth--death process for coherent calibration of
+  divergence-time estimates.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 111\penalty0
+  (29):\penalty0 E2957--E2966, 2014.
 
 \bibitem[Ho(2014)]{ho2014changing}
 S.~Y. Ho.
