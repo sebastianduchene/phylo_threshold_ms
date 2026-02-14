@@ -236,4 +236,7 @@ colnames(summary_table) <- c("Coverage", "Bias", "Uncertainty")
 rownames(summary_table) <- c("Complete data (n=500)", "Time-uniform sampling (n=100)", "Time-biased sampling (n=100)")
 summary_table <- t(summary_table)
 
+#print table in latex style
+library(xtable)
+print(xtable(summary_table, digits = 3), include.rownames = T, include.colnames = T)
 

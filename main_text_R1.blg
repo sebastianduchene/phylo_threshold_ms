@@ -2,66 +2,95 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main_text_R1.aux
 The style file: abbrvnat.bst
-Database file #1: References.bib
-Repeated entry---line 362 of file References.bib
- : @article{wang2014priors
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 515 of file References.bib
- : @article{muhlemann2018ancient
- :                              ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 550 of file References.bib
- : @article{paraskevis2013dating
- :                              ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 705 of file References.bib
- : @article{tay2024assessing
- :                          ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 972 of file References.bib
- : @article{ferreira2008bayesian
- :                              ,
-I'm skipping whatever remains of this entry
-You've used 73 entries,
+I found no \bibdata command---while reading file main_text_R1.aux
+Warning--I didn't find a database entry for "zuckerkandl1965evolutionary"
+Warning--I didn't find a database entry for "ho2014changing"
+Warning--I didn't find a database entry for "ho2014molecular"
+Warning--I didn't find a database entry for "guindon2020rates"
+Warning--I didn't find a database entry for "dos2013unbearable"
+Warning--I didn't find a database entry for "bromham2018bayesian"
+Warning--I didn't find a database entry for "rieux2016inferences"
+Warning--I didn't find a database entry for "warnock2012exploring"
+Warning--I didn't find a database entry for "duchene2014impact"
+Warning--I didn't find a database entry for "gavryushkina2017bayesian"
+Warning--I didn't find a database entry for "ronquist2016closing"
+Warning--I didn't find a database entry for "ghafari2022purifying"
+Warning--I didn't find a database entry for "sanjuan2012molecular"
+Warning--I didn't find a database entry for "drummond2003measurably"
+Warning--I didn't find a database entry for "spyrou2019ancient"
+Warning--I didn't find a database entry for "duchene2020recovery"
+Warning--I didn't find a database entry for "biek2015measurably"
+Warning--I didn't find a database entry for "menardo2019molecular"
+Warning--I didn't find a database entry for "duchene2020temporal"
+Warning--I didn't find a database entry for "duchene2015performance"
+Warning--I didn't find a database entry for "tay2024assessing"
+Warning--I didn't find a database entry for "buonagurio1986evolution"
+Warning--I didn't find a database entry for "gojobori1990molecular"
+Warning--I didn't find a database entry for "drummond2003inference"
+Warning--I didn't find a database entry for "ramsden2009hantavirus"
+Warning--I didn't find a database entry for "duchene2018inferring"
+Warning--I didn't find a database entry for "trovao2015host"
+Warning--I didn't find a database entry for "duchene2020bayesian"
+Warning--I didn't find a database entry for "boni2020evolutionary"
+Warning--I didn't find a database entry for "duchene2016genome"
+Warning--I didn't find a database entry for "eldholm2015four"
+Warning--I didn't find a database entry for "kuhnert2018tuberculosis"
+Warning--I didn't find a database entry for "merker2022transcontinental"
+Warning--I didn't find a database entry for "eaton2023plagued"
+Warning--I didn't find a database entry for "andrades2022stone"
+Warning--I didn't find a database entry for "devault2014second"
+Warning--I didn't find a database entry for "rambaut2016exploring"
+Warning--I didn't find a database entry for "gharbi2024clock"
+Warning--I didn't find a database entry for "moller2018impact"
+Warning--I didn't find a database entry for "mendes2025validate"
+Warning--I didn't find a database entry for "kocher2021ten"
+Warning--I didn't find a database entry for "paraskevis2013dating"
+Warning--I didn't find a database entry for "ross2018paradox"
+Warning--I didn't find a database entry for "kahila2012tracing"
+Warning--I didn't find a database entry for "muhlemann2018ancient"
+Warning--I didn't find a database entry for "bouckaert2019beast"
+Warning--I didn't find a database entry for "heath2014fossilized"
+Warning--I didn't find a database entry for "spyrou2019phylogeography"
+Warning--I didn't find a database entry for "murray2016effect"
+You've used 0 entries,
             2773 wiz_defined-function locations,
-            1039 strings with 21181 characters,
-and the built_in function-call counts, 44361 in all, are:
-= -- 3751
-> -- 3508
-< -- 22
-+ -- 1181
-- -- 1104
-* -- 4234
-:= -- 6981
-add.period$ -- 222
-call.type$ -- 73
-change.case$ -- 574
-chr.to.int$ -- 69
-cite$ -- 146
-duplicate$ -- 1579
-empty$ -- 3012
-format.name$ -- 1193
-if$ -- 9005
-int.to.chr$ -- 5
+            640 strings with 5473 characters,
+and the built_in function-call counts, 33 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 10
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 74
-newline$ -- 373
-num.names$ -- 294
-pop$ -- 1036
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 502
+purify$ -- 0
 quote$ -- 0
-skip$ -- 1309
+skip$ -- 1
 stack$ -- 0
-substring$ -- 1872
-swap$ -- 129
-text.length$ -- 7
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 798
+type$ -- 0
 warning$ -- 0
-while$ -- 347
+while$ -- 0
 width$ -- 0
-write$ -- 959
-(There were 5 error messages)
+write$ -- 7
+(There was 1 error message)
