@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.1.30)  14 FEB 2026 11:37
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.1.30)  16 FEB 2026 10:45
  restricted system commands enabled.
 **main_text_R1.tex
 (./main_text_R1.tex
@@ -495,215 +495,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--102
 
  []
 
-
-Package natbib Warning: Citation `zuckerkandl1965evolutionary' on page 1 undefi
-ned on input line 111.
-
-
-Package natbib Warning: Citation `ho2014changing' on page 1 undefined on input 
-line 111.
-
-
-Package natbib Warning: Citation `ho2014molecular' on page 1 undefined on input
- line 111.
-
-
-Package natbib Warning: Citation `guindon2020rates' on page 1 undefined on inpu
-t line 111.
-
-
-Package natbib Warning: Citation `dos2013unbearable' on page 1 undefined on inp
-ut line 113.
-
-
-Package natbib Warning: Citation `bromham2018bayesian' on page 1 undefined on i
-nput line 113.
-
-
-Package natbib Warning: Citation `guindon2020rates' on page 1 undefined on inpu
-t line 113.
-
-
-Package natbib Warning: Citation `rieux2016inferences' on page 1 undefined on i
-nput line 113.
-
-
-Package natbib Warning: Citation `warnock2012exploring' on page 1 undefined on 
-input line 113.
-
-
-Package natbib Warning: Citation `duchene2014impact' on page 1 undefined on inp
-ut line 113.
-
-
-Package natbib Warning: Citation `gavryushkina2017bayesian' on page 1 undefined
- on input line 113.
-
-
-Package natbib Warning: Citation `ronquist2016closing' on page 1 undefined on i
-nput line 113.
-
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package natbib Warning: Citation `ghafari2022purifying' on page 2 undefined on 
-input line 116.
-
-
-Package natbib Warning: Citation `sanjuan2012molecular' on page 2 undefined on 
-input line 116.
-
-
-Package natbib Warning: Citation `drummond2003measurably' on page 2 undefined o
-n input line 116.
-
-
-Overfull \hbox (14.23975pt too wide) in paragraph at lines 116--117
-\TU/lmr/m/n/10.95 13,500 nu-cleotides, one would ex-pect to ob-serve one mu-ta-t
-ion ev-ery 4 to 5 days ($[] \OMS/cmsy/m/n/10.95 
- []
-
-
-Package natbib Warning: Citation `spyrou2019ancient' on page 2 undefined on inp
-ut line 118.
-
-
-Package natbib Warning: Citation `duchene2020recovery' on page 2 undefined on i
-nput line 118.
-
-
-Package natbib Warning: Citation `biek2015measurably' on page 2 undefined on in
-put line 118.
-
-
-Package natbib Warning: Citation `menardo2019molecular' on page 2 undefined on 
-input line 118.
-
-
-Package natbib Warning: Citation `duchene2020temporal' on page 2 undefined on i
-nput line 121.
-
-[2]
-
-Package natbib Warning: Citation `duchene2015performance' on page 3 undefined o
-n input line 126.
-
-
-Package natbib Warning: Citation `rieux2016inferences' on page 3 undefined on i
-nput line 126.
-
-
-Package natbib Warning: Citation `tay2024assessing' on page 3 undefined on inpu
-t line 128.
-
-
-Package natbib Warning: Citation `buonagurio1986evolution' on page 3 undefined 
-on input line 130.
-
-
-Package natbib Warning: Citation `gojobori1990molecular' on page 3 undefined on
- input line 130.
-
-
-Package natbib Warning: Citation `drummond2003inference' on page 3 undefined on
- input line 130.
-
-
-Package natbib Warning: Citation `ramsden2009hantavirus' on page 3 undefined on
- input line 130.
-
-
-Package natbib Warning: Citation `duchene2015performance' on page 3 undefined o
-n input line 130.
-
-
-Package natbib Warning: Citation `duchene2018inferring' on page 3 undefined on 
-input line 130.
-
-
-Package natbib Warning: Citation `trovao2015host' on page 3 undefined on input 
-line 130.
-
-
-Package natbib Warning: Citation `duchene2020bayesian' on page 3 undefined on i
-nput line 130.
-
-
-Package natbib Warning: Citation `rieux2016inferences' on page 3 undefined on i
-nput line 130.
-
-
-Package natbib Warning: Citation `duchene2020bayesian' on page 3 undefined on i
-nput line 130.
-
-
-Package natbib Warning: Citation `boni2020evolutionary' on page 3 undefined on 
-input line 133.
-
-
-Package natbib Warning: Citation `duchene2020temporal' on page 3 undefined on i
-nput line 133.
-
-
-Package natbib Warning: Citation `ghafari2022purifying' on page 3 undefined on 
-input line 133.
-
-[3]
-
-Package natbib Warning: Citation `duchene2016genome' on page 4 undefined on inp
-ut line 135.
-
-
-Package natbib Warning: Citation `eldholm2015four' on page 4 undefined on input
- line 135.
-
-
-Package natbib Warning: Citation `menardo2019molecular' on page 4 undefined on 
-input line 135.
-
-
-Package natbib Warning: Citation `kuhnert2018tuberculosis' on page 4 undefined 
-on input line 135.
-
-
-Package natbib Warning: Citation `merker2022transcontinental' on page 4 undefin
-ed on input line 135.
-
-
-Package natbib Warning: Citation `eaton2023plagued' on page 4 undefined on inpu
-t line 137.
-
-
-Package natbib Warning: Citation `andrades2022stone' on page 4 undefined on inp
-ut line 137.
-
-
-Package natbib Warning: Citation `devault2014second' on page 4 undefined on inp
-ut line 139.
-
-
-Package natbib Warning: Citation `rambaut2016exploring' on page 4 undefined on 
-input line 139.
-
-
-Package natbib Warning: Citation `gharbi2024clock' on page 4 undefined on input
- line 141.
-
-
-Package natbib Warning: Citation `tay2024assessing' on page 4 undefined on inpu
-t line 141.
-
-
-Package natbib Warning: Citation `moller2018impact' on page 4 undefined on inpu
-t line 141.
-
-
-Package natbib Warning: Citation `mendes2025validate' on page 4 undefined on in
-put line 141.
-
-[4] [5]
-<examples_temp_signal_thresholds_meps.pdf, id=79, 794.97pt x 505.89pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
+<examples_temp_signal_thresholds_meps.pdf, id=277, 794.97pt x 505.89pt>
 File: examples_temp_signal_thresholds_meps.pdf Graphic file (type pdf)
 <use examples_temp_signal_thresholds_meps.pdf>
 Package luatex.def Info: examples_temp_signal_thresholds_meps.pdf  used on inpu
@@ -713,112 +508,159 @@ t line 146.
 
 <./examples_temp_signal_thresholds_meps.pdf>]
 
-Package natbib Warning: Citation `kocher2021ten' on page 7 undefined on input l
-ine 156.
-
-
-Package natbib Warning: Citation `paraskevis2013dating' on page 7 undefined on 
-input line 156.
-
-
-Package natbib Warning: Citation `ross2018paradox' on page 7 undefined on input
- line 156.
-
-
-Package natbib Warning: Citation `kahila2012tracing' on page 7 undefined on inp
-ut line 156.
-
-
-Package natbib Warning: Citation `kocher2021ten' on page 7 undefined on input l
-ine 159.
-
-
-Package natbib Warning: Citation `kocher2021ten' on page 7 undefined on input l
-ine 159.
-
-
-Package natbib Warning: Citation `muhlemann2018ancient' on page 7 undefined on 
-input line 159.
-
-
-Package natbib Warning: Citation `bouckaert2019beast' on page 7 undefined on in
-put line 161.
-
-
 LaTeX Warning: Reference `table:prior_distros' on page 7 undefined on input lin
 e 163.
+
+
+LaTeX Warning: Reference `table:coverage' on page 7 undefined on input line 165
+.
+
+
+LaTeX Warning: Reference `table:coverage' on page 7 undefined on input line 165
+.
 
 [7
 
 ] [8]
-<testing_prior_uncertainty_fig.pdf, id=108, 650.43pt x 505.89pt>
+<testing_prior_uncertainty_fig.pdf, id=326, 650.43pt x 505.89pt>
 File: testing_prior_uncertainty_fig.pdf Graphic file (type pdf)
 <use testing_prior_uncertainty_fig.pdf>
 Package luatex.def Info: testing_prior_uncertainty_fig.pdf  used on input line 
 193.
 (luatex.def)             Requested size: 487.8213pt x 379.41655pt.
+ [9
+
+<./testing_prior_uncertainty_fig.pdf>]
+
+LaTeX Warning: Reference `table:precision' on page 10 undefined on input line 2
+01.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9<./testing_prior_uncertainty_fig.pdf>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `table:precision' on page 10 undefined on input line 2
+03.
 
 
-Package natbib Warning: Citation `duchene2015performance' on page 10 undefined 
-on input line 252.
+LaTeX Warning: Reference `table:coverage' on page 10 undefined on input line 20
+6.
+
+
+LaTeX Warning: Reference `table:coverage' on page 10 undefined on input line 20
+6.
+
+
+LaTeX Warning: Reference `table:bias' on page 10 undefined on input line 228.
+
+
+LaTeX Warning: Reference `table:coverage' on page 10 undefined on input line 25
+4.
 
 [10
 
-
 ]
 
-Package natbib Warning: Citation `heath2014fossilized' on page 11 undefined on 
-input line 259.
+LaTeX Warning: Reference `table:coverage' on page 11 undefined on input line 26
+1.
 
-[11] [12]
-<testing_hierarchical_prior_fig.pdf, id=158, 650.43pt x 252.945pt>
+
+LaTeX Warning: Reference `table:precision' on page 11 undefined on input line 2
+61.
+
+
+LaTeX Warning: Reference `table:bias' on page 11 undefined on input line 261.
+
+
+LaTeX Warning: Reference `table:hyper' on page 11 undefined on input line 261.
+
+[11]
+<testing_hierarchical_prior_fig.pdf, id=362, 650.43pt x 252.945pt>
 File: testing_hierarchical_prior_fig.pdf Graphic file (type pdf)
 <use testing_hierarchical_prior_fig.pdf>
 Package luatex.def Info: testing_hierarchical_prior_fig.pdf  used on input line
  282.
 (luatex.def)             Requested size: 487.8213pt x 189.70828pt.
- [13
+ [12
 
 <./testing_hierarchical_prior_fig.pdf>]
 
-LaTeX Warning: Reference `figure:Fig4' on page 14 undefined on input line 291.
-
-
-Package natbib Warning: Citation `spyrou2019phylogeography' on page 14 undefine
-d on input line 291.
-
-
-LaTeX Warning: Reference `table:sampling_bias' on page 14 undefined on input li
+LaTeX Warning: Reference `table:sampling_bias' on page 13 undefined on input li
 ne 293.
-
-
-Package natbib Warning: Citation `murray2016effect' on page 14 undefined on inp
-ut line 293.
-
-
-LaTeX Warning: Reference `figure:Fig4' on page 14 undefined on input line 296.
-
-
-LaTeX Warning: Reference `figure:Fig4' on page 14 undefined on input line 296.
 
 
 Overfull \hbox (6.56027pt too wide) in paragraph at lines 299--306
  [] 
  []
 
+<sampling_bias_summary_trees_rates.pdf, id=385, 794.97pt x 1011.78pt>
+File: sampling_bias_summary_trees_rates.pdf Graphic file (type pdf)
+<use sampling_bias_summary_trees_rates.pdf>
+Package luatex.def Info: sampling_bias_summary_trees_rates.pdf  used on input l
+ine 314.
+(luatex.def)             Requested size: 397.48402pt x 505.88876pt.
+[13
 
-LaTeX Warning: Reference `figure:Fig5' on page 14 undefined on input line 309.
+]
+<sampling_bias_summary_rates.pdf, id=395, 867.24pt x 505.89pt>
+File: sampling_bias_summary_rates.pdf Graphic file (type pdf)
+<use sampling_bias_summary_rates.pdf>
+Package luatex.def Info: sampling_bias_summary_rates.pdf  used on input line 32
+4.
+(luatex.def)             Requested size: 433.61894pt x 252.94437pt.
+ [14<./sampling_bias_summary_trees_rates.pdf>] [15<./sampling_bias_summary_rates
+.pdf>]
+<empirical_results_depth.pdf, id=438, 578.16pt x 650.43pt>
+File: empirical_results_depth.pdf Graphic file (type pdf)
+<use empirical_results_depth.pdf>
+Package luatex.def Info: empirical_results_depth.pdf  used on input line 338.
+(luatex.def)             Requested size: 404.70924pt x 455.2979pt.
+ [16<./empirical_results_depth.pdf>] [17] [18]
+<empirical_results_biased.pdf, id=526, 578.16pt x 650.43pt>
+File: empirical_results_biased.pdf Graphic file (type pdf)
+<use empirical_results_biased.pdf>
+Package luatex.def Info: empirical_results_biased.pdf  used on input line 371.
+(luatex.def)             Requested size: 404.70924pt x 455.2979pt.
+ [19] [20<./empirical_results_biased.pdf>] [21]
 
+LaTeX Warning: Reference `table:prior_distros' on page 22 undefined on input li
+ne 396.
 
-LaTeX Warning: Reference `figure:Fig5' on page 14 undefined on input line 309.
+[22] (./main_text_R1.bbl [23] [24] [25] [26] [27]) [28] (./main_text_R1.aux)
 
-! error:  (file sampling_bias_summary_trees_rates.pdf) (pdf inclusion): reading 
-image failed
-!  ==> Fatal error occurred, no output PDF file produced!
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `main_text_R1.out' has not changed.
+(rerunfilecheck)             Checksum: F4A55D42A06C78CA7D8D7AF0CDE9B5DC;4041.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 11377 strings out of 477805
+ 125011,552014 words of node,token memory allocated
+ 518 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 13 attribute, 56 glue_spec
+, 13 attribute_list, 1 write, 6 pdf_action nodes
+   avail lists: 2:977,3:474,4:255,5:771,6:61,7:12399,8:95,9:547,10:27,11:1128
+ 31480 multiletter control sequences out of 65536+600000
+ 45 fonts using 3327239 bytes
+ 60i,10n,59p,1766b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texm
+f/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf/fonts/opentype
+/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman
+10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></u
+sr/share/texmf/fonts/opentype/public/lm/lmsans8-regular.otf></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main_text_R1.pdf (28 pages, 850739 bytes).
+
+PDF statistics: 708 PDF objects out of 1000 (max. 8388607)
+ 621 compressed objects within 7 object streams
+ 130 named destinations out of 1000 (max. 131072)
+ 161 words of extra memory for PDF output out of 10000 (max. 100000000)
+

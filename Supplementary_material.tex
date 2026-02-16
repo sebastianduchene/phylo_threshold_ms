@@ -80,7 +80,7 @@
 	\end{LARGE}
 
 
-Ariane Weber$^{1,*}$, Julia Kende$^{2, 3}$, Sanni Översti$^{1, \ddagger}$ and Sebastian Duchene$^{3,4, 5,\ddagger, *}$.
+Ariane Weber$^{1,*}$, Julia Kende$^{2, 3}$, Camila Duitama González$^{3,4}$, Sanni Översti$^{1, \ddagger}$ and Sebastian Duchene$^{3,4, 5,\ddagger, *}$.
 \end{center}
 
 $^{1}$ Max Planck Institute of Geoanthropology, Jena, Germany.
@@ -92,30 +92,48 @@ $^{3}$ Université Paris Cité, Paris, France.
 $^{4}$ ED-ID unit, Dept of Computational Biology, Institut Pasteur, Paris, France.
 
 $^{5}$ Peter Doherty Institute for Infection and Immunity, Dept of Microbiology and Immunology, University of Melbourne, Melbourne, Australia.
-\newline
+
 
 *email: weber@gea.mpg.de, sduchene@pasteur.fr
 
 $\ddagger$ Equal contribution to the supervision of this work.
 \newline
-\newline
-In fig. S\ref{figure:Fig1} we show the simulation results for a situation where the prior on the evolutionary rate is misleading and with most of its density falling on much higher values than those used to generate the data. Here, the prior on the evolutionary rate is $\Gamma(shape=1.5, rate=10^{4})$ (mean=$1.5\times 10^{-4}$, and 95\% range from $1.08 \times 10^{-5}$ to $4.7 \times 10^{-4}$), where as that for the population size is an exponential distribution with mean 5,000, and thus concentrated on the true value. Note that the resulting prior on the tree height is not misleading.
-
-In fig. S\ref{figure:Fig2} we show the posterior distribution of the tree height for our empirical analyses of Hepatitis B virus with varying sampling window widths, while fig S\ref{figure:Fig3} shows the posterior distribution of the tree height for our empirical analyses with temporal sampling bias. The corresponding results with a misleading prior that favours low evolutionary rates and old divergence times are shown in figs \ref{figure:Fig4}, \ref{figure:Fig5}. The misleading prior on the evolutionary rate is $\Gamma(shape=1.5, rate=10^6)$, while for the population size it is an exponential distribution with mean 50,000.
-
-
-Finally, figs \ref{figure:Fig6} and \ref{figure:Fig7} show the estimates of the evolutionary rate for these data using the `misleading' prior.
+In fig. S\ref{figure:Fig1} we show the posterior estimates of the root height for our simulations of varying sampling window widths. 
 
 \begin{landscape}
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.7, angle=0]{summary_all_estimates_misleading_upwards_prior.pdf}
-			\caption{Simulations of varying sampling window widths with a `misleading prior'. Each column corresponds to a simulation setting: (a) is for ultrametric trees where all samples are collected at the same point in time, (b) is for the situation where the sampling window is 10 years (half the expected phylodynamic threshold), (c) is where the sampling window is exactly the expected phylodynamic threshold of 20 years. Scenarios (d) and (e) denote sampling windows that are 10 and 100 times the expected phylodynamic threshold. The first row is an example of a simulated phylogenetic tree with branch lengths scaled in units of time. The black circles represent genomic samples. The purple dashed line is the expected phylodynamic threshold and the solid red line is for the oldest sample, such that it represents the sampling window. Note that time here is shown in log$_{10}$ scale. The second row is the estimated evolutionary rate over 100 simulations. The dashed black line is the value used to generate the data (i.e. the ground truth), the dark blue bars are the posterior, and those in orange are the prior. For the prior and the posterior we use solid circles to show the mean estimate and the width of the error bars denotes the 95\% quantile range. The third row is the estimate of the error in tree height (the age of the tree). The error in tree height is calculated as $\frac{true-estimated}{true}$.}
+			\includegraphics[scale=0.7, angle=0]{testing_prior_uncertainty_tree_height_fig_reordered.pdf}
+			\caption{Estimates of the age of the root-node for simulations of varying sampling window widths. Each column corresponds to a simulation setting: (a) is for ultrametric trees where all samples are collected at the same point in time (sampling window, sw=0), (b) is for the situation where the sampling window is 10 years (half the expected phylodynamic threshold; sampling window, sw=0.5$\times$ ph.t), (c) is where the sampling window is exactly the expected phylodynamic threshold of 20 years (sw=1$\times$ ph.t). Scenarios (d) and (e) denote sampling windows that are 10 and 100 $\times$ the expected phylodynamic threshold (sw=10$\times$ ph.t and sw=100$\times$ ph.t, respectively). The rows denote example phylogenetic trees and prior configurations where the mean evolutionary rate prior, $M$, is set to the correct value (fist row), an order of magnitude higher (second row), or an order of magnitude lower, last row). Because each simulated tree has a different root height, we subtract the posterior by the truth and divide by the truth. Thus, an value of 0 is the correct value, where as one of 1 means a one-fold overestimation. The dashed line is for values of 0. Each vertical lines are the 95\% posterior credible interval, with 100 replicates for each of the priors on $M$ in table \ref{table:prior_distros} }
 			\label{figure:Fig1}
 		\end{center}
 		%		\centering
 	\end{figure}
 \end{landscape}
+
+
+\begin{table}[H]
+	\caption{Prior configuration for the mean evolutionary rate, $M$ of the lognormal distribution of branch rates. Note that the mean of the $Gamma$ distribution here is $shape/rate$ and that the true value used to generate the data is $1.5\times10^{-5}$ subs/site/year.} 
+	\begin{center} 
+		\label{table:prior_distros}
+		\begin{tabular}{ c|c|c }
+			Mean value of $M$ & Prior configuration & 95\% quantile width / mean $M$\\
+			\hline
+			$1.5\times10^{-5}$ & $Gamma(shape=1.5, rate=1\times10^5)$ & $3.04$\\
+			$1.5\times10^{-5}$ & $Gamma(shape=0.3, rate=2\times10^4)$ & $6.33$\\
+			$1.5\times10^{-5}$ & $Gamma(shape=15, rate=1\times10^6)$ & $1.00$\\
+			
+			$1.5\times10^{-4}$ & $Gamma(shape=1.5, rate=1\times10^4)$ & $3.04$\\
+			$1.5\times10^{-4}$ & $Gamma(shape=0.3, rate=2\times10^{3})$ & $6.33$\\
+			$1.5\times10^{-4}$ & $Gamma(shape=15, rate=1\times10^{5})$ & $1.00$\\
+			
+			$1.5\times10^{-6}$ & $Gamma(shape=1.5, rate=1\times10^6)$ & $3.04$\\
+			$1.5\times10^{-6}$ & $Gamma(shape=0.3, rate=2\times10^5)$ & $6.33$\\
+			$1.5\times10^{-6}$ & $Gamma(shape=15, rate=1\times10^7)$ & $1.00$\\
+		\end{tabular}
+	\end{center}	%\vspace{-0.4cm}
+\end{table}
+
 
 \begin{figure}[H]
     \begin{center}
@@ -127,61 +145,8 @@ Finally, figs \ref{figure:Fig6} and \ref{figure:Fig7} show the estimates of the 
 \end{figure}
 
 
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[scale=0.7, angle=0]{empirical_results_biased_root_height.pdf}
-        \caption{Results from empirical analyses of Hepatitis B virus (HBV) ancient DNA data. The phylogenetic trees correspond to highest clade credibility trees from three analyses where the data were subsampled to include an increasing number of ancient samples. First, we consider a data set for which the samples are 95\% modern and the remaining 5\% being the most ancient. Then, we reduce the number of modern samples to 50\%, 25\% and 10\%, and the rest being ancient. Note that the sampling window is constant because we always retain the most ancient samples. In all cases the data sets consist of 100 genome samples. The violin plots show the posterior distribution of the tree height in blue and its corresponding prior in orange.}
-        \label{figure:Fig7}
-    \end{center}
-    %		\centering
-\end{figure}
 
 
-
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[scale=0.7, angle=0]{empirical_results_depth_misleading_prior_tree_height.pdf}
-        \caption{Results from empirical analyses of Hepatitis B virus (HBV) ancient DNA data using a `misleading' prior configuration. The phylogenetic trees correspond to highest clade credibility trees from three analyses where the data were subsampled to include an increasing number of ancient samples. First, we consider a data set for which the samples are 95\% modern and the remaining 5\% being the most ancient. Then, we reduce the number of modern samples to 50\%, 25\% and 10\%, and the rest being ancient. Note that the sampling window is constant because we always retain the most ancient samples. In all cases the data sets consist of 100 genome samples. The violin plots show the posterior distribution of the tree height in blue and its corresponding prior in orange.}
-        \label{figure:Fig3}
-    \end{center}
-    %		\centering
-\end{figure}
-
-
-
-
-
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[scale=0.7, angle=0]{empirical_results_biased_misleading_prior_root_height.pdf}
-        \caption{Results from empirical analyses of Hepatitis B virus (HBV) ancient DNA data using a `misleading' prior. The phylogenetic trees correspond to highest clade credibility trees from three analyses where the data were subsampled to include an increasing number of ancient samples. First, we consider a data set for which the samples are 95\% modern and the remaining 5\% being the most ancient. Then, we reduce the number of modern samples to 50\%, 25\% and 10\%, and the rest being ancient. Note that the sampling window is constant because we always retain the most ancient samples. In all cases the data sets consist of 100 genome samples. The violin plots show the posterior distribution of the tree height in blue and its corresponding prior in orange.}
-        \label{figure:Fig5}
-    \end{center}
-    %		\centering
-\end{figure}
-
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[scale=0.7, angle=0]{empirical_results_depth_misleading_prior.pdf}
-        \caption{Results from empirical analyses of Hepatitis B virus (HBV) ancient DNA data under a `misleading' prior configuration. The phylogenetic trees correspond to highest clade credibility trees from three analyses where the data were subsampled to include an increasing number of ancient samples. First, we consider a data set for which the samples are 95\% modern and the remaining 5\% being the most ancient. Then, we reduce the number of modern samples to 50\%, 25\% and 10\%, and the rest being ancient. Note that the sampling window is constant because we always retain the most ancient samples. In all cases the data sets consist of 100 genome samples. The violin plots show the posterior distribution of the evolutionary rate in blue and its corresponding prior in orange.}
-        \label{figure:Fig6}
-    \end{center}
-    %		\centering
-\end{figure}
-
-
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[scale=0.7, angle=0]{empirical_results_biased_misleading_prior.pdf}
-        \caption{Results from empirical analyses of Hepatitis B virus (HBV) ancient DNA data using a `misleading' prior. The phylogenetic trees correspond to highest clade credibility trees from three analyses where the data were subsampled to include an increasing number of ancient samples. First, we consider a data set for which the samples are 95\% modern and the remaining 5\% being the most ancient. Then, we reduce the number of modern samples to 50\%, 25\% and 10\%, and the rest being ancient. Note that the sampling window is constant because we always retain the most ancient samples. In all cases the data sets consist of 100 genome samples. The violin plots show the posterior distribution of the evolutionary rate in blue and its corresponding prior in orange.}
-        \label{figure:Fig7}
-    \end{center}
-    %		\centering
-\end{figure}
 
 
 \end{document}
