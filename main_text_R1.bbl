@@ -1,4 +1,4 @@
-\begin{thebibliography}{73}
+\begin{thebibliography}{74}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -287,6 +287,14 @@ S.~Y. Ho and S.~Duch{\^e}ne.
   timescales.
 \newblock \emph{Molecular Ecology}, 23\penalty0 (24):\penalty0 5947--5965,
   2014.
+
+\bibitem[H{\"o}hna et~al.(2016)H{\"o}hna, Landis, Heath, Boussau, Lartillot,
+  Moore, Huelsenbeck, and Ronquist]{hohna2016revbayes}
+S.~H{\"o}hna, M.~J. Landis, T.~A. Heath, B.~Boussau, N.~Lartillot, B.~R. Moore,
+  J.~P. Huelsenbeck, and F.~Ronquist.
+\newblock Revbayes: Bayesian phylogenetic inference using graphical models and
+  an interactive model-specification language.
+\newblock \emph{Systematic biology}, 65\penalty0 (4):\penalty0 726--736, 2016.
 
 \bibitem[Kahila Bar-Gal et~al.(2012)Kahila Bar-Gal, Kim, Klein, Shin, Oh, Kim,
   Kim, Kim, Grant, Pappo, et~al.]{kahila2012tracing}
