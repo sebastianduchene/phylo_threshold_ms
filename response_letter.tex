@@ -155,14 +155,7 @@ The Reviewer raises an important point that we attempted to address comprehensiv
 
 A major focus of this paper is clarifying the impact of prior distributions on the phylogenetic threshold. I was therefore surprised by the very limited range of prior distributions that were used to analyze the simulated data. These analyses form the heart of this paper, and a much wider range of priors (not simply or two additional sets of priors) should be examined. I understand that these analyses are time consuming, but I think fewer replicates of each simulation scenario, with a wider range of analyses (corresponding to a wider range of priors) for each replicate would be a good trade-off. 
 
-<<<<<<< HEAD
 {\color{blue}
-=======
-\textcolor{blue}{These are our main revisions. In particular, we repeated our analyses with the following setup of priors:}
-
-
-
->>>>>>> overleaf-2026-02-04-1507
 \textbf{Response:}
 
 We conducted analyses with a range of priors for the mean evolutionary rate, $M$ (the mean rate of the relaxed molecular clock with underlying lognormal distribution, where branch rates $r_i$ are given by $r_i \sim Lognormal(\mu, \sigma)$).
@@ -184,7 +177,7 @@ We conducted analyses with a range of priors for the mean evolutionary rate, $M$
 
  
 
-In fig \ref{figure:Figure1} we show the corresponding prior distributions.
+In fig \ref{figure:Figure1} and  we show the corresponding prior distributions.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.6, angle=0]{prior_example_for_response_letter.pdf}
@@ -194,6 +187,39 @@ In fig \ref{figure:Figure1} we show the corresponding prior distributions.
 	%		\centering
 \end{figure}
 %
+
+\begin{table}[H]
+    \centering
+    \caption{Summary of new simulation experiments conducted for the revised manuscript. All configurations were run for each of the five sampling windows with 100 simulation replicates per condition.}
+    \label{tab:new_experiments}
+    \renewcommand{\arraystretch}{1.2} % Adds a bit of vertical spacing to rows
+    \begin{tabular}{l l l c}
+        \thickhline
+        \textbf{Experiment Type} & \textbf{Uncertainty Level} & \textbf{Prior on Mean Rate (M)} & \textbf{Resulting Prior Mean} \\
+        \hline
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Centered on \\ True Value\end{tabular}} & 
+        Medium (width $\sim$3x mean) & $M \sim \text{Gamma}(1.5, 1 \times 10^5)$ & $1.5 \times 10^{-5}$ \\
+        & High (width $\sim$6x mean) & $M \sim \text{Gamma}(0.3, 2 \times 10^4)$ & $1.5 \times 10^{-5}$ \\
+        & Low (width $\sim$1x mean) & $M \sim \text{Gamma}(15, 1 \times 10^6)$ & $1.5 \times 10^{-5}$ \\
+        \hline
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Upward Bias \\ (10x True Value)\end{tabular}} & 
+        Medium (width $\sim$3x mean) & $M \sim \text{Gamma}(1.5, 1 \times 10^4)$ & $1.5 \times 10^{-4}$ \\
+        & High (width $\sim$6x mean) & $M \sim \text{Gamma}(0.3, 2 \times 10^3)$ & $1.5 \times 10^{-4}$ \\
+        & Low (width $\sim$1x mean) & $M \sim \text{Gamma}(15, 1 \times 10^5)$ & $1.5 \times 10^{-4}$ \\
+        \hline
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Downward Bias \\ (0.1x True Value)\end{tabular}} & 
+        Medium (width $\sim$3x mean) & $M \sim \text{Gamma}(1.5, 1 \times 10^6)$ & $1.5 \times 10^{-6}$ \\
+        & High (width $\sim$6x mean) & $M \sim \text{Gamma}(0.3, 2 \times 10^5)$ & $1.5 \times 10^{-6}$ \\
+        & Low (width $\sim$1x mean) & $M \sim \text{Gamma}(15, 1 \times 10^7)$ & $1.5 \times 10^{-6}$ \\
+        \hline
+        \multicolumn{2}{l}{\textbf{Hyperprior Configuration}} & \multicolumn{2}{l}{$M \sim \text{Gamma}(\alpha, \beta)$} \\
+        \multicolumn{2}{l}{} & \multicolumn{2}{l}{$\alpha \sim \text{Lognormal}(M=1, \sigma=5)$} \\
+        \multicolumn{2}{l}{} & \multicolumn{2}{l}{$\beta \sim \text{Lognormal}(M=1, \sigma=5)$} \\
+        \thickhline
+    \end{tabular}
+\end{table}
+
+
 
 We also conducted analyses where we included a hyper prior distribution for the shape and rate of the Gamma distribution that we use as a prior for the mean evolutionary rate, as follows:
 $$
@@ -212,10 +238,10 @@ Our results are consistent with our previous findings, but much more comprehensi
 
 Another major issue I have is that the choice of prior distributions used for comparison seem arbitrary and not very well motivated. For example, consider the "reasonable prior" and "misleading prior" detailed on Page 20. The population size parameter priors are both relatively vague, and the "misleading" prior comfortably includes the true value within its 95\% quantile interval. On the other hand, for the molecular clock mean rate, the "misleading" prior has a 95\% quantile interval that is 1/10-th as wide as that of the "reasonable" prior, and it does not include the true value. What if the "misleading" priors were centered far away from the true values but were as informative/uninformative (meaning, had the same variance) as the "reasonable" priors? Or what if we kept the same "misleading" downward biased prior for the mean rate and paired it with a prior for the population size that is upward biased (as the "misleading" prior is) AND much more informative than the "reasonable" prior? It seems that the authors' motivation for the "misleading" prior was choosing the mean rate to be much lower and the mean population size to be much higher, but it is puzzling why they seem to have ignored the variance of these priors: the "misleading" mean rate prior has much smaller variance than the "reasonable" mean rate prior, while the the "misleading" population size prior has much larger variance than the "reasonable" population size prior. As it stands, the results of the simulation study show: 1) that we have more temporal signal when we increase the sampling window, and 2) the scenario in which the data have the lowest amount of signal and the model employs a relatively strong prior results in the posterior being dominated by the prior. Neither of these findings are new or add much insight. What would be insightful is if the authors could provide some guidance (by exploring a wide range of priors) on how vague the prior must be in the case of each sampling window to ensure that the prior does not override the temporal signal in the data.
 
-<<<<<<< HEAD
+
 {\color{blue}
 \textbf{Response:} 
-=======
+
 \textcolor{blue}{Action: We used a new set of nine prior configurations that impose different levels of uncertainty, and for which most of the mass of the distribution is concentrated at, below, or above the true value.
 $$
 \theta \sim Exponential(mean=5,000)
