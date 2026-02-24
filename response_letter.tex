@@ -8,8 +8,6 @@
 \usepackage[normalem]{ulem}
 
 \usepackage[utf8]{inputenc}
-\usepackage{multirow} % For spanning multiple rows in tables
-\usepackage{amsmath}  % For improved math typesetting, like \text{}
 
 \usepackage[square,sort,comma,numbers]{natbib}
 \bibliographystyle{abbrvnat}
@@ -84,6 +82,7 @@ I would have liked to see a much larger set of priors than simply two sets of va
 
 I wish to emphasize that I consider the central idea of the study to have merit.  If you feel able to redo a new study based on the reviewers' comments (notably reviewer 2) and mine, and address all points raised carefully, I would encourage you to resubmit as a new manuscript.
 
+
 {\color{blue}
 \textbf{Response:}
 
@@ -150,7 +149,7 @@ This manuscript begins with a nice and illuminating discussion of measurably evo
 {\color{blue}
 \textbf{Response:}
 
-The Reviewer raises an important point that we attempted to address comprehensively. To this end, we conducted novel simulation experiments using nine configurations for the prior on the mean evolutionary rate that include those where this parameter is dramatically over- and underestimated and with varying degrees of uncertainty. Please see our detailed actions below.
+The Reviewer raises and important point that we attempted to address comprehensively. To this end, we conducted novel simulation experiments using nine configurations for the prior on the mean evolutionary rate that include those where this parameter is dramatically over- and underestimated and with varying degrees of uncertainty. Please see our detailed actions below.
 }
 
 A major focus of this paper is clarifying the impact of prior distributions on the phylogenetic threshold. I was therefore surprised by the very limited range of prior distributions that were used to analyze the simulated data. These analyses form the heart of this paper, and a much wider range of priors (not simply or two additional sets of priors) should be examined. I understand that these analyses are time consuming, but I think fewer replicates of each simulation scenario, with a wider range of analyses (corresponding to a wider range of priors) for each replicate would be a good trade-off. 
@@ -174,54 +173,18 @@ We conducted analyses with a range of priors for the mean evolutionary rate, $M$
 		\subitem $M \sim Gamma(shape=0.3, rate=2\times10^5)$, with a mean of $1.5\times10^{-6}$.
 		\subitem $M \sim Gamma(shape=15, rate=1\times10^7)$, with a mean of $1.5\times10^{-6}$.
 \end{itemize}
-
- 
-
-In fig \ref{figure:Figure1} and  we show the corresponding prior distributions.
+In fig \ref{figure:Figure1} we show the corresponding prior distributions.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.6, angle=0]{prior_example_for_response_letter.pdf}
-		\caption{{\color{blue}Violin plots of prior distributions used in revisions. The `true mean' in green are Gamma distributions for which the mean is $1.5\times10^{-5}$ and with three degrees of uncertainty. `Upward bias' is for three prior distributions with mean $1.5\times10^{-4}$, and `downward bias' corresponds to priors with mean $1.5\times10^{-6}$.}}
+		\caption{{\color{blue}Violin plots of prior distributions used in revisions. The `true mean' in green are Gamma distributions for which the mean is $1.5\times10^{-5}$ and with three degrees of uncertainty. `Upward bias' is for a three prior distributions with mean $1.5\times10^{-4}$, and `downward bias' correspond to priors with mean $1.5\times10^{-6}$.}}
 		\label{figure:Figure1}
 	\end{center}
 	%		\centering
 \end{figure}
 %
 
-\begin{table}[H]
-    \centering
-    \caption{Summary of new simulation experiments conducted for the revised manuscript. All configurations were run for each of the five sampling windows with 100 simulation replicates per condition.}
-    \label{tab:new_experiments}
-    \renewcommand{\arraystretch}{1.2} % Adds a bit of vertical spacing to rows
-    \begin{tabular}{l l l c}
-        \thickhline
-        \textbf{Experiment Type} & \textbf{Uncertainty Level} & \textbf{Prior on Mean Rate (M)} & \textbf{Resulting Prior Mean} \\
-        \hline
-        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Centered on \\ True Value\end{tabular}} & 
-        Medium (width $\sim$3x mean) & $M \sim \text{Gamma}(1.5, 1 \times 10^5)$ & $1.5 \times 10^{-5}$ \\
-        & High (width $\sim$6x mean) & $M \sim \text{Gamma}(0.3, 2 \times 10^4)$ & $1.5 \times 10^{-5}$ \\
-        & Low (width $\sim$1x mean) & $M \sim \text{Gamma}(15, 1 \times 10^6)$ & $1.5 \times 10^{-5}$ \\
-        \hline
-        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Upward Bias \\ (10x True Value)\end{tabular}} & 
-        Medium (width $\sim$3x mean) & $M \sim \text{Gamma}(1.5, 1 \times 10^4)$ & $1.5 \times 10^{-4}$ \\
-        & High (width $\sim$6x mean) & $M \sim \text{Gamma}(0.3, 2 \times 10^3)$ & $1.5 \times 10^{-4}$ \\
-        & Low (width $\sim$1x mean) & $M \sim \text{Gamma}(15, 1 \times 10^5)$ & $1.5 \times 10^{-4}$ \\
-        \hline
-        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Downward Bias \\ (0.1x True Value)\end{tabular}} & 
-        Medium (width $\sim$3x mean) & $M \sim \text{Gamma}(1.5, 1 \times 10^6)$ & $1.5 \times 10^{-6}$ \\
-        & High (width $\sim$6x mean) & $M \sim \text{Gamma}(0.3, 2 \times 10^5)$ & $1.5 \times 10^{-6}$ \\
-        & Low (width $\sim$1x mean) & $M \sim \text{Gamma}(15, 1 \times 10^7)$ & $1.5 \times 10^{-6}$ \\
-        \hline
-        \multicolumn{2}{l}{\textbf{Hyperprior Configuration}} & \multicolumn{2}{l}{$M \sim \text{Gamma}(\alpha, \beta)$} \\
-        \multicolumn{2}{l}{} & \multicolumn{2}{l}{$\alpha \sim \text{Lognormal}(M=1, \sigma=5)$} \\
-        \multicolumn{2}{l}{} & \multicolumn{2}{l}{$\beta \sim \text{Lognormal}(M=1, \sigma=5)$} \\
-        \thickhline
-    \end{tabular}
-\end{table}
-
-
-
-We also conducted analyses where we included a hyper prior distribution for the shape and rate of the Gamma distribution that we use as a prior for the mean evolutionary rate, as follows:
+We also conducted analyses where we included a hyper prior distributions for the shape and rate of the Gamma distribution that we use as a prior for the mean evolutionary rate as follows:
 $$
 \mu \sim Gamma(shape, rate)
 $$
@@ -233,7 +196,7 @@ rate \sim Lognormal(M=1, \sigma=5)
 $$
 We conducted 100 simulation replicates in each case, for a total of 5,000 new analyses. 
 
-Our results are consistent with our previous findings, but much more comprehensive. We find that a prior that is highly informative (low uncertainty) tends to bias rate estimates. Such bias is negligible when the sampling window is 100 times the expected phylodynamic threshold, but in some cases, such as when the prior is positively biased and not overly informative, a sampling window of 0.5 of the expected phylodynamic threshold may be sufficient. In practice, our results suggest that a prior that is not overly informative is advisable, for example with a 95\% quantile width that is six times the mean.
+Our results are consistent with our previous findings, but much more comprehensive. We find that a prior that is highly informative (low uncertainty) tends to bias rate estimates. Such bias is negligible when the sampling window is 100 times the phylodynamic threshold, but in some cases, such as when the prior is positively biased and not overly informative, a sampling window of 0.5 of the phylodynamic threshold may be sufficient. In practice, our results suggest that a prior that is not overly informative is advisable, for example with a 95\% quantile width that is six times the mean.
 }
 
 Another major issue I have is that the choice of prior distributions used for comparison seem arbitrary and not very well motivated. For example, consider the "reasonable prior" and "misleading prior" detailed on Page 20. The population size parameter priors are both relatively vague, and the "misleading" prior comfortably includes the true value within its 95\% quantile interval. On the other hand, for the molecular clock mean rate, the "misleading" prior has a 95\% quantile interval that is 1/10-th as wide as that of the "reasonable" prior, and it does not include the true value. What if the "misleading" priors were centered far away from the true values but were as informative/uninformative (meaning, had the same variance) as the "reasonable" priors? Or what if we kept the same "misleading" downward biased prior for the mean rate and paired it with a prior for the population size that is upward biased (as the "misleading" prior is) AND much more informative than the "reasonable" prior? It seems that the authors' motivation for the "misleading" prior was choosing the mean rate to be much lower and the mean population size to be much higher, but it is puzzling why they seem to have ignored the variance of these priors: the "misleading" mean rate prior has much smaller variance than the "reasonable" mean rate prior, while the the "misleading" population size prior has much larger variance than the "reasonable" population size prior. As it stands, the results of the simulation study show: 1) that we have more temporal signal when we increase the sampling window, and 2) the scenario in which the data have the lowest amount of signal and the model employs a relatively strong prior results in the posterior being dominated by the prior. Neither of these findings are new or add much insight. What would be insightful is if the authors could provide some guidance (by exploring a wide range of priors) on how vague the prior must be in the case of each sampling window to ensure that the prior does not override the temporal signal in the data.
@@ -241,14 +204,13 @@ Another major issue I have is that the choice of prior distributions used for co
 
 {\color{blue}
 \textbf{Response:} 
-
-\textcolor{blue}{Action: We used a new set of nine prior configurations that impose different levels of uncertainty, and for which most of the mass of the distribution is concentrated at, below, or above the true value.
+We used a new set of nine prior configurations that impose different levels of uncertainty, and for which most of the mass of the distribution is concentrated at, below, or above the true value.
 $$
-\theta \sim Exponential(mean=5,000)
+N \sim Exponential(mean=5,000)
 $$
-, where $\theta$ is the effective population size of the coalescent and which we now keep constant for the analyses, given the points raised by the reviewer. The true value of this parameter is 5,000.
+, where $N$ is the population size of the coalescent and which we now keep constant for the analyses, given the points raised by the reviewer. The true value of this parameter is 5,000.
 \newline
-For the evolutionary rate (mean of the lognormal distribution, $M$), we considered nine possible priors. The first three assume that the mean is the correct value ($1.5\times10^{-5}$), but with different degrees of uncertainty (recall that the mean of the Gamma distribution is $shape/rate$):
+For the evolutionary rate (mean of the lognormal distribution, $M$), we considered nine possible priors. The first three assume that the mean is the correct value ($1.5\times10^{-5}$), but with different degrees of uncertainty (recal that the mean of the Gamma distribution is $shape/rate$):
 \newline
 $$
 M \sim Gamma(shape = 1.5, rate = 1\times10^{5})
@@ -283,11 +245,7 @@ $$
 M \sim Gamma(shape = 15, rate = 1\times10^{7})
 $$}
 
-
-\textbf{Response:}
-The Reviewer raises an entirely valid point about the uncertainty in the prior distributions. In our revised study we only concentrate on the prior on the evolutionary rate. For the population size of the coalescent, $\theta$, we use a conservative prior of the form $\theta \sim Exponential(mean=5,000)$. This is the `reasonable prior' in our previous version of the manuscript, because its mean is the value used to generate the data. For the prior on the evolutionary rate we considered a range of Gamma distributions that place more weight on values that would over- or underestimate the evolutionary rate and with three different degrees of uncertainty. Please see our response above and fig \ref{figure:Figure1}.
 	
-}
 In the discussion, the authors write: "Maximally uninformative priors, such as Jeffrey’s prior, offer an attractive approach, but such priors can ignore useful expert knowledge, they can be particularly difficult to sample, and are not necessarily proper probability distributions". I do not think that this is a very compelling point. It is easy to specify a suitably vague prior distribution that is proper and will not unnecessarily complicate MCMC sampling. On the other hand, if a researcher does not want their expert knowledge to be ignored, then they should not be alarmed if the prior has a relatively high impact on the posterior.
 
 {\color{blue}
@@ -301,7 +259,7 @@ I found Figures 2 and 3 (and similar figures in the supplementary material) to b
 {\color{blue}
 \textbf{Response:}
 
-We revised our previous figures. At present we only show violin plots for the prior distribution of the evolutionary rate and 95\% credible interval of the posterior is shown with black bars and no points. 
+We revised our previous figures. At present we only show violin plots for the prior distribution of the evolutionary rate and 95\% credible interval of the the posterior is shown with black bars and no points. 
 }
 
 Also, apologies if I have misunderstood, but I am confused by how the yellow bars (95\% quantile ranges for the prior) in each plot vary. From the text, it seems that the same prior distribution is being used for all analyses corresponding to a given plot, so why do the yellow bars in a given plots have varying widths? 
@@ -318,7 +276,7 @@ Finally, it seems that the simulation replicates in each plot have been ordered 
 {\color{blue}
 \textbf{Response:}
 
-Yes, we sorted simulation replicates by their posterior mean to facilitate visualisation. We have now explained this in the figure captions. 
+Yes, we sorted simulation replicates by their posterior mean to faciliate visualisation. We have now explained this in the figure captions. 
 }
 
 I found the description of "uniformly distributed" samples in the "Temporal sampling bias" section to be misleading/confusing. The samples do not appear to be uniformly distributed between the present and the roots of the trees in Figure 4. Please clarify.
