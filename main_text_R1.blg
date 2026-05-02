@@ -3,23 +3,11 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main_text_R1.aux
 The style file: abbrvnat.bst
 Database file #1: References.bib
-Repeated entry---line 373 of file References.bib
- : @article{wang2014priors
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 526 of file References.bib
- : @article{muhlemann2018ancient
- :                              ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 561 of file References.bib
- : @article{paraskevis2013dating
- :                              ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 716 of file References.bib
+Repeated entry---line 690 of file References.bib
  : @article{tay2024assessing
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 983 of file References.bib
+Repeated entry---line 957 of file References.bib
  : @article{ferreira2008bayesian
  :                              ,
 I'm skipping whatever remains of this entry
@@ -64,4 +52,4 @@ warning$ -- 0
 while$ -- 352
 width$ -- 0
 write$ -- 972
-(There were 5 error messages)
+(There were 2 error messages)

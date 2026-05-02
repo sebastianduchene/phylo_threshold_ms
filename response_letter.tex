@@ -88,7 +88,7 @@ I wish to emphasize that I consider the central idea of the study to have merit.
 
 We would like to thank the Editor and the two reviewers for their helpful feedback. We have attempted to address all comments and concerns in our revised manuscript, which entailed a novel and extensive set of simulation experiments.
 
-Our revisions include analyses of all data with five sampling windows, and nine configurations for which the prior on the mean evolutionary rate has different degrees of uncertainty and concentrated on the value used to generate the data, and a bias of one order of magnitude above or below the truth. We also conducted a set of analyses using hyper-prior distributions for the parameters that govern the relaxed molecular clock with an underlying lognormal distribution. The sum of our novel analyses consisted of a total of 5,000 new simulation replicates for the conditions stated above. Please see our detailed actions in our point-by-point response. 
+Our revisions include analyses of all data with five sampling windows, and nine configurations for which the prior on the mean evolutionary rate has different degrees of uncertainty and is concentrated on the value used to generate the data, and a bias of one order of magnitude above or below the truth. We also conducted a set of analyses using hyper-prior distributions for the parameters that govern the relaxed molecular clock with an underlying lognormal distribution. The sum of our novel analyses consisted of a total of 5,000 new simulation replicates for the conditions stated above. Please see our detailed actions in our point-by-point response. 
 }
 
 \textbf{Reviewer(s)' comments to author:}
@@ -119,7 +119,7 @@ Line 36: Rate variation among branches - but also among sites?
 \textbf{Response:}
 We added a reference for the context of evolutionary rate variation among sites \citep{ho2014changing}. The molecular clock, as described in this section, only models rate variation among lineages. Models that allow for clock rate variation among sites are known as heterotachy models and we would like to retain the distinction here. This section now reads as follows: 
 
-\textit{The development of molecular clock models as statistical processes relaxes this and other assumptions by allowing for rate variation among branches (and sometimes sites see \citealt{ho2014changing}) in phylogenetic trees (reviewed by \cite{ho2014molecular, guindon2020rates}).}
+\textit{The development of molecular clock models as statistical processes relaxes this and other assumptions by allowing for rate variation among branches (and sometimes sites, see \citealt{ho2014changing}) in phylogenetic trees (reviewed by \cite{ho2014molecular, guindon2020rates}).}
 }
 
 Line 54: I would say that most (all?), not "some" bacteria are measurably evolving. This applies even to very diverse species, as long as one zooms in on particular clades etc.
@@ -149,7 +149,7 @@ This manuscript begins with a nice and illuminating discussion of measurably evo
 {\color{blue}
 \textbf{Response:}
 
-The Reviewer raises and important point that we attempted to address comprehensively. To this end, we conducted novel simulation experiments using nine configurations for the prior on the mean evolutionary rate that include those where this parameter is dramatically over- and underestimated and with varying degrees of uncertainty. Please see our detailed actions below.
+The Reviewer raises an important point that we attempted to address comprehensively. To this end, we conducted novel simulation experiments using nine configurations for the prior on the mean evolutionary rate that include those where this parameter is dramatically over- and underestimated and with varying degrees of uncertainty. Please see our detailed actions below.
 }
 
 A major focus of this paper is clarifying the impact of prior distributions on the phylogenetic threshold. I was therefore surprised by the very limited range of prior distributions that were used to analyze the simulated data. These analyses form the heart of this paper, and a much wider range of priors (not simply or two additional sets of priors) should be examined. I understand that these analyses are time consuming, but I think fewer replicates of each simulation scenario, with a wider range of analyses (corresponding to a wider range of priors) for each replicate would be a good trade-off. 
@@ -164,7 +164,7 @@ We conducted analyses with a range of priors for the mean evolutionary rate, $M$
 		\subitem $M \sim Gamma(shape=1.5, rate=1\times10^5)$, with mean of $1.5\times10^{-5}$ and 95\% quantile width of three times the mean.
 		\subitem $M \sim Gamma(shape=0.3, rate=2\times10^4)$, with mean of $1.5\times10^{-5}$ and 95\% quantile width of six times the mean.
 		\subitem $M \sim Gamma(shape=15, rate=1\times10^6)$, with  mean of $1.5\times10^{-5}$ and 95\% quantile width of about the same as the mean.
-	\item Second, we used three prior configurations for the mean $\mu$ was one order of magnitude higher than the truth:
+	\item Second, we used three prior configurations for which the mean $\mu$ was one order of magnitude higher than the truth:
 		\subitem $M \sim Gamma(shape=1.5, rate=1\times10^4)$, with a mean of $1.5\times10^{-4}$.
 		\subitem $M \sim Gamma(shape=0.3, rate=2\times10^{3})$, with a mean of $1.5\times10^{-4}$.
 		\subitem $M \sim Gamma(shape=15, rate=1\times10^{5})$, with a mean of $1.5\times10^{-4}$.	
@@ -173,18 +173,18 @@ We conducted analyses with a range of priors for the mean evolutionary rate, $M$
 		\subitem $M \sim Gamma(shape=0.3, rate=2\times10^5)$, with a mean of $1.5\times10^{-6}$.
 		\subitem $M \sim Gamma(shape=15, rate=1\times10^7)$, with a mean of $1.5\times10^{-6}$.
 \end{itemize}
-In fig \ref{figure:Figure1} we show the corresponding prior distributions.
+In Fig.~\ref{figure:Figure1} we show the corresponding prior distributions.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.6, angle=0]{prior_example_for_response_letter.pdf}
-		\caption{{\color{blue}Violin plots of prior distributions used in revisions. The `true mean' in green are Gamma distributions for which the mean is $1.5\times10^{-5}$ and with three degrees of uncertainty. `Upward bias' is for a three prior distributions with mean $1.5\times10^{-4}$, and `downward bias' correspond to priors with mean $1.5\times10^{-6}$.}}
+		\caption{{\color{blue}Violin plots of prior distributions used in revisions. The `true mean' in green are Gamma distributions for which the mean is $1.5\times10^{-5}$ and with three degrees of uncertainty. `Upward bias' refers to three prior distributions with mean $1.5\times10^{-4}$, and `downward bias' corresponds to priors with mean $1.5\times10^{-6}$.}}
 		\label{figure:Figure1}
 	\end{center}
 	%		\centering
 \end{figure}
 %
 
-We also conducted analyses where we included a hyper prior distributions for the shape and rate of the Gamma distribution that we use as a prior for the mean evolutionary rate as follows:
+We also conducted analyses where we included hyper-prior distributions for the shape and rate of the Gamma distribution that we use as a prior for the mean evolutionary rate as follows:
 $$
 \mu \sim Gamma(shape, rate)
 $$
@@ -210,7 +210,7 @@ N \sim Exponential(mean=5,000)
 $$
 , where $N$ is the population size of the coalescent and which we now keep constant for the analyses, given the points raised by the reviewer. The true value of this parameter is 5,000.
 \newline
-For the evolutionary rate (mean of the lognormal distribution, $M$), we considered nine possible priors. The first three assume that the mean is the correct value ($1.5\times10^{-5}$), but with different degrees of uncertainty (recal that the mean of the Gamma distribution is $shape/rate$):
+For the evolutionary rate (mean of the lognormal distribution, $M$), we considered nine possible priors. The first three assume that the mean is the correct value ($1.5\times10^{-5}$), but with different degrees of uncertainty (recall that the mean of the Gamma distribution is $shape/rate$):
 \newline
 $$
 M \sim Gamma(shape = 1.5, rate = 1\times10^{5})
@@ -259,16 +259,16 @@ I found Figures 2 and 3 (and similar figures in the supplementary material) to b
 {\color{blue}
 \textbf{Response:}
 
-We revised our previous figures. At present we only show violin plots for the prior distribution of the evolutionary rate and 95\% credible interval of the the posterior is shown with black bars and no points. 
+We revised our previous figures. At present we only show violin plots for the prior distribution of the evolutionary rate and 95\% credible interval of the posterior is shown with black bars and no points. 
 }
 
-Also, apologies if I have misunderstood, but I am confused by how the yellow bars (95\% quantile ranges for the prior) in each plot vary. From the text, it seems that the same prior distribution is being used for all analyses corresponding to a given plot, so why do the yellow bars in a given plots have varying widths? 
+Also, apologies if I have misunderstood, but I am confused by how the yellow bars (95\% quantile ranges for the prior) in each plot vary. From the text, it seems that the same prior distribution is being used for all analyses corresponding to a given plot, so why do the yellow bars in a given plot have varying widths? 
 
 {\color{blue}
 \textbf{Response:}
 Our figures are different and do not show individual priors for the analyses. However, we would like to clarify this choice in the previous version of our manuscript. 
 
-The prior for the evolutionary rate is indeed expected to be identical over simulation replicates. However, this is not necessarily the case for prior on the tree height because this parameter is a function of the prior on the population size, which is identical for all simulations, and the number and distribution of sampling times. In our simulations, the number of samples are fixed, but the sampling times are drawn from a uniform distribution between the present and a pre-defined time (e.g. the phylodynamic threshold multiplied by 0.5). As such, the prior on the tree height is not necessarily identical between simulation replicates. This point has been described in some detail in \cite{boskova2014inference}.
+The prior for the evolutionary rate is indeed expected to be identical over simulation replicates. However, this is not necessarily the case for the prior on the tree height because this parameter is a function of the prior on the population size, which is identical for all simulations, and the number and distribution of sampling times. In our simulations, the number of samples are fixed, but the sampling times are drawn from a uniform distribution between the present and a pre-defined time (e.g. the phylodynamic threshold multiplied by 0.5). As such, the prior on the tree height is not necessarily identical between simulation replicates. This point has been described in some detail in \cite{boskova2014inference}.
 }
 
 Finally, it seems that the simulation replicates in each plot have been ordered by posterior mean (or something like that). If so, I suggest making this clear. Otherwise, the "increasing" trend in blue bars from left to right might confuse readers.
@@ -276,7 +276,7 @@ Finally, it seems that the simulation replicates in each plot have been ordered 
 {\color{blue}
 \textbf{Response:}
 
-Yes, we sorted simulation replicates by their posterior mean to faciliate visualisation. We have now explained this in the figure captions. 
+Yes, we sorted simulation replicates by their posterior mean to facilitate visualisation. We have now explained this in the figure captions. 
 }
 
 I found the description of "uniformly distributed" samples in the "Temporal sampling bias" section to be misleading/confusing. The samples do not appear to be uniformly distributed between the present and the roots of the trees in Figure 4. Please clarify.

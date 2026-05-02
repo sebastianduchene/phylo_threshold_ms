@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main_text_R2.aux
+The style file: abbrvnat.bst
+Database file #1: References.bib
+Repeated entry---line 702 of file References.bib
+ : @article{tay2024assessing
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 969 of file References.bib
+ : @article{ferreira2008bayesian
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 999 of file References.bib
+ : @article{r2019marginal
+ :                       ,
+I'm skipping whatever remains of this entry
+You've used 76 entries,
+            2773 wiz_defined-function locations,
+            1053 strings with 21890 characters,
+and the built_in function-call counts, 46329 in all, are:
+= -- 3916
+> -- 3679
+< -- 22
++ -- 1238
+- -- 1158
+* -- 4432
+:= -- 7293
+add.period$ -- 231
+call.type$ -- 76
+change.case$ -- 601
+chr.to.int$ -- 72
+cite$ -- 152
+duplicate$ -- 1642
+empty$ -- 3135
+format.name$ -- 1250
+if$ -- 9398
+int.to.chr$ -- 5
+int.to.str$ -- 1
+missing$ -- 77
+newline$ -- 388
+num.names$ -- 306
+pop$ -- 1084
+preamble$ -- 1
+purify$ -- 526
+quote$ -- 0
+skip$ -- 1363
+stack$ -- 0
+substring$ -- 1953
+swap$ -- 132
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 831
+warning$ -- 0
+while$ -- 362
+width$ -- 0
+write$ -- 998
+(There were 3 error messages)

@@ -1,0 +1,158 @@
+\documentclass[11pt]{article}
+
+
+%\documentclass[11 pt]{article}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage[normalem]{ulem}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[square,sort,comma,numbers]{natbib}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
+
+\usepackage{setspace}
+
+\usepackage{pdflscape}
+%\doublespacing
+\onehalfspacing
+\usepackage[dvipsnames]{xcolor}
+\usepackage{lineno}
+%\linenumbers
+\usepackage{multicol}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=false,
+%	linkcolor=blue,
+%	filecolor=magenta,      
+%	urlcolor=cyan,
+	pdftitle={Overleaf Example},
+	pdfpagemode=FullScreen,
+}
+
+\addtolength{\oddsidemargin}{-2.5cm}
+\addtolength{\evensidemargin}{-1.5cm}
+
+\addtolength{\textwidth}{5.5cm}
+
+\addtolength{\topmargin}{-.875in}
+\addtolength{\textheight}{1.75in}
+
+% color can be used to apply background shading to table cells only
+%\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+\begin{document}
+
+
+\textbf{MS: MBE-26-0186}
+
+\textbf{Associate Editor}
+Dear authors,
+
+Your manuscript is much improved and is now likely to be accepted for publication.  Reviewer 2 suggests a few simple experiments, which I think could be worthwhile and should be easy for you to do.  A few clarifications are also suggested.  If you can address these relatively minor issues, I will be happy to recommend acceptance.
+
+{\color{blue}
+\textbf{Response:}
+
+We thank the editor for their positive comments. We have addressed all comments raised by both reviewers in the re-submitted version.
+}
+
+\textbf{Reviewers' comments:}
+\textbf{Reviewer: 1}
+
+Comments to the Author
+Overall, I'm happy with the revised version of the manuscript, but would like to highlight one open question that came to me while reviewing the current version.
+
+In their comparisons of "time-biased" and "time-uniform" sampling of HBV, I have identifid a potential source of complexity. As I interpret the methods, the samples were randomly sampled for each subset (within each predefined sampling scheme). The authors observe that there was no systematic bias in rate estimates when moving gradually from one sampling scheme to the other. I suspect this *might* be related to the sampling scheme:
+
+Even though the "sum to 100" sampling scheme is nice and symmetric, I do believe it might have been better to keep a fixed number of recent samples, and subsequently add 5, 25, 50, 100 ancient samples or so in a stepwise manner. The reason for this is that with very few samples in each category, a single or handful deviating sample(s), could have a relatively substantial effect on the posterior distributions of the substitution rate and other parameters. Any such issues are most likely for the ancient samples, which are typically associated with higher sequencing error rates, and which could also be inaccurately placed in time. Effects of this kind could very well result in posterior estimates with "no systematic bias" as the authors note. An "additive sampling scheme" as I suggest above would cancel out any "disturbances" provided by a hypothetical handful of ancient genomes erroneously placed in time or having high rates of sequencing errors.
+
+I'm not saying this would have to be redone, but I think the authors should mention this explanatiion as a potential source of their observed lack of systematic bias.
+
+{\color{blue}
+	\textbf{Response:}
+	
+	This is an entirely valid point, but the section that the reviewer refers to for a set of simulation experiments, where we know the true value used to generate the data. Because this is a valid and important point, at the end of the corresponding section we added the following statement:
+
+	\textit{We note that in empirical analyses of ancient DNA data systematic biases may occur with the inclusion of ancient samples, particularly due to sequencing errors that are more likely in ancient samples, and therefore a careful assessment of their impact is advisable, for example by conducting analyses where these samples are sequentially added.}
+}
+
+
+
+\textbf{Reviewer: 2}
+
+Comments to the Author
+In this article Weber and colleagues explore the related concepts of measurably evolving population, temporal signal and phylodynamic threshold, and investigate the effect of sampling regime and some model priors on estimations of the substitution rate. They do so by running simulation studies, where sampling window depth (relative to the phylodynamic threshold) and temporal sampling bias vary. As expected, the authors show that shallower sampling depth and larger sampling bias increase estimate uncertainty (95\% HPD). They also analyze the effect of informative rate priors in the context of varying sampling window depth, and find that misspecified priors produce worse estimates with shallow sampling window depth. They find that improperly setting a rate prior to lower values than their true value is more detrimental than setting them to higher values. In addition, they also show that provided sufficient sampling time depth, a hierarchical structure on the rate prior does a good job. Finally, the authors offer a study on an empirical HBV dataset – probably the most densely serially pathogen in the aDNA sense (if one excludes Y. pestis, but this bacterium evolves at an extremely slow rate). Here they show that varying sampling window depth indeed affects substitution rate estimates (both their central value and uncertainty). They also find that temporal sampling bias has an effect, although unpredictable in their particular settings.
+
+It is a well-conceived and well-written article. I appreciated a lot the initial effort to provide a conceptual framework to the topic at large. I also found the simulation studies interesting – as said, they do not bring any surprising result, but it is good to see broadly shared intuitions confirmed in a formal way. I found the empirical study somewhat falling less in line and relatively underdeveloped, but still interesting.
+
+I have a couple of content criticisms/remarks (but nothing on true textual details, it is a very easy read, especially for a technical piece):
+
+Major (potential experiments)
+1. I was a bit puzzled that the authors sort of pose as a default that people would use informative rate priors. While it has become commonplace in some instances (eg with SARS-CoV-2 where people would often default to a strong prior centered on 8e-4), my own practice (and that of many others) rather is to use pretty flat priors so the data drives rate estimation. I think it makes sense that the initial exploratory steps of a new dataset believed to comprise temporal signal be based on a poorly informative prior (and later as well if the data comes with good temporal signal). This is covered in some way by the part on the hyperprior, but I find it is the one specific thing that is not well explained in the paper and in my view a slightly questionable choice. I would therefore suggest that the authors also run a real flat prior like the -INF-0 of BEAST2 on their simulated data – the results are largely predictable, but so were they for many of their model settings.
+
+{\color{blue}\textbf{Response:}
+
+We renalysed our simulations with varying sampling window widths using the uniform prior between zero and infinity. We included these results in the Supplementary material and discuss them in the main text as follows:
+
+\textit{For completeness, we also analysed our simulated data with a uniform prior on $M$ bounded between zero and infinity. This is a default prior in some version of BEAST2, but we note that it is unadvisable for several reasons. First, it is not a proper probability distribution because the are under the curve is not one, such that it is can lead to unreliable model selection using marginal likelihoods and Bayes factors \citep{r2019marginal, fourment202019}. Second, although this distribution is commonly perceived to be `uninformative', there is an infinite amount of density on implausible high values. In our analyses we found that for the ultrametric trees the Markov chain often had unreliable mixing (low effective sample size), with mean posterior estimates for $M$ that could be as high as $1\times10^{50}$ subs/site/year. However, those simulations with a sampling window of 0.5 $\times$ the phylodynamic threshold produced estimates that were much more reasonable, with subsequently wider sampling windows producing estimates with lower uncertainty and higher accuracy (see Supplementary material online).}
+}
+
+
+2. As aforementioned, the HBV part is (relatively to the simulation one) a bit underwhelming. I think part of it is that the connection to the simulation part is not made very clear. The sampling window depth in the simulation part is defined in phylodynamic threshold units, which are then not explicitly used in the HBV part (and would be 125, 150 and 350, applying the 20y phylodynamic threshold identified elsewhere by the authors – by the way, referring to years BC is a bit misleading, the number of years in the period would make things clearer). This can be easily solved in the text, but I also note that these empirical iterations of the dataset all start after the 100x used as the maximal sampling window depth for the simulations. Therefore, I wonder whether it would not be interesting to add some analyses based on this dataset that would also use sampling window shorter than 125x. This is possible if one focuses on ancient sequences only. For example, the WENBA lineage was sampled pretty intensively during the LNBA (and importantly seems to represent a single, relatively unstructured lineage): the sampling covers 4ky (200x) but I would expect it should be doable to cut this into thinner slices (eg 300 or 600 years, ie 15 to 30x). I think this could already be interesting. I could even imagine that a sliding window analysis focused on this lineage and period might provide interesting insight into stochastic sampling effects under real world sampling regimes of ancient pathogens, which would give food for thought to many. A bit along the same line (stochastic effects), I think that the second part of the empirical analyses focused on sampling time biases would benefit from being run on multiple randomly drawn subdatasets of a given size, which I expect would probably show the missing monotonic trend and the extent of sampling derived stochasticity. Again excellent food for thought.
+
+{\color{blue} \textbf{Response:}
+
+This is an important point and we repeated our empirical analyses accordingly. In the present version we use six depths for the sampling window, all with 100 samples. We describe the result in the main text as follows (please also see Fig. 6):
+
+\textit{We analysed the data by drawing 100 sequences with replacement and restricting their sampling window. We constructed six of such data sets, with sampling windows of 10 years (approximately half of the expected phylodynamic threshold), 19 years (approximately the expected phylodynamic threshold), 32, 422, 1,863 and 10,526 years. Increasing the sampling window resulted in estimates of the evolutionary rate that were more precise and closer to the estimate from the complete data set (Fig. 6). Here we find that the evolutionary rate is estimated to be higher for shorter sampling windows, with correspondingly younger estimates for the tree height. This pattern can be due to one or a combination of other factors influencing the inference, for example, the vagaries of evolutionary rate variation in this virus, particularly time-dependency \citep{vrancken2017accurate}. Similarly, population structure that is unaccounted for has been shown to produce an overestimation of the evolutionary rate, because under the tree prior samples that are genetically linked are expected to have been sampled at the same point in time \citep{moller2018impact}.}
+
+}
+
+Minor (textual)
+
+1. The title does not tell much about the simulation and empiric dataset-based explorations performed by the authors. Please consider a more descriptive one.
+
+{\color{blue} \textbf{Response:}
+
+We respectfully disagree and would prefer to keep the current title, because we believe that our study clarifies broad concepts around the phylodynamic threshold and measurably evolving populations.
+}
+
+2. The authors write several times (eg L26 but also later in the text) that prior sensitivity assessment is more important than temporal signal tests. I don t see anything in their data supporting this claim. If anything, their results also show that when a dataset is characterized by a sampling window that is just equal or inferior to the underlying phylodynamic threshold median estimates are more biased and uncertainty increases. I think it would make more sense that both the dataset (temporal signal) and model (priors) matter. Which does not prevent from stating clearly that a significant temporal signal test does not guarantee landing the correct result: it is still modeling so if the model is not adequate it will provide wrong rate and date estimates.
+{\color{blue} \textbf{Response:}
+
+This is an important point. We added a sentence in the Discussion to emphasise the role of tests of temporal signal:
+
+\textit{Thus, positive evidence for temporal signal might not necessarily mean that estimates are accurate}
+}
+
+
+
+
+
+%\bibliographystyle{plain}
+\bibliography{References}
+
+\end{document}

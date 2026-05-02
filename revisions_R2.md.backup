@@ -1,0 +1,44 @@
+17-Apr-2026
+
+MS: MBE-26-0186
+
+Associate Editor
+Editors’ comments to the author:
+Dear authors,
+
+Your manuscript is much improved and is now likely to be accepted for publication.  Reviewer 2 suggests a few simple experiments, which I think could be worthwhile and should be easy for you to do.  A few clarifications are also suggested.  If you can address these relatively minor issues, I will be happy to recommend acceptance.
+
+
+Reviewers' comments:
+Reviewer: 1
+
+Comments to the Author
+Overall, I'm happy with the revised version of the manuscript, but would like to highlight one open question that came to me while reviewing the current version.
+
+In their comparisons of "time-biased" and "time-uniform" sampling of HBV, I have identifid a potential source of complexity. As I interpret the methods, the samples were randomly sampled for each subset (within each predefined sampling scheme). The authors observe that there was no systematic bias in rate estimates when moving gradually from one sampling scheme to the other. I suspect this *might* be related to the sampling scheme:
+
+Even though the "sum to 100" sampling scheme is nice and symmetric, I do believe it might have been better to keep a fixed number of recent samples, and subsequently add 5, 25, 50, 100 ancient samples or so in a stepwise manner. The reason for this is that with very few samples in each category, a single or handful deviating sample(s), could have a relatively substantial effect on the posterior distributions of the substitution rate and other parameters. Any such issues are most likely for the ancient samples, which are typically associated with higher sequencing error rates, and which could also be inaccurately placed in time. Effects of this kind could very well result in posterior estimates with "no systematic bias" as the authors note. An "additive sampling scheme" as I suggest above would cancel out any "disturbances" provided by a hypothetical handful of ancient genomes erroneously placed in time or having high rates of sequencing errors.
+
+I'm not saying this would have to be redone, but I think the authors should mention this explanatiion as a potential source of their observed lack of systematic bias.
+
+
+Reviewer: 2
+
+Comments to the Author
+In this article Weber and colleagues explore the related concepts of measurably evolving population, temporal signal and phylodynamic threshold, and investigate the effect of sampling regime and some model priors on estimations of the substitution rate. They do so by running simulation studies, where sampling window depth (relative to the phylodynamic threshold) and temporal sampling bias vary. As expected, the authors show that shallower sampling depth and larger sampling bias increase estimate uncertainty (95% HPD). They also analyze the effect of informative rate priors in the context of varying sampling window depth, and find that misspecified priors produce worse estimates with shallow sampling window depth. They find that improperly setting a rate prior to lower values than their true value is more detrimental than setting them to higher values. In addition, they also show that provided sufficient sampling time depth, a hierarchical structure on the rate prior does a good job. Finally, the authors offer a study on an empirical HBV dataset – probably the most densely serially pathogen in the aDNA sense (if one excludes Y. pestis, but this bacterium evolves at an extremely slow rate). Here they show that varying sampling window depth indeed affects substitution rate estimates (both their central value and uncertainty). They also find that temporal sampling bias has an effect, although unpredictable in their particular settings.
+
+It is a well-conceived and well-written article. I appreciated a lot the initial effort to provide a conceptual framework to the topic at large. I also found the simulation studies interesting – as said, they do not bring any surprising result, but it is good to see broadly shared intuitions confirmed in a formal way. I found the empirical study somewhat falling less in line and relatively underdeveloped, but still interesting.
+
+I have a couple of content criticisms/remarks (but nothing on true textual details, it is a very easy read, especially for a technical piece):
+
+Major (potential experiments)
+1. I was a bit puzzled that the authors sort of pose as a default that people would use informative rate priors. While it has become commonplace in some instances (eg with SARS-CoV-2 where people would often default to a strong prior centered on 8e-4), my own practice (and that of many others) rather is to use pretty flat priors so the data drives rate estimation. I think it makes sense that the initial exploratory steps of a new dataset believed to comprise temporal signal be based on a poorly informative prior (and later as well if the data comes with good temporal signal). This is covered in some way by the part on the hyperprior, but I find it is the one specific thing that is not well explained in the paper and in my view a slightly questionable choice. I would therefore suggest that the authors also run a real flat prior like the -INF-0 of BEAST2 on their simulated data – the results are largely predictable, but so were they for many of their model settings.
+2. As aforementioned, the HBV part is (relatively to the simulation one) a bit underwhelming. I think part of it is that the connection to the simulation part is not made very clear. The sampling window depth in the simulation part is defined in phylodynamic threshold units, which are then not explicitly used in the HBV part (and would be 125, 150 and 350, applying the 20y phylodynamic threshold identified elsewhere by the authors – by the way, referring to years BC is a bit misleading, the number of years in the period would make things clearer). This can be easily solved in the text, but I also note that these empirical iterations of the dataset all start after the 100x used as the maximal sampling window depth for the simulations. Therefore, I wonder whether it would not be interesting to add some analyses based on this dataset that would also use sampling window shorter than 125x. This is possible if one focuses on ancient sequences only. For example, the WENBA lineage was sampled pretty intensively during the LNBA (and importantly seems to represent a single, relatively unstructured lineage): the sampling covers 4ky (200x) but I would expect it should be doable to cut this into thinner slices (eg 300 or 600 years, ie 15 to 30x). I think this could already be interesting. I could even imagine that a sliding window analysis focused on this lineage and period might provide interesting insight into stochastic sampling effects under real world sampling regimes of ancient pathogens, which would give food for thought to many. A bit along the same line (stochastic effects), I think that the second part of the empirical analyses focused on sampling time biases would benefit from being run on multiple randomly drawn subdatasets of a given size, which I expect would probably show the missing monotonic trend and the extent of sampling derived stochasticity. Again excellent food for thought.
+
+Minor (textual)
+1. The title does not tell much about the simulation and empiric dataset-based explorations performed by the authors. Please consider a more descriptive one.
+2. The authors write several times (eg L26 but also later in the text) that prior sensitivity assessment is more important than temporal signal tests. I don t see anything in their data supporting this claim. If anything, their results also show that when a dataset is characterized by a sampling window that is just equal or inferior to the underlying phylodynamic threshold median estimates are more biased and uncertainty increases. I think it would make more sense that both the dataset (temporal signal) and model (priors) matter. Which does not prevent from stating clearly that a significant temporal signal test does not guarantee landing the correct result: it is still modeling so if the model is not adequate it will provide wrong rate and date estimates.
+
+Best regards,
+
+Sebastien Calvignac-Spencer

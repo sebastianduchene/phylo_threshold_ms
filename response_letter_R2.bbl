@@ -1,0 +1,38 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Fourment et~al.(2020)Fourment, Magee, Whidden, Bilge, Matsen~IV, and
+  Minin]{fourment202019}
+M.~Fourment, A.~F. Magee, C.~Whidden, A.~Bilge, F.~A. Matsen~IV, and V.~N.
+  Minin.
+\newblock 19 dubious ways to compute the marginal likelihood of a phylogenetic
+  tree topology.
+\newblock \emph{Systematic Biology}, 69\penalty0 (2):\penalty0 209--220, 2020.
+
+\bibitem[M{\"o}ller et~al.(2018)M{\"o}ller, du~Plessis, and
+  Stadler]{moller2018impact}
+S.~M{\"o}ller, L.~du~Plessis, and T.~Stadler.
+\newblock Impact of the tree prior on estimating clock rates during epidemic
+  outbreaks.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 115\penalty0
+  (16):\penalty0 4200--4205, 2018.
+
+\bibitem[R~Oaks et~al.(2019)R~Oaks, A~Cobb, N~Minin, and
+  D~Leach{\'e}]{r2019marginal}
+J.~R~Oaks, K.~A~Cobb, V.~N~Minin, and A.~D~Leach{\'e}.
+\newblock Marginal likelihoods in phylogenetics: a review of methods and
+  applications.
+\newblock \emph{Systematic Biology}, 68\penalty0 (5):\penalty0 681--697, 2019.
+
+\bibitem[Vrancken et~al.(2017)Vrancken, Suchard, and
+  Lemey]{vrancken2017accurate}
+B.~Vrancken, M.~A. Suchard, and P.~Lemey.
+\newblock Accurate quantification of within-and between-host hbv evolutionary
+  rates requires explicit transmission chain modelling.
+\newblock \emph{Virus Evolution}, 3\penalty0 (2):\penalty0 vex028, 2017.
+
+\end{thebibliography}
