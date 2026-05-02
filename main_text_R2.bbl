@@ -410,6 +410,12 @@ D.~J. Nott, X.~Wang, M.~Evans, and B.-G. Englert.
   divergences.
 \newblock \emph{Statistical Science}, 35\penalty0 (2):\penalty0 234--253, 2020.
 
+\bibitem[Oaks et~al.(2019)Oaks, Cobb, Minin, and Leach{\'e}]{r2019marginal}
+J.~Oaks, K.~F. Cobb, V.~N. Minin, and A.~D. Leach{\'e}.
+\newblock Marginal likelihoods in phylogenetics: a review of methods and
+  applications.
+\newblock \emph{Systematic Biology}, 68\penalty0 (5):\penalty0 681--697, 2019.
+
 \bibitem[Paraskevis et~al.(2013)Paraskevis, Magiorkinis, Magiorkinis, Ho,
   Belshaw, Allain, and Hatzakis]{paraskevis2013dating}
 D.~Paraskevis, G.~Magiorkinis, E.~Magiorkinis, S.~Y. Ho, R.~Belshaw, J.-P.
@@ -423,13 +429,6 @@ D.~Paraskevis, G.~Magiorkinis, E.~Magiorkinis, S.~Y. Ho, R.~Belshaw, J.-P.
 M.~Plummer, N.~Best, K.~Cowles, K.~Vines, et~al.
 \newblock Coda: convergence diagnosis and output analysis for mcmc.
 \newblock \emph{R news}, 6\penalty0 (1):\penalty0 7--11, 2006.
-
-\bibitem[R~Oaks et~al.(2019)R~Oaks, A~Cobb, N~Minin, and
-  D~Leach{\'e}]{r2019marginal}
-J.~R~Oaks, K.~A~Cobb, V.~N~Minin, and A.~D~Leach{\'e}.
-\newblock Marginal likelihoods in phylogenetics: a review of methods and
-  applications.
-\newblock \emph{Systematic Biology}, 68\penalty0 (5):\penalty0 681--697, 2019.
 
 \bibitem[Rambaut et~al.(2016)Rambaut, Lam, Max~Carvalho, and
   Pybus]{rambaut2016exploring}

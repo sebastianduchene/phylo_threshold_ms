@@ -3,21 +3,9 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main_text_R2.aux
 The style file: abbrvnat.bst
 Database file #1: References.bib
-Repeated entry---line 702 of file References.bib
- : @article{tay2024assessing
- :                          ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 969 of file References.bib
- : @article{ferreira2008bayesian
- :                              ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 999 of file References.bib
- : @article{r2019marginal
- :                       ,
-I'm skipping whatever remains of this entry
 You've used 76 entries,
             2773 wiz_defined-function locations,
-            1053 strings with 21890 characters,
+            1053 strings with 21888 characters,
 and the built_in function-call counts, 46329 in all, are:
 = -- 3916
 > -- 3679
@@ -56,4 +44,3 @@ warning$ -- 0
 while$ -- 362
 width$ -- 0
 write$ -- 998
-(There were 3 error messages)

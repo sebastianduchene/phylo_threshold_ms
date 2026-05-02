@@ -94,7 +94,7 @@ I'm not saying this would have to be redone, but I think the authors should ment
 {\color{blue}
 	\textbf{Response:}
 	
-	This is an entirely valid point, but the section that the reviewer refers to for a set of simulation experiments, where we know the true value used to generate the data. Because this is a valid and important point, at the end of the corresponding section we added the following statement:
+	This is an entirely valid point, but the section that the reviewer refers to is for a set of simulation experiments, where we know the true value used to generate the data. Because this is a valid and important point, at the end of the corresponding section we added the following statement:
 
 	\textit{We note that in empirical analyses of ancient DNA data systematic biases may occur with the inclusion of ancient samples, particularly due to sequencing errors that are more likely in ancient samples, and therefore a careful assessment of their impact is advisable, for example by conducting analyses where these samples are sequentially added.}
 }
@@ -115,9 +115,9 @@ Major (potential experiments)
 
 {\color{blue}\textbf{Response:}
 
-We renalysed our simulations with varying sampling window widths using the uniform prior between zero and infinity. We included these results in the Supplementary material and discuss them in the main text as follows:
+We reanalysed our simulations with varying sampling window widths using the uniform prior between zero and infinity. We included these results in the Supplementary material and discuss them in the main text as follows:
 
-\textit{For completeness, we also analysed our simulated data with a uniform prior on $M$ bounded between zero and infinity. This is a default prior in some version of BEAST2, but we note that it is unadvisable for several reasons. First, it is not a proper probability distribution because the are under the curve is not one, such that it is can lead to unreliable model selection using marginal likelihoods and Bayes factors \citep{r2019marginal, fourment202019}. Second, although this distribution is commonly perceived to be `uninformative', there is an infinite amount of density on implausible high values. In our analyses we found that for the ultrametric trees the Markov chain often had unreliable mixing (low effective sample size), with mean posterior estimates for $M$ that could be as high as $1\times10^{50}$ subs/site/year. However, those simulations with a sampling window of 0.5 $\times$ the phylodynamic threshold produced estimates that were much more reasonable, with subsequently wider sampling windows producing estimates with lower uncertainty and higher accuracy (see Supplementary material online).}
+\textit{For completeness, we also analysed our simulated data with a uniform prior on $M$ bounded between zero and infinity. This is a default prior in some versions of BEAST2, but we note that it is unadvisable for several reasons. First, it is not a proper probability distribution because the area under the curve is not one, such that it can lead to unreliable model selection using marginal likelihoods and Bayes factors \citep{r2019marginal, fourment202019}. Second, although this distribution is commonly perceived to be `uninformative', there is an infinite amount of density on implausible high values. In our analyses we found that for the ultrametric trees the Markov chain often had unreliable mixing (low effective sample size), with mean posterior estimates for $M$ that could be as high as $1\times10^{50}$ subs/site/year. However, those simulations with a sampling window of 0.5 $\times$ the phylodynamic threshold produced estimates that were much more reasonable, with subsequently wider sampling windows producing estimates with lower uncertainty and higher accuracy (see Supplementary material online).}
 }
 
 
